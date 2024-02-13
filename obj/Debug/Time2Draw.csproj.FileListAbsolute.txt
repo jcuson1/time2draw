@@ -1,0 +1,16 @@
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\bin\Debug\Time2Draw.exe.config
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\bin\Debug\Time2Draw.exe
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\bin\Debug\Time2Draw.pdb
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.csproj.AssemblyReference.cache
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.csproj.SuggestedBindingRedirects.cache
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\MainWindow.g.cs
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\App.g.cs
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw_MarkupCompile.cache
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw_MarkupCompile.lref
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\MainWindow.baml
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.g.resources
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.Properties.Resources.resources
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.csproj.GenerateResource.cache
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.exe
+C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.pdb
