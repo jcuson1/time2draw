@@ -1,0 +1,9 @@
+C:\Users\Андрей\source\repos\Time2Draw\IO\bin\Debug\net472\IO.dll
+C:\Users\Андрей\source\repos\Time2Draw\IO\bin\Debug\net472\IO.pdb
+C:\Users\Андрей\source\repos\Time2Draw\IO\obj\Debug\net472\IO.csproj.AssemblyReference.cache
+C:\Users\Андрей\source\repos\Time2Draw\IO\obj\Debug\net472\IO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Андрей\source\repos\Time2Draw\IO\obj\Debug\net472\IO.AssemblyInfoInputs.cache
+C:\Users\Андрей\source\repos\Time2Draw\IO\obj\Debug\net472\IO.AssemblyInfo.cs
+C:\Users\Андрей\source\repos\Time2Draw\IO\obj\Debug\net472\IO.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\source\repos\Time2Draw\IO\obj\Debug\net472\IO.dll
+C:\Users\Андрей\source\repos\Time2Draw\IO\obj\Debug\net472\IO.pdb

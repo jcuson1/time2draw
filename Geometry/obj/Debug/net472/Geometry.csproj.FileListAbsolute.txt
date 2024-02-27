@@ -1,0 +1,8 @@
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\bin\Debug\net472\Geometry.dll
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\bin\Debug\net472\Geometry.pdb
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\obj\Debug\net472\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfoInputs.cache
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\obj\Debug\net472\Geometry.dll
+C:\Users\Андрей\source\repos\Time2Draw\Geometry\obj\Debug\net472\Geometry.pdb

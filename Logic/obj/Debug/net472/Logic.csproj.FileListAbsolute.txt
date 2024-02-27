@@ -1,0 +1,8 @@
+C:\Users\Андрей\source\repos\Time2Draw\Logic\bin\Debug\net472\Logic.dll
+C:\Users\Андрей\source\repos\Time2Draw\Logic\bin\Debug\net472\Logic.pdb
+C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.AssemblyInfoInputs.cache
+C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.AssemblyInfo.cs
+C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.dll
+C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.pdb
