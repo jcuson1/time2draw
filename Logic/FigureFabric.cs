@@ -14,9 +14,7 @@ namespace Logic
       
       public void AddFigure(Vector2 position)
       {
-         /*
-          * int x =
-          */
+         
       }
       public void DeleteFigure(Vector2 position) 
       {
