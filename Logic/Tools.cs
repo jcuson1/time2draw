@@ -8,6 +8,7 @@ namespace Logic
 {
    internal class Tools
    {
-      public enum PaintTools { AddFigure, DeleteFigure, StretchFigure, RotateFigure, FillColorFigure, BorderColorFigure, Save, Load, Undo, Redo };
-   }
+      public enum PaintTools { AddFigure, DeleteFigure, StretchFigure, RotateFigure, FillColorFigure, BorderColorFigure, Undo, Redo };
+      public enum IOTools { Save, Load };
+    }
 }
