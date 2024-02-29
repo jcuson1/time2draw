@@ -6,3 +6,12 @@ C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.Assembly
 C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
 C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.dll
 C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.pdb
+C:\Users\artyo\Downloads\time2draw-main\Test\bin\Debug\net472\Test.dll
+C:\Users\artyo\Downloads\time2draw-main\Test\bin\Debug\net472\Test.pdb
+C:\Users\artyo\Downloads\time2draw-main\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+C:\Users\artyo\Downloads\time2draw-main\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\artyo\Downloads\time2draw-main\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+C:\Users\artyo\Downloads\time2draw-main\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+C:\Users\artyo\Downloads\time2draw-main\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+C:\Users\artyo\Downloads\time2draw-main\Test\obj\Debug\net472\Test.dll
+C:\Users\artyo\Downloads\time2draw-main\Test\obj\Debug\net472\Test.pdb

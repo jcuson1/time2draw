@@ -6,3 +6,12 @@ C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.Assemb
 C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
 C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.dll
 C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.pdb
+C:\Users\artyo\Downloads\time2draw-main\Logic\bin\Debug\net472\Logic.dll
+C:\Users\artyo\Downloads\time2draw-main\Logic\bin\Debug\net472\Logic.pdb
+C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.csproj.AssemblyReference.cache
+C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.AssemblyInfoInputs.cache
+C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.AssemblyInfo.cs
+C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
+C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.dll
+C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.pdb
