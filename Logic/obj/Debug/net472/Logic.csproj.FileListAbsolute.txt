@@ -15,3 +15,12 @@ C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.AssemblyInf
 C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
 C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.dll
 C:\Users\artyo\Downloads\time2draw-main\Logic\obj\Debug\net472\Logic.pdb
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\bin\Debug\net472\Logic.dll
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\bin\Debug\net472\Logic.pdb
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\obj\Debug\net472\Logic.csproj.AssemblyReference.cache
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\obj\Debug\net472\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\obj\Debug\net472\Logic.AssemblyInfoInputs.cache
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\obj\Debug\net472\Logic.AssemblyInfo.cs
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\obj\Debug\net472\Logic.dll
+C:\Users\Даша\Documents\GitHub\time2draw\Logic\obj\Debug\net472\Logic.pdb

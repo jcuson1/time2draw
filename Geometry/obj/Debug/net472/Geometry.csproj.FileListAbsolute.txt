@@ -15,3 +15,12 @@ C:\Users\artyo\Downloads\time2draw-main\Geometry\obj\Debug\net472\Geometry.Assem
 C:\Users\artyo\Downloads\time2draw-main\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
 C:\Users\artyo\Downloads\time2draw-main\Geometry\obj\Debug\net472\Geometry.dll
 C:\Users\artyo\Downloads\time2draw-main\Geometry\obj\Debug\net472\Geometry.pdb
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\bin\Debug\net472\Geometry.dll
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\bin\Debug\net472\Geometry.pdb
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.AssemblyReference.cache
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfoInputs.cache
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.dll
+C:\Users\Даша\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.pdb
