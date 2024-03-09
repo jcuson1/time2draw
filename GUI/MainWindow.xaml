@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
         Title="Time2Draw" Height="600" Width="800">
-	<Grid>
-		<DockPanel Height="65" LastChildFill="False" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Left" Width="700"  >
-			<Button Name="lineButton" Content="Line" Width="60" Click="lineButton_Click"/>
-			<Button Name="ellipseButton" Content="Ellipse" Width="60" Click="ellipsseButton_Click"/>
-			<Button Name="rectangleButton" Content="Rectangle" Width="60" Click="rectButton_Click"/>
-		</DockPanel>
-		<Canvas x:Name="paintSurface" HorizontalAlignment="Stretch"  Margin="0,65,0,0" VerticalAlignment="Stretch" Background="White" MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"  />
-	</Grid>
+    <Grid>
+        <DockPanel Height="65" LastChildFill="False" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Left" Width="700"  >
+            <Button Name="lineButton" Content="Line" Width="60" Click="lineButton_Click"/>
+            <Button Name="ellipseButton" Content="Ellipse" Width="60" Click="ellipsseButton_Click"/>
+            <Button Name="rectangleButton" Content="Rectangle" Width="60" Click="rectButton_Click"/>
+        </DockPanel>
+        <Canvas x:Name="paintSurface" HorizontalAlignment="Stretch"  Margin="0,65,0,0" VerticalAlignment="Stretch" Background="White" MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"  />
+    </Grid>
 </Window>

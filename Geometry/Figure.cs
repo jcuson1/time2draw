@@ -17,7 +17,7 @@ namespace Geometry
     public class Figure
     {
         public List<Point> points;  // Точки
-        public double angle;        // (0; 2pi] - угол поворота
+        public double angle;        // Угол поворота в градусах
         public string type;         // Тип фигуры (эллипс, прямая, ломанная)
         public byte fill_R, fill_G, fill_B;                     // Цвет заливки
         public byte rectFill_R, rectFill_G, rectFill_B;         // Цвет рамки
@@ -35,3 +35,4 @@ namespace Geometry
         }
     }
 }
+

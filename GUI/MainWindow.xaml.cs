@@ -17,44 +17,45 @@ using Point = Geometry.Point;
 
 namespace GUI
 {
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
-			InitializeComponent();
-		}
-		bool firstClick = true;
-		Point p1, p2;
-		string selectedType = "line";
+    public partial class MainWindow : Window
+    {   
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+        bool firstClick = true;
+        Point p1, p2;
+        string selectedType = "line";
 
-		private void lineButton_Click(object sender, RoutedEventArgs e)
-		{
-			selectedType = "line";
-		}
+        private void lineButton_Click(object sender, RoutedEventArgs e)
+        {
+            selectedType = "line";
+        }
 
-		private void ellipsseButton_Click(object sender, RoutedEventArgs e)
-		{
-			selectedType = "ellipse";
-		}
+        private void ellipsseButton_Click(object sender, RoutedEventArgs e)
+        {
+            selectedType = "ellipse";
+        }
 
-		private void rectButton_Click(object sender, RoutedEventArgs e)
-		{
-			selectedType = "rectangle";
-		}
+        private void rectButton_Click(object sender, RoutedEventArgs e)
+        {
+            selectedType = "rectangle";
+        }
 
-		private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-		{
-			if (firstClick)
-			{
-				p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-				firstClick = false;
-			}
-			else
-			{
-				p2 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-				firstClick = true;
-				Drawer.addFigure(p1, p2, selectedType, paintSurface);
-			}
-		}
-	}
+        private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Затычка
+            if (firstClick)
+            {
+                p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
+                firstClick = false;
+            }
+            else
+            {
+                p2 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
+                firstClick = true;
+                Drawer.addFigure(p1, p2, selectedType, paintSurface);
+            }
+        }
+    }
 }

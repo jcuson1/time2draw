@@ -45,6 +45,10 @@ namespace GUI
                         el.Width = Math.Abs(Figures[i].points[1].x - Figures[i].points[0].x);
                         el.Height = Math.Abs(Figures[i].points[1].y - Figures[i].points[0].y);
                         el.StrokeThickness = Figures[i].rectWidth;
+                        RotateTransform rotateEllipse = new RotateTransform(Figures[i].angle);
+                        rotateEllipse.CenterX = el.Width / 2;
+                        rotateEllipse.CenterY = el.Height / 2;
+                        el.RenderTransform = rotateEllipse;
                         canvas.Children.Add(el);
                         break;
                     case "rectangle":
@@ -58,6 +62,10 @@ namespace GUI
                         r.Width = Math.Abs(Figures[i].points[1].x - Figures[i].points[0].x);
                         r.Height = Math.Abs(Figures[i].points[1].y - Figures[i].points[0].y);
                         r.StrokeThickness = Figures[i].rectWidth;
+                        RotateTransform rotateRect = new RotateTransform(Figures[i].angle);
+                        rotateRect.CenterX = r.Width / 2;
+                        rotateRect.CenterY = r.Height / 2;
+                        r.RenderTransform = rotateRect;
                         canvas.Children.Add(r);
                         break;
                 }
@@ -71,6 +79,7 @@ namespace GUI
             fig1.rectWidth = 2.0;
             fig1.setFill(50, 255, 10);
             fig1.setRectFill(0, 0, 0);
+            fig1.setAngle(45);
             Figures.Add(fig1);
             indFigures++;
             draw(canvas);
