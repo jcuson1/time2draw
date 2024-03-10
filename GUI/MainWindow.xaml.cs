@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Geometry;
-using IO;
-using Logic;
 using Point = Geometry.Point;
 
-namespace GUI
+namespace Time2Draw
 {
+    /// <summary>
+    /// Логика взаимодействия для MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
-    {   
+    {
         public MainWindow()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace GUI
             selectedType = "line";
         }
 
-        private void ellipsseButton_Click(object sender, RoutedEventArgs e)
+        private void ellipseButton_Click(object sender, RoutedEventArgs e)
         {
             selectedType = "ellipse";
         }
@@ -54,8 +56,9 @@ namespace GUI
             {
                 p2 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
                 firstClick = true;
-                Drawer.addFigure(p1, p2, selectedType, paintSurface);
+                GUI.Drawer.addFigure(p1, p2, selectedType, paintSurface);
             }
         }
     }
+
 }

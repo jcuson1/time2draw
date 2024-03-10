@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\IO\\IO.csproj",
+      "projectUniqueName": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\IO\\IO.csproj",
+      "projectPath": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
       "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\IO\\obj\\",
+      "outputPath": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -24,3 +24,11 @@ C:\Users\Andrey\Source\Repos\time2draw\Geometry\obj\Debug\net472\Geometry.Assemb
 C:\Users\Andrey\Source\Repos\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
 C:\Users\Andrey\Source\Repos\time2draw\Geometry\obj\Debug\net472\Geometry.dll
 C:\Users\Andrey\Source\Repos\time2draw\Geometry\obj\Debug\net472\Geometry.pdb
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\bin\Debug\net472\Geometry.dll
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\bin\Debug\net472\Geometry.pdb
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfoInputs.cache
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.dll
+C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.pdb

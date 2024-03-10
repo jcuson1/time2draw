@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\Test\\Test.csproj": {}
+    "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\Test\\Test.csproj": {
+    "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andrey\\Source\\Repos\\time2draw\\Test\\obj\\",
+        "outputPath": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

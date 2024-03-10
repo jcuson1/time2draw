@@ -77,9 +77,9 @@ namespace GUI
             fig1.type = selectedType;
             fig1.points = new List<Point>() { p1, p2 };
             fig1.rectWidth = 2.0;
-            fig1.setFill(50, 255, 10);
+            fig1.setFill(255, 255, 255);
             fig1.setRectFill(0, 0, 0);
-            fig1.setAngle(45);
+            fig1.setAngle(0);
             Figures.Add(fig1);
             indFigures++;
             draw(canvas);
