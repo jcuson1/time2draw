@@ -6,3 +6,12 @@ C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.Assembly
 C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
 C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.dll
 C:\Users\Андрей\source\repos\Time2Draw\Test\obj\Debug\net472\Test.pdb
+C:\hz\учеба\СКТ\Test\bin\Debug\net472\Test.dll
+C:\hz\учеба\СКТ\Test\bin\Debug\net472\Test.pdb
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.dll
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.pdb

@@ -6,3 +6,12 @@ C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.Assemb
 C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
 C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.dll
 C:\Users\Андрей\source\repos\Time2Draw\Logic\obj\Debug\net472\Logic.pdb
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.csproj.AssemblyReference.cache
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.AssemblyInfoInputs.cache
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.AssemblyInfo.cs
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.dll
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.pdb
+C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Logic.dll
+C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Logic.pdb

@@ -13,11 +13,11 @@ namespace Logic
 
       public void Save()
       {
-         SelectedTool = Tools.PaintTools.Save;
+       
       }
       public void Load() 
       {
-         SelectedTool = Tools.PaintTools.Load;
+    
       }
       public void Undo()
       {
