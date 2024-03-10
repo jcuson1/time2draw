@@ -175,6 +175,9 @@
 
         <Canvas Name="paintSurface"
                 MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"
+                MouseRightButtonDown="paintSurface_MouseRightButtonDown"
+                MouseLeftButtonUp="paintSurface_MouseLeftButtonUp"
+                MouseMove="paintSurface_MouseMove"
                 Grid.Row="2" 
                 Grid.Column="1"  
                 Background="White"

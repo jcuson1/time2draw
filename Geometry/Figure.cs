@@ -6,8 +6,6 @@ namespace Geometry
 {
     public class Point
     {
-        public string colorName;      // Имя цвета
-        public int r, g, b;           // Значения RGB цвета
         public int x, y;
         public Point(int X, int Y)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Geometry;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -13,9 +14,9 @@ namespace Logic
       public static FigureFabric instance;
 
       
-      public void AddFigure(Point position)
+      public void AddFigure(Point p1)
       {
-         
+
       }
       public void DeleteFigure(Point position) 
       {
