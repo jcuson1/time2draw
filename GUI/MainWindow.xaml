@@ -70,8 +70,11 @@
                 Grid.Row="2" 
                 ToolTip="Прямая" 
                 Style="{StaticResource SideButton}" 
-                Click="lineButton_Click"/>
-        
+                Click="lineButton_Click" Visibility="Visible">
+            <Image Source="Resources/линия(отрезок).png" Visibility="Visible"></Image>
+        </Button>
+
+
         <Button x:Name="Point" 
                 Grid.Row="2" 
                 ToolTip="Точка"

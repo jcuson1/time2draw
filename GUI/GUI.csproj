@@ -104,6 +104,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,6 +143,48 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bezier-curve %28кривая безье%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color-picker%28выбор цвета%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hexagon многоугольник.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\градиентная заливка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\линия%28отрезок%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\прямоугольник.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\текст text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\толщина линии.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\точка%28ручка%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\эллипс.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
