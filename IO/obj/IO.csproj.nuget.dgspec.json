@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\IO.csproj": {}
+    "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\IO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\IO.csproj": {
+    "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\IO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\IO.csproj",
+        "projectUniqueName": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
         "projectName": "IO",
-        "projectPath": "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\IO.csproj",
-        "packagesPath": "C:\\Users\\artyo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\obj\\",
+        "projectPath": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
+        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andrey\\Documents\\GitHub\\time2draw\\IO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\artyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,7 +43,7 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
