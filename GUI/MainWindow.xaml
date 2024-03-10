@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
         Title="Time2Draw" Height="600" Width="800">
-    <Canvas Name="mainCanvas" Background="White" Focusable="True" MouseLeftButtonDown="ClickCanvas">
-        
-    </Canvas>
+    <Grid>
+        <DockPanel Height="65" LastChildFill="False" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Left" Width="700"  />
+        <Canvas x:Name="paintSurface" HorizontalAlignment="Stretch"  Margin="0,65,0,0" VerticalAlignment="Stretch" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" MouseDown="PaintSurface_MouseDown" MouseMove="PaintSurface_MouseMove" MouseUp="PaintSurface_MouseUp" />
+    </Grid>
 </Window>

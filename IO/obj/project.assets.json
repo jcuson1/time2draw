@@ -8,23 +8,23 @@
     ".NETFramework,Version=v4.7.2": []
   },
   "packageFolders": {
-    "C:\\Users\\LemeshKING\\.nuget\\packages\\": {},
+    "C:\\Users\\artyo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\hz\\учеба\\СКТ\\IO\\IO.csproj",
+      "projectUniqueName": "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "C:\\hz\\учеба\\СКТ\\IO\\IO.csproj",
-      "packagesPath": "C:\\Users\\LemeshKING\\.nuget\\packages\\",
-      "outputPath": "C:\\hz\\учеба\\СКТ\\IO\\obj\\",
+      "projectPath": "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\artyo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\artyo\\Downloads\\time2draw-main\\IO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\LemeshKING\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\artyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -51,7 +50,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -5,40 +5,169 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Time2Draw"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="900">
+    <Window.Resources>
+        <Style x:Key="TopButton">
+            <Setter Property="Control.Background" Value="#FFC7C7C7" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.Width" Value="100" />
+            <Setter Property="Control.BorderBrush" Value="#FFC7C7C7" />
+        </Style>
+        <Style x:Key="SideButton">
+            <Setter Property="Control.Background" Value="#FFE0E0E0" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+            <Setter Property="Control.VerticalAlignment" Value="Top" />
+            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.Width" Value="30" />
+            <Setter Property="Control.BorderBrush" Value="#FFADADAD" />
+        </Style>
+        <Style x:Key="CenterButton">
+            <Setter Property="Control.Background" Value="#FFE0E0E0" />
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.Width" Value="30" />
+            <Setter Property="Control.BorderBrush" Value="#FFE0E0E0" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Canvas Height="300" Width="300">
-            <!-- Draws a diagonal line from (10,10) to (50,50). -->
-            <Line
-    X1="10" Y1="10"
-    X2="50" Y2="50"
-    Stroke="Black"
-    StrokeThickness="4" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-            <!-- Draws a diagonal line from (10,10) to (50,50)
-       and moves it 100 pixels to the right. -->
-            <Line
-    X1="10" Y1="10"
-    X2="50" Y2="50"
-    StrokeThickness="4"
-    Canvas.Left="100">
-                <Line.Stroke>
-                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
-                        <RadialGradientBrush.GradientStops>
-                            <GradientStop Color="Red" Offset="0" />
-                            <GradientStop Color="Blue" Offset="0.25" />
-                        </RadialGradientBrush.GradientStops>
-                    </RadialGradientBrush>
-                </Line.Stroke>
-            </Line>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
-            <!-- Draws a horizontal line from (10,60) to (150,60). -->
-            <Line
-     X1="10" Y1="60"
-     X2="150" Y2="60"
-     Stroke="Black"
-     StrokeThickness="4"/>
+        <Border  Grid.Row="0" Grid.Column="0" Background="#FFC7C7C7" />
+        <Border  Grid.Row="0" Grid.Column="1" Background="#FFC7C7C7" />
+        <Border  Grid.Row="1" Grid.Column="1" Background="#FFE0E0E0" />
+        <Border  Grid.Row="1" Grid.Column="0" Background="#FFE0E0E0" />
+        <Border  Grid.Row="2" Grid.Column="0" Background="#FFE0E0E0" />
 
-        </Canvas>
+        <Button x:Name="LoadButton" 
+                Content="Загрузить" 
+                Grid.Column="1"
+                Style="{StaticResource TopButton}"/>
+        <Button x:Name="SafeButton" 
+                Content="Сохранить" 
+                Margin="100,0,0,0" 
+                Grid.Column="1"
+                Style="{StaticResource TopButton}"/>
+        <Button x:Name="HelpButton"  
+                Width="100" 
+                Content="Помощь" 
+                Margin="200,0,0,0" 
+                Grid.Column="1"
+                Style="{StaticResource TopButton}"/>
+
+        <Button x:Name="LineSegment" 
+                Grid.Row="2" 
+                ToolTip="Прямая" 
+                Style="{StaticResource SideButton}" />
+        <Button x:Name="Point" 
+                Grid.Row="2" 
+                ToolTip="Точка"
+                Style="{StaticResource SideButton}" 
+                Margin="0,30,0,0" />
+        <Button x:Name="Circle" 
+                Grid.Row="2" 
+                ToolTip="Окружность"
+                Style="{StaticResource SideButton}" 
+                Margin="0,60,0,0" />
+        <Button x:Name="Ellipse" 
+                Grid.Row="2" 
+                ToolTip="Эллипс"
+                Style="{StaticResource SideButton}" 
+                Margin="0,90,0,0" />
+        <Button x:Name="Rectangle" 
+                Grid.Row="2" 
+                ToolTip="Прямоугольник"
+                Style="{StaticResource SideButton}" 
+                Margin="0,120,0,0" />
+        <Button x:Name="Polygon" 
+                Grid.Row="2" 
+                ToolTip="Многоугольник"
+                Style="{StaticResource SideButton}" 
+                Margin="0,150,0,0" />
+        <Button x:Name="BezierCurve" 
+                Grid.Row="2" 
+                ToolTip="Кривая Безье"
+                Style="{StaticResource SideButton}" 
+                Margin="0,180,0,0" />
+        <Button x:Name="FillBucket" 
+                Grid.Row="2" 
+                ToolTip="Заливка"
+                Style="{StaticResource SideButton}" 
+                Margin="0,222,0,0"/>
+        <Button x:Name="ColourPicker" 
+                Grid.Row="2" 
+                ToolTip="Выбор цвета"
+                Style="{StaticResource SideButton}" 
+                Margin="0,252,0,0" />
+        <Button x:Name="Text" 
+                Grid.Row="2" 
+                ToolTip="Текст"
+                Style="{StaticResource SideButton}" 
+                Margin="0,282,0,0" />
+
+        <Button x:Name="GoBack" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                ToolTip="Отменить действие" 
+                Content="BB"
+                Style="{StaticResource CenterButton}" 
+                Margin="10,0,0,0"/>
+        <Button x:Name="GoForward" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                ToolTip="Вернуть действие" 
+                Content="FF"
+                Style="{StaticResource CenterButton}" 
+                Margin="40,0,0,0"/>
+
+        <ComboBox Grid.Column="1" 
+                  Width="100" 
+                  Height="20" 
+                  Margin="134,0,0,0" 
+                  Grid.Row="1"
+                  VerticalAlignment="Center" 
+                  HorizontalAlignment="Left">
+            <TextBlock>50%</TextBlock>
+            <TextBlock>75%</TextBlock>
+            <TextBlock>100%</TextBlock>
+            <TextBlock>125%</TextBlock>
+            <TextBlock>150%</TextBlock>
+            <TextBlock>200%</TextBlock>
+        </ComboBox>
+        
+        <TextBlock Grid.Row="1" 
+                   Grid.Column="1" 
+                   Style="{StaticResource CenterButton}" 
+                   Width="55"
+                   Height="20"
+                   Margin="266,0,0,0">
+            Толщина
+        </TextBlock>
+        
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Width="40"
+                 Height="20"
+                 MaxLength="3" 
+                 VerticalAlignment="Center" 
+                 HorizontalAlignment="Left" 
+                 Margin="326,0,0,0"
+        />
+
+        <Canvas Grid.Row="2" 
+                Grid.Column="1"  
+                Background="White"
+        />
     </Grid>
 </Window>
