@@ -5,12 +5,14 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using Point = Geometry.Point;
+
 
 namespace Logic
 {
    internal class Clicker
    {
-      public void OnClick(Vector2 cords) 
+      public void OnClick(Point cords) 
       {
             switch (GUIHandler.instance.SelectedTool)
             {

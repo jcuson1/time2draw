@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-   internal class GUIHandler:iGUIHandler
+   public class GUIHandler:iGUIHandler
    {
       public static GUIHandler instance;
       public Tools.PaintTools SelectedTool;

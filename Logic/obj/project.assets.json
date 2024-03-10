@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.7.2": {}
+    ".NETFramework,Version=v4.7.2": {
+      "Geometry/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "compile": {
+          "bin/placeholder/Geometry.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Geometry.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Geometry/1.0.0": {
+      "type": "project",
+      "path": "../Geometry/Geometry.csproj",
+      "msbuildProject": "../Geometry/Geometry.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.7.2": []
+    ".NETFramework,Version=v4.7.2": [
+      "Geometry >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\LemeshKING\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\hz\\учеба\\СКТ\\Geometry\\Geometry.csproj": {
+              "projectPath": "C:\\hz\\учеба\\СКТ\\Geometry\\Geometry.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

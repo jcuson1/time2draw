@@ -15,3 +15,6 @@ C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.dll
 C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.pdb
 C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Logic.dll
 C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Logic.pdb
+C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Geometry.dll
+C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Geometry.pdb
+C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.csproj.CopyComplete

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using Point = Geometry.Point;
 
 namespace Logic
 {
@@ -12,23 +13,23 @@ namespace Logic
       public static FigureFabric instance;
 
       
-      public void AddFigure(Vector2 position)
+      public void AddFigure(Point position)
       {
          
       }
-      public void DeleteFigure(Vector2 position) 
+      public void DeleteFigure(Point position) 
       {
          
       }
-      public void ChangeFigure(Vector2 position)
+      public void ChangeFigure(Point position)
       {
 
       }
-      public void CopyFigure(Vector2 position)
+      public void CopyFigure(Point position)
       {
 
       }
-      public void PasteFigure(Vector2 position)
+      public void PasteFigure(Point position)
       {
 
       }
