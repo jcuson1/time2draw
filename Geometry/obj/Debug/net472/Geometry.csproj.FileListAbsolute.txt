@@ -41,3 +41,13 @@ C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
 C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
 C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.dll
 C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.pdb
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\bin\Debug\net472\Geometry.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\bin\Debug\net472\Geometry.pdb
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.AssemblyReference.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfoInputs.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.sourcelink.json
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\obj\Debug\net472\Geometry.pdb

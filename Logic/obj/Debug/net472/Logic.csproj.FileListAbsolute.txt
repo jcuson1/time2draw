@@ -18,3 +18,16 @@ C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Logic.pdb
 C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Geometry.dll
 C:\hz\учеба\СКТ\Logic\bin\Debug\net472\Geometry.pdb
 C:\hz\учеба\СКТ\Logic\obj\Debug\net472\Logic.csproj.CopyComplete
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\bin\Debug\net472\Logic.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\bin\Debug\net472\Logic.pdb
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\bin\Debug\net472\Geometry.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\bin\Debug\net472\Geometry.pdb
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.csproj.AssemblyReference.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.AssemblyInfoInputs.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.AssemblyInfo.cs
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.sourcelink.json
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.csproj.CopyComplete
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\obj\Debug\net472\Logic.pdb

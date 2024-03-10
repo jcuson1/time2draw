@@ -70,7 +70,7 @@
                 Grid.Row="2" 
                 ToolTip="Прямая" 
                 Style="{StaticResource SideButton}" 
-                Click="lineButton_Click" Visibility="Visible">
+                Click="lineButton_Click">
             <Image Source="Resources/линия(отрезок).png" Visibility="Visible"></Image>
         </Button>
 
@@ -79,68 +79,95 @@
                 Grid.Row="2" 
                 ToolTip="Точка"
                 Style="{StaticResource SideButton}" 
-                Margin="0,30,0,0" />
-        
+                Margin="0,30,0,0" >
+            <Image Source="Resources/точка(ручка).png" Visibility="Visible"></Image>
+        </Button>
+
+
+
         <Button x:Name="Circle" 
                 Grid.Row="2" 
                 ToolTip="Окружность"
                 Style="{StaticResource SideButton}" 
-                Margin="0,60,0,0" />
-        
+                Margin="0,60,0,0" >
+            <Image Source="Resources/circle.png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="Ellipse" 
                 Grid.Row="2" 
                 ToolTip="Эллипс"
                 Style="{StaticResource SideButton}" 
                 Margin="0,90,0,0" 
-                Click="ellipseButton_Click"/>
-        
+                Click="ellipseButton_Click">
+            <Image Source="Resources/эллипс.png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="Rectangle" 
                 Grid.Row="2" 
                 ToolTip="Прямоугольник"
                 Style="{StaticResource SideButton}" 
                 Margin="0,120,0,0" 
-                Click="rectButton_Click"/>
-        
+                Click="rectButton_Click">
+            <Image Source="Resources/прямоугольник.png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="Polygon" 
                 Grid.Row="2" 
                 ToolTip="Многоугольник"
                 Style="{StaticResource SideButton}" 
-                Margin="0,150,0,0" />
+                Margin="0,150,0,0">
+            <Image Source="Resources/hexagon многоугольник.png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="BezierCurve" 
                 Grid.Row="2" 
                 ToolTip="Кривая Безье"
                 Style="{StaticResource SideButton}" 
-                Margin="0,180,0,0" />
+                Margin="0,180,0,0" >
+            <Image Source="Resources/bezier-curve (кривая безье).png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="FillBucket" 
                 Grid.Row="2" 
                 ToolTip="Заливка"
                 Style="{StaticResource SideButton}" 
-                Margin="0,222,0,0"/>
+                Margin="0,222,0,0">
+            <Image Source="Resources/градиентная заливка.png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="ColourPicker" 
                 Grid.Row="2" 
                 ToolTip="Выбор цвета"
                 Style="{StaticResource SideButton}" 
-                Margin="0,252,0,0" />
+                Margin="0,252,0,0" >
+            <Image Source="Resources/color-picker(выбор цвета).png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="Text" 
                 Grid.Row="2" 
                 ToolTip="Текст"
                 Style="{StaticResource SideButton}" 
-                Margin="0,282,0,0" />
+                Margin="0,282,0,0" >
+            <Image Source="Resources/текст text.png" Visibility="Visible"></Image>
+        </Button>
 
         <Button x:Name="GoBack" 
                 Grid.Row="1" 
                 Grid.Column="1" 
                 ToolTip="Отменить действие" 
-                Content="BB"
                 Style="{StaticResource CenterButton}" 
-                Margin="10,0,0,0"/>
+                Margin="10,0,0,0">
+            <Image Source="Resources/back.png" Visibility="Visible"></Image>
+        </Button>
+
         <Button x:Name="GoForward" 
                 Grid.Row="1" 
                 Grid.Column="1" 
                 ToolTip="Вернуть действие" 
-                Content="FF"
                 Style="{StaticResource CenterButton}" 
-                Margin="40,0,0,0"/>
+                Margin="40,0,0,0">
+            <Image Source="Resources/forward.png" Visibility="Visible"></Image>
+        </Button>
 
         <ComboBox Grid.Column="1" 
                   Width="100" 

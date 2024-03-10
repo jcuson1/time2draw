@@ -145,46 +145,46 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back.png" />
+    <Resource Include="Resources\back.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bezier-curve %28кривая безье%29.png" />
+    <Resource Include="Resources\bezier-curve %28кривая безье%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\circle.png" />
+    <Resource Include="Resources\circle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\color-picker%28выбор цвета%29.png" />
+    <Resource Include="Resources\color-picker%28выбор цвета%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\forward.png" />
+    <Resource Include="Resources\forward.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hexagon многоугольник.png" />
+    <Resource Include="Resources\hexagon многоугольник.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\text.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\градиентная заливка.png" />
+    <Resource Include="Resources\градиентная заливка.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\линия%28отрезок%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\прямоугольник.png" />
+    <Resource Include="Resources\прямоугольник.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\текст text.png" />
+    <Resource Include="Resources\текст text.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\толщина линии.png" />
+    <Resource Include="Resources\толщина линии.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\точка%28ручка%29.png" />
+    <Resource Include="Resources\точка%28ручка%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\эллипс.png" />
+    <Resource Include="Resources\эллипс.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
