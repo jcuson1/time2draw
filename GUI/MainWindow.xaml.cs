@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Logic;
 using Point = Geometry.Point;
 
 namespace Time2Draw
@@ -32,16 +33,19 @@ namespace Time2Draw
         private void lineButton_Click(object sender, RoutedEventArgs e)
         {
             selectedType = "line";
+            GUIHandler.instance.AddFigure();
         }
 
         private void ellipseButton_Click(object sender, RoutedEventArgs e)
         {
             selectedType = "ellipse";
+            GUIHandler.instance.AddFigure();
         }
 
         private void rectButton_Click(object sender, RoutedEventArgs e)
         {
             selectedType = "rectangle";
+            GUIHandler.instance.AddFigure();
         }
 
         private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

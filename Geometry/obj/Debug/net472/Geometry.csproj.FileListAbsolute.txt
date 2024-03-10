@@ -32,3 +32,12 @@ C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.As
 C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
 C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.dll
 C:\Users\Andrey\Documents\GitHub\time2draw\Geometry\obj\Debug\net472\Geometry.pdb
+C:\hz\учеба\СКТ\Geometry\bin\Debug\net472\Geometry.dll
+C:\hz\учеба\СКТ\Geometry\bin\Debug\net472\Geometry.pdb
+C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.csproj.AssemblyReference.cache
+C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.AssemblyInfoInputs.cache
+C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
+C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
+C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.dll
+C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.pdb
