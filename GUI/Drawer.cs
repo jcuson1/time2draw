@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -15,7 +16,7 @@ namespace GUI
         static List<Figure> Figures = new List<Figure>();
         static int indFigures = -1;
 
-        public static void draw(Canvas canvas)
+        public static void draw(Canvas canvas, MouseButtonState buttonState, int countFigure)
         {
             SolidColorBrush brStroke;
             SolidColorBrush brFill;
@@ -32,7 +33,13 @@ namespace GUI
                         brStroke = new SolidColorBrush(Color.FromRgb(Figures[i].rectFill_R, Figures[i].rectFill_G, Figures[i].rectFill_B));
                         ln.Stroke = brStroke;
                         ln.StrokeThickness = Figures[i].rectWidth;
+                        if (canvas.Children.Count > 0)
+                              if(canvas.Children.Count - countFigure == 2)
+                                 canvas.Children.RemoveAt(canvas.Children.Count - 1);
+                     if(buttonState == MouseButtonState.Pressed)   
                         canvas.Children.Add(ln);
+                        
+
                         break;
                     case "ellipse":
                         Ellipse el = new Ellipse();
@@ -49,7 +56,11 @@ namespace GUI
                         rotateEllipse.CenterX = el.Width / 2;
                         rotateEllipse.CenterY = el.Height / 2;
                         el.RenderTransform = rotateEllipse;
-                        canvas.Children.Add(el);
+                        if (canvas.Children.Count > 0)
+                           if (canvas.Children.Count - countFigure == 2)
+                                 canvas.Children.RemoveAt(canvas.Children.Count - 1);
+                        if (buttonState == MouseButtonState.Pressed)
+                           canvas.Children.Add(el);
                         break;
                     case "rectangle":
                         Rectangle r = new Rectangle();
@@ -66,12 +77,16 @@ namespace GUI
                         rotateRect.CenterX = r.Width / 2;
                         rotateRect.CenterY = r.Height / 2;
                         r.RenderTransform = rotateRect;
-                        canvas.Children.Add(r);
+                        if (canvas.Children.Count > 0)
+                           if (canvas.Children.Count - countFigure == 2)
+                              canvas.Children.RemoveAt(canvas.Children.Count - 1);
+                        if (buttonState == MouseButtonState.Pressed)
+                           canvas.Children.Add(r);
                         break;
                 }
             }
         }
-        public static void addFigure(Point p1, Point p2, string selectedType, Canvas canvas)
+        public static void addFigure(Point p1, Point p2, string selectedType, Canvas canvas, MouseButtonState buttonState, int countFigure)
         {
             Figure fig1 = new Figure();
             fig1.type = selectedType;
@@ -82,7 +97,7 @@ namespace GUI
             fig1.setAngle(0);
             Figures.Add(fig1);
             indFigures++;
-            draw(canvas);
+            draw(canvas, buttonState, countFigure);
         }
 
     }
