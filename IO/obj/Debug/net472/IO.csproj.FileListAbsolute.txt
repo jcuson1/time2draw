@@ -43,3 +43,11 @@ C:\hz\учеба\СКТ\IO\obj\Debug\net472\IO.AssemblyInfo.cs
 C:\hz\учеба\СКТ\IO\obj\Debug\net472\IO.csproj.CoreCompileInputs.cache
 C:\hz\учеба\СКТ\IO\obj\Debug\net472\IO.dll
 C:\hz\учеба\СКТ\IO\obj\Debug\net472\IO.pdb
+D:\UnityProj\time2draw\IO\bin\Debug\net472\IO.dll
+D:\UnityProj\time2draw\IO\bin\Debug\net472\IO.pdb
+D:\UnityProj\time2draw\IO\obj\Debug\net472\IO.csprojAssemblyReference.cache
+D:\UnityProj\time2draw\IO\obj\Debug\net472\IO.AssemblyInfoInputs.cache
+D:\UnityProj\time2draw\IO\obj\Debug\net472\IO.AssemblyInfo.cs
+D:\UnityProj\time2draw\IO\obj\Debug\net472\IO.csproj.CoreCompileInputs.cache
+D:\UnityProj\time2draw\IO\obj\Debug\net472\IO.dll
+D:\UnityProj\time2draw\IO\obj\Debug\net472\IO.pdb

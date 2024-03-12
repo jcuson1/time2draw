@@ -41,3 +41,11 @@ C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
 C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
 C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.dll
 C:\hz\учеба\СКТ\Geometry\obj\Debug\net472\Geometry.pdb
+D:\UnityProj\time2draw\Geometry\bin\Debug\net472\Geometry.dll
+D:\UnityProj\time2draw\Geometry\bin\Debug\net472\Geometry.pdb
+D:\UnityProj\time2draw\Geometry\obj\Debug\net472\Geometry.csprojAssemblyReference.cache
+D:\UnityProj\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfoInputs.cache
+D:\UnityProj\time2draw\Geometry\obj\Debug\net472\Geometry.AssemblyInfo.cs
+D:\UnityProj\time2draw\Geometry\obj\Debug\net472\Geometry.csproj.CoreCompileInputs.cache
+D:\UnityProj\time2draw\Geometry\obj\Debug\net472\Geometry.dll
+D:\UnityProj\time2draw\Geometry\obj\Debug\net472\Geometry.pdb
