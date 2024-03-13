@@ -93,25 +93,24 @@ namespace GUI
 
         public static void reDraw(Point p1, Point p2, string selectedType, Canvas canvas)
         {
-            Figure fig = new Figure();
-            //if (canvas.Children.Count > 0)
-                canvas.Children.RemoveAt(canvas.Children.Count - 1);
-            fig.type = selectedType;
-            fig.points = new List<Point>() { p1, p2 };
-            fig.rectWidth = 2.0;
-            fig.setFill(255, 255, 255);
-            fig.setRectFill(0, 0, 0);
-            fig.setAngle(0);
-            Figures.Add(fig);
+            canvas.Children.RemoveAt(canvas.Children.Count - 1);
+            addFigure(p1, p2, selectedType, canvas);
+        }
+
+        public static void rotateFigure(Point p1, Point p2, double angle,  string selectedType, Canvas canvas)
+        {
+            canvas.Children.RemoveAt(canvas.Children.Count - 1);
+            Figure fig1 = new Figure();
+            fig1.type = selectedType;
+            fig1.points = new List<Point>() { p1, p2 };
+            fig1.rectWidth = 2.0;
+            fig1.setFill(255, 255, 255);
+            fig1.setRectFill(0, 0, 0);
+            fig1.setAngle(angle);
+            Figures.Add(fig1);
             indFigures++;
             draw(canvas);
         }
-
-        //public static void rmLast(Canvas canvas, int countFigure)
-        //{
-        //    if(canvas.Children.Count - countFigure == 2)
-        //        canvas.Children.RemoveAt(canvas.Children.Count - 1);
-        //}
 
     }
 }

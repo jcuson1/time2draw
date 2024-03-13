@@ -123,7 +123,8 @@
                 Grid.Row="2" 
                 ToolTip="Кривая Безье"
                 Style="{StaticResource SideButton}" 
-                Margin="0,180,0,0" >
+                Margin="0,180,0,0" 
+                Click="rotateButton_Click">
             <Image Source="Resources/bezier-curve (кривая безье).png" Visibility="Visible"></Image>
         </Button>
 
