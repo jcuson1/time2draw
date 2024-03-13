@@ -23,6 +23,7 @@ namespace Time2Draw
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool redrawigFlag = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -49,70 +50,74 @@ namespace Time2Draw
 
         }
 
-      private void paintSurface_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
-      {
-         if (e.Source is Shape)
-         {
-            Shape shape = (Shape)e.Source;
-            Figure figure = new Figure();
-            int i = paintSurface.Children.IndexOf(shape);
-            paintSurface.Children.Remove(shape);
+        private void paintSurface_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.Source is Shape)
+            {
+                Shape shape = (Shape)e.Source;
+                Figure figure = new Figure();
+                int i = paintSurface.Children.IndexOf(shape);
+                paintSurface.Children.Remove(shape);
 
-         }
-      }
-      int countFigure = 0;
-      private void paintSurface_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-      {
-         countFigure++;
-         p2 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-         GUI.Drawer.addFigure(p1, p2, selectedType, paintSurface, e.LeftButton, countFigure);
+            }
+        }
+        int countFigure = 0;
+        private void paintSurface_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            countFigure++;
+            redrawigFlag = false;
+        }
 
-      }
+        private void paintSurface_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                if (!redrawigFlag)
+                {
+                    p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                    GUI.Drawer.addFigure(p1, p2, selectedType, paintSurface);
+                    redrawigFlag = true;
+                }
+                else
+                {
+                    p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                    GUI.Drawer.reDraw(p1, p2, selectedType, paintSurface);
+                }
 
-      private void paintSurface_MouseMove(object sender, MouseEventArgs e)
-      {
-         if (e.LeftButton == MouseButtonState.Pressed)
-         {
-            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
-            GUI.Drawer.addFigure(p1, p2, selectedType, paintSurface, e.LeftButton, countFigure);
-         }
-         else
-            return;
+        }
 
-      }
-
-      private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-      {
-         // Затычка
-        
-         p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-         if(e.Source is Shape)
-         {  
-            Shape shape = (Shape)e.Source;
-            Figure figure = new Figure();
-            figure.angle = ((RotateTransform)shape.RenderTransform).Angle;
-            int i = paintSurface.Children.IndexOf(shape);
-            var x = Canvas.GetLeft(shape);
-            var y = Canvas.GetTop(shape);
-            var x1 = x + shape.ActualWidth;
-            var y1 = y + shape.ActualHeight;
-            List<Point> points = new List<Point>();
-            Point p1 = new Point((int)x, (int )y);
-            Point p2 = new Point((int)x1, (int)y1);
-            points.Add(p1);
-            points.Add(p2);
-            figure.setPoints(points);
-            SolidColorBrush cl = (SolidColorBrush)shape.Fill;
-            SolidColorBrush clst = (SolidColorBrush)shape.Stroke;
-            figure.rectWidth = shape.StrokeThickness;
-            figure.fill_R = cl.Color.R;
-            figure.fill_B = cl.Color.B;
-            figure.fill_G = cl.Color.G;
-            figure.rectFill_R = clst.Color.R;
-            figure.rectFill_G = clst.Color.G;
-            figure.rectFill_B = clst.Color.B;
-         }
-      }
+        private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Затычка
+            redrawigFlag = false;
+            p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
+            if (e.Source is Shape)
+            {
+                Shape shape = (Shape)e.Source;
+                Figure figure = new Figure();
+                //figure.angle = ((RotateTransform)shape.RenderTransform).Angle;
+                int i = paintSurface.Children.IndexOf(shape);
+                var x = Canvas.GetLeft(shape);
+                var y = Canvas.GetTop(shape);
+                var x1 = x + shape.ActualWidth;
+                var y1 = y + shape.ActualHeight;
+                List<Point> points = new List<Point>();
+                Point p1 = new Point((int)x, (int)y);
+                Point p2 = new Point((int)x1, (int)y1);
+                points.Add(p1);
+                points.Add(p2);
+                figure.setPoints(points);
+                SolidColorBrush cl = (SolidColorBrush)shape.Fill;
+                SolidColorBrush clst = (SolidColorBrush)shape.Stroke;
+                figure.rectWidth = shape.StrokeThickness;
+                
+                figure.fill_R = cl.Color.R;
+                figure.fill_B = cl.Color.B;
+                figure.fill_G = cl.Color.G;
+                figure.rectFill_R = clst.Color.R;
+                figure.rectFill_G = clst.Color.G;
+                figure.rectFill_B = clst.Color.B;
+            }
+        }
     }
 
 }

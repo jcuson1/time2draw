@@ -16,7 +16,7 @@ namespace GUI
         static List<Figure> Figures = new List<Figure>();
         static int indFigures = -1;
 
-        public static void draw(Canvas canvas, MouseButtonState buttonState, int countFigure)
+        public static void draw(Canvas canvas)
         {
             SolidColorBrush brStroke;
             SolidColorBrush brFill;
@@ -33,12 +33,11 @@ namespace GUI
                         brStroke = new SolidColorBrush(Color.FromRgb(Figures[i].rectFill_R, Figures[i].rectFill_G, Figures[i].rectFill_B));
                         ln.Stroke = brStroke;
                         ln.StrokeThickness = Figures[i].rectWidth;
-                        if (canvas.Children.Count > 0)
-                              if(canvas.Children.Count - countFigure == 2)
-                                 canvas.Children.RemoveAt(canvas.Children.Count - 1);
-                     if(buttonState == MouseButtonState.Pressed)   
+                        //if (canvas.Children.Count > 0)
+                        //      if(canvas.Children.Count - countFigure == 1)
+                        //         canvas.Children.RemoveAt(canvas.Children.Count - 1);
                         canvas.Children.Add(ln);
-                        
+
 
                         break;
                     case "ellipse":
@@ -56,11 +55,7 @@ namespace GUI
                         rotateEllipse.CenterX = el.Width / 2;
                         rotateEllipse.CenterY = el.Height / 2;
                         el.RenderTransform = rotateEllipse;
-                        if (canvas.Children.Count > 0)
-                           if (canvas.Children.Count - countFigure == 2)
-                                 canvas.Children.RemoveAt(canvas.Children.Count - 1);
-                        if (buttonState == MouseButtonState.Pressed)
-                           canvas.Children.Add(el);
+                        canvas.Children.Add(el);
                         break;
                     case "rectangle":
                         Rectangle r = new Rectangle();
@@ -77,16 +72,12 @@ namespace GUI
                         rotateRect.CenterX = r.Width / 2;
                         rotateRect.CenterY = r.Height / 2;
                         r.RenderTransform = rotateRect;
-                        if (canvas.Children.Count > 0)
-                           if (canvas.Children.Count - countFigure == 2)
-                              canvas.Children.RemoveAt(canvas.Children.Count - 1);
-                        if (buttonState == MouseButtonState.Pressed)
-                           canvas.Children.Add(r);
+                        canvas.Children.Add(r);
                         break;
                 }
             }
         }
-        public static void addFigure(Point p1, Point p2, string selectedType, Canvas canvas, MouseButtonState buttonState, int countFigure)
+        public static void addFigure(Point p1, Point p2, string selectedType, Canvas canvas)
         {
             Figure fig1 = new Figure();
             fig1.type = selectedType;
@@ -97,8 +88,30 @@ namespace GUI
             fig1.setAngle(0);
             Figures.Add(fig1);
             indFigures++;
-            draw(canvas, buttonState, countFigure);
+            draw(canvas);
         }
+
+        public static void reDraw(Point p1, Point p2, string selectedType, Canvas canvas)
+        {
+            Figure fig = new Figure();
+            //if (canvas.Children.Count > 0)
+                canvas.Children.RemoveAt(canvas.Children.Count - 1);
+            fig.type = selectedType;
+            fig.points = new List<Point>() { p1, p2 };
+            fig.rectWidth = 2.0;
+            fig.setFill(255, 255, 255);
+            fig.setRectFill(0, 0, 0);
+            fig.setAngle(0);
+            Figures.Add(fig);
+            indFigures++;
+            draw(canvas);
+        }
+
+        //public static void rmLast(Canvas canvas, int countFigure)
+        //{
+        //    if(canvas.Children.Count - countFigure == 2)
+        //        canvas.Children.RemoveAt(canvas.Children.Count - 1);
+        //}
 
     }
 }
