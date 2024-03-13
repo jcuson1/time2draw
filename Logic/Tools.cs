@@ -15,6 +15,8 @@ namespace Logic
          AddRect, 
          AddElips, 
          AddPolygon, 
+         ChoisingFigure,
+         MovingFigure,
          DeleteFigure, 
          StretchFigure, 
          RotateFigure, 
