@@ -12,7 +12,11 @@ namespace Logic
       void Load();
       void Undo();
       void Redo();
-      void AddFigure();
+      void AddLine();
+      void AddRect();
+      void AddElips();
+      void AddPolygon();
+      void AddCircle();
       void StretchFigure();
       void RotateFigure();
       void FillColorFigure();

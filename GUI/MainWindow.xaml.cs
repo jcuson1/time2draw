@@ -24,9 +24,11 @@ namespace Time2Draw
     public partial class MainWindow : Window
     {
         bool redrawigFlag = false;
+        
         public MainWindow()
         {
             InitializeComponent();
+            GUIHandler.GetInstance();
         }
         bool firstClick = true;
         Point p1, p2;
@@ -35,19 +37,19 @@ namespace Time2Draw
         private void lineButton_Click(object sender, RoutedEventArgs e)
         {
             selectedType = "line";
-
+            GUIHandler.instance.AddLine();
         }
 
         private void ellipseButton_Click(object sender, RoutedEventArgs e)
         {
             selectedType = "ellipse";
-
+            GUIHandler.instance.AddElips();
         }
 
         private void rectButton_Click(object sender, RoutedEventArgs e)
         {
             selectedType = "rectangle";
-
+            GUIHandler.instance.AddRect();
         }
 
         private void paintSurface_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -88,35 +90,57 @@ namespace Time2Draw
         private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // Затычка
-            redrawigFlag = false;
-            p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-            if (e.Source is Shape)
+            switch(GUIHandler.instance.SelectedTool)
             {
-                Shape shape = (Shape)e.Source;
-                Figure figure = new Figure();
-                //figure.angle = ((RotateTransform)shape.RenderTransform).Angle;
-                int i = paintSurface.Children.IndexOf(shape);
-                var x = Canvas.GetLeft(shape);
-                var y = Canvas.GetTop(shape);
-                var x1 = x + shape.ActualWidth;
-                var y1 = y + shape.ActualHeight;
-                List<Point> points = new List<Point>();
-                Point p1 = new Point((int)x, (int)y);
-                Point p2 = new Point((int)x1, (int)y1);
-                points.Add(p1);
-                points.Add(p2);
-                figure.setPoints(points);
-                SolidColorBrush cl = (SolidColorBrush)shape.Fill;
-                SolidColorBrush clst = (SolidColorBrush)shape.Stroke;
-                figure.rectWidth = shape.StrokeThickness;
-                
-                figure.fill_R = cl.Color.R;
-                figure.fill_B = cl.Color.B;
-                figure.fill_G = cl.Color.G;
-                figure.rectFill_R = clst.Color.R;
-                figure.rectFill_G = clst.Color.G;
-                figure.rectFill_B = clst.Color.B;
+            case Tools.PaintTools.AddRect:
+            case Tools.PaintTools.AddLine:
+            case Tools.PaintTools.AddCircle:
+            case Tools.PaintTools.AddElips:
+            case Tools.PaintTools.AddPolygon:
+               redrawigFlag = false;
+               p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
+               break;
+            case Tools.PaintTools.BorderColorFigure:
+               break;
+               case Tools.PaintTools.DeleteFigure: 
+               break;
+               case Tools.PaintTools.FillColorFigure: 
+               break;
+               case Tools.PaintTools.RotateFigure: 
+               break;
+               case Tools.PaintTools.StretchFigure: 
+               break;
+               default: break;
+
             }
+           
+            //if (e.Source is Shape)
+            //{
+            //    Shape shape = (Shape)e.Source;
+            //    Figure figure = new Figure();
+            //    //figure.angle = ((RotateTransform)shape.RenderTransform).Angle;
+            //    int i = paintSurface.Children.IndexOf(shape);
+            //    var x = Canvas.GetLeft(shape);
+            //    var y = Canvas.GetTop(shape);
+            //    var x1 = x + shape.ActualWidth;
+            //    var y1 = y + shape.ActualHeight;
+            //    List<Point> points = new List<Point>();
+            //    Point p1 = new Point((int)x, (int)y);
+            //    Point p2 = new Point((int)x1, (int)y1);
+            //    points.Add(p1);
+            //    points.Add(p2);
+            //    figure.setPoints(points);
+            //    SolidColorBrush cl = (SolidColorBrush)shape.Fill;
+            //    SolidColorBrush clst = (SolidColorBrush)shape.Stroke;
+            //    figure.rectWidth = shape.StrokeThickness;
+                
+            //    figure.fill_R = cl.Color.R;
+            //    figure.fill_B = cl.Color.B;
+            //    figure.fill_G = cl.Color.G;
+            //    figure.rectFill_R = clst.Color.R;
+            //    figure.rectFill_G = clst.Color.G;
+            //    figure.rectFill_B = clst.Color.B;
+            //}
         }
     }
 
