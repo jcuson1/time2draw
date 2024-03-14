@@ -13,18 +13,21 @@ namespace GUI
 {
     internal class Drawer
     {
-        static List<Figure> Figures = new List<Figure>();
+      public static List<Figure> Figures = new List<Figure>();
         static int indFigures = -1;
 
-        public static void draw(Canvas canvas)
+     
+
+      public static void draw(Canvas canvas)
         {
+
             SolidColorBrush brStroke;
             SolidColorBrush brFill;
-            for (int i = indFigures; i < Figures.Count; i++)
-            {
+            for (int i = indFigures; i < Figures.Count; i++)           
+         {
                 switch (Figures[i].type)
                 {
-                    case "line":
+                  case "line":
                         Line ln = new Line();
                         ln.X1 = Figures[i].points[0].x;
                         ln.Y1 = Figures[i].points[0].y;
@@ -38,7 +41,7 @@ namespace GUI
                         //         canvas.Children.RemoveAt(canvas.Children.Count - 1);
                         canvas.Children.Add(ln);
 
-
+   
                         break;
                     case "ellipse":
                         Ellipse el = new Ellipse();
@@ -56,6 +59,7 @@ namespace GUI
                         rotateEllipse.CenterY = el.Height / 2;
                         el.RenderTransform = rotateEllipse;
                         canvas.Children.Add(el);
+
                         break;
                     case "rectangle":
                         Rectangle r = new Rectangle();

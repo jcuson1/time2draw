@@ -17,6 +17,9 @@ using Point = Geometry.Point;
 using Figure = Geometry.Figure;
 using System.Security.Cryptography;
 using System.Windows.Media.Media3D;
+using IO;
+using System.Xml.Linq;
+using GUI;
 
 namespace Time2Draw
 {
@@ -34,7 +37,6 @@ namespace Time2Draw
         private double startWidth = 0;
         private double startHeight = 0;
         public int FigureIndex;
-
 
         public MainWindow()
         {
@@ -62,14 +64,16 @@ namespace Time2Draw
 
         private void paintSurface_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.Source is Shape)
+         string path = "C:/Users/olgaa/OneDrive/Desktop/nstu/test.svg";
+            SaveFile(path);
+            /*if (e.Source is Shape)
             {
                 Shape shape = (Shape)e.Source;
                 Figure figure = new Figure();
                 int i = paintSurface.Children.IndexOf(shape);
                 paintSurface.Children.Remove(shape);
 
-            }
+            }*/
         }
         private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -259,6 +263,40 @@ namespace Time2Draw
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.MovingFigure);
         }
-    }
 
+        public void SaveFile(string path)
+        {
+         Save save = new Save("svg");
+
+         /*int i = 0;
+         List<Figure> figures = new List<Figure>();
+
+         foreach (Shape fig in paintSurface.Children)
+         {
+            figures.Add(new Figure());
+            
+            List<Point> points = new List<Point>();
+            Point point = new Point((int)Canvas.GetTop(paintSurface.Children[i]), (int)Canvas.GetLeft(paintSurface.Children[i]));
+            points.Add(point);
+
+            point = new Point((int)Canvas.GetG(paintSurface.Children[i]), (int)Canvas.GetLeft(paintSurface.Children[i]));
+            
+            points.Add(point);
+
+
+            if (paintSurface.Children[i] is Line) figures[i].type = "line";
+            else if (paintSurface.Children[i] is Rectangle) figures[i].type = "rectangle";
+            else if (paintSurface.Children[i] is Ellipse) figures[i].type = "ellipse";
+
+
+            if (!(paintSurface.Children[i] is Line)) figures[i].setAngle((fig.RenderTransform as RotateTransform).Angle);
+            figures[i].setPoints(points);
+            figures[i].setRectWidth(fig.StrokeThickness);
+            i++;
+         }*/
+
+         save.SaveAsSVG(Drawer.Figures, paintSurface.Width, paintSurface.Height, path);
+        }
+
+    }
 }
