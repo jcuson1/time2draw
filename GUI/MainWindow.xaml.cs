@@ -106,6 +106,8 @@ namespace Time2Draw
                 case Tools.PaintTools.StretchFigure:
                     if (figure != null)
                     {
+                        startPos.x = (int)Canvas.GetLeft(figure);
+                        startPos.y = (int)Canvas.GetTop(figure);
                         startWidth = figure.Width;
                         startHeight = figure.Height;
                     }
@@ -217,7 +219,16 @@ namespace Time2Draw
                 figure.Width = startWidth + p2.x - p1.x;
             if(startHeight + p2.y - p1.y > 0)
                 figure.Height = startHeight + p2.y - p1.y;
-
+            if (startWidth + p2.x - p1.x <= 0)
+            {
+                Canvas.SetLeft(figure, startPos.x - Math.Abs(startWidth + p2.x - p1.x));
+                figure.Width = Math.Abs(startWidth + p2.x - p1.x);
+            }
+            if (startHeight + p2.y - p1.y <= 0)
+            {
+                Canvas.SetTop(figure, startPos.y - Math.Abs(startHeight + p2.y - p1.y));
+                figure.Height = Math.Abs(startHeight + p2.y - p1.y);
+            }
             paintSurface.Children[FigureIndex] = figure;
         }
 
