@@ -25,9 +25,13 @@ namespace Time2Draw
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool redrawigFlag = false;
-        bool rotatingFlag = false;
-        Shape figure;
+        private bool rotatingFlag = false;
+        private bool redrawigFlag = false;
+        private Shape figure;
+        private Point p1, p2;
+        private string selectedType = "line";
+        private Point startPos = new Point(0, 0);
+
         public int FigureIndex;
 
 
@@ -36,8 +40,6 @@ namespace Time2Draw
             InitializeComponent();
             GUIHandler.GetInstance();
         }
-        Point p1, p2;
-        string selectedType = "line";
 
         private void lineButton_Click(object sender, RoutedEventArgs e)
         {
@@ -103,6 +105,14 @@ namespace Time2Draw
                 case Tools.PaintTools.StretchFigure:
 
                     break;
+                case Tools.PaintTools.MovingFigure:
+                    if (figure != null)
+                    {
+                        startPos.x = (int)Canvas.GetLeft(figure);
+                        startPos.y = (int)Canvas.GetTop(figure);
+                    }
+                    break;
+
                 default:
                     break;
 
@@ -145,11 +155,17 @@ namespace Time2Draw
                         if (rotatingFlag)
                         {
                             p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
-                            Rotating(p2);
+                            Rotating();
                         }
                         break;
                     case Tools.PaintTools.StretchFigure:
-
+                        break;
+                    case Tools.PaintTools.MovingFigure:
+                        if (figure != null)
+                        {
+                            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                            Moving();
+                        }
                         break;
                     default:
                         break;
@@ -159,7 +175,7 @@ namespace Time2Draw
 
         }
 
-       void Rotating(Point p2)
+        void Rotating()
         {
             RotateTransform rotateTransform = new RotateTransform();
             if (figure.RenderTransform is RotateTransform)
@@ -170,25 +186,17 @@ namespace Time2Draw
             {
                 rotateTransform = (RotateTransform)figure.LayoutTransform;
             }
-            var stangle = rotateTransform.Angle;
-            var x = Canvas.GetLeft(figure);
-            var y = Canvas.GetTop(figure);
-            Point x1 = new Point((int)x, (int)y);
-            Point x2 = new Point((int)(x + figure.ActualWidth), (int)(y + figure.ActualHeight));
-            double angle;
-            if (!redrawigFlag)
-            {
-                //paintSurface.Children.Remove(figure);
-                //GUI.Drawer.addFigure(x1, x2, selectedType, paintSurface);
-                redrawigFlag = true;
-            }
-            else
-            {
-                angle = p1.x - p2.x + stangle;
-                //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
-                rotateTransform.Angle += p1.x - p2.x;
-                figure.RenderTransform = rotateTransform;
-            }
+            
+            //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
+            rotateTransform.Angle += (p1.x - p2.x) * 0.01;
+            figure.RenderTransform = rotateTransform;
+
+            paintSurface.Children[FigureIndex] = figure;
+        }
+        void Moving()
+        {
+            Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
+            Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
 
             paintSurface.Children[FigureIndex] = figure;
         }
@@ -213,6 +221,11 @@ namespace Time2Draw
             }
 
             FigureIndex = paintSurface.Children.IndexOf(figure);
+        }
+
+        private void moveButton_Click(object sender, RoutedEventArgs e)
+        {
+            GUIHandler.instance.MoveFigure();
         }
 
         private bool EditingToolIsActive()
