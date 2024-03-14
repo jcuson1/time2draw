@@ -52,3 +52,12 @@ D:\Университет\4 курс\Современные технологии
 D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.sourcelink.json
 D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.dll
 D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.pdb
+D:\GitHubRepos\time2draw\Test\bin\Debug\net472\Test.dll
+D:\GitHubRepos\time2draw\Test\bin\Debug\net472\Test.pdb
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.dll
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.pdb
