@@ -31,7 +31,8 @@ namespace Time2Draw
         private Point p1, p2;
         private string selectedType = "line";
         private Point startPos = new Point(0, 0);
-
+        private double startWidth = 0;
+        private double startHeight = 0;
         public int FigureIndex;
 
 
@@ -103,7 +104,11 @@ namespace Time2Draw
                     }
                     break;
                 case Tools.PaintTools.StretchFigure:
-
+                    if (figure != null)
+                    {
+                        startWidth = figure.Width;
+                        startHeight = figure.Height;
+                    }
                     break;
                 case Tools.PaintTools.MovingFigure:
                     if (figure != null)
@@ -159,6 +164,11 @@ namespace Time2Draw
                         }
                         break;
                     case Tools.PaintTools.StretchFigure:
+                        if (figure != null)
+                        {
+                            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                            Stretching();
+                        }
                         break;
                     case Tools.PaintTools.MovingFigure:
                         if (figure != null)
@@ -186,7 +196,7 @@ namespace Time2Draw
             {
                 rotateTransform = (RotateTransform)figure.LayoutTransform;
             }
-            
+
             //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
             rotateTransform.Angle += (p1.x - p2.x) * 0.01;
             figure.RenderTransform = rotateTransform;
@@ -197,6 +207,16 @@ namespace Time2Draw
         {
             Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
             Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
+
+            paintSurface.Children[FigureIndex] = figure;
+        }
+
+        void Stretching()
+        {
+            if (startWidth + p2.x - p1.x > 0)
+                figure.Width = startWidth + p2.x - p1.x;
+            if(startHeight + p2.y - p1.y > 0)
+                figure.Height = startHeight + p2.y - p1.y;
 
             paintSurface.Children[FigureIndex] = figure;
         }
@@ -226,6 +246,11 @@ namespace Time2Draw
         private void moveButton_Click(object sender, RoutedEventArgs e)
         {
             GUIHandler.instance.MoveFigure();
+        }
+
+        private void stretchButton_Click(object sender, RoutedEventArgs e)
+        {
+            GUIHandler.instance.StretchFigure();
         }
 
         private bool EditingToolIsActive()

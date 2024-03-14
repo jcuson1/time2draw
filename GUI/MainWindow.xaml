@@ -116,6 +116,7 @@
                 ToolTip="Многоугольник"
                 Style="{StaticResource SideButton}" 
                 Margin="0,150,0,0"
+                
                 Click="stretchButton_Click">
             <Image Source="Resources/hexagon многоугольник.png" Visibility="Visible"></Image>
         </Button>
