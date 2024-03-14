@@ -114,3 +114,11 @@ C:\Users\Павел\source\repos\time2draw\Test\bin\Debug\net472\zh-Hans\Microso
 C:\Users\Павел\source\repos\time2draw\Test\bin\Debug\net472\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Users\Павел\source\repos\time2draw\Test\bin\Debug\net472\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Users\Павел\source\repos\time2draw\Test\bin\Debug\net472\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.csproj.SuggestedBindingRedirects.cache
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.dll
+N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.pdb
