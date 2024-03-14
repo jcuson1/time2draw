@@ -102,9 +102,11 @@ namespace Time2Draw
                   }
                   break;
                case Tools.PaintTools.RotateFigure:
+                  if (rotatingFlag)
+                  {
                      p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
                      Rotating(p2);
-                  
+                  }
                   break;
                case Tools.PaintTools.StretchFigure:
 
