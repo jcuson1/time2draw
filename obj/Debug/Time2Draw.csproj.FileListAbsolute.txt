@@ -14,3 +14,6 @@ C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.cspro
 C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.csproj.CoreCompileInputs.cache
 C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.exe
 C:\Users\Андрей\source\repos\Time2Draw\Time2Draw\obj\Debug\Time2Draw.pdb
+C:\Users\Павел\source\repos\time2draw\obj\Debug\Time2Draw.csproj.AssemblyReference.cache
+C:\Users\Павел\source\repos\time2draw\obj\Debug\Time2Draw.exe
+C:\Users\Павел\source\repos\time2draw\obj\Debug\Time2Draw.pdb

@@ -53,3 +53,13 @@ D:\Университет\4 курс\Современные технологии
 D:\Университет\4 курс\Современные технологии программирования\time2draw\IO\obj\Debug\net472\IO.sourcelink.json
 D:\Университет\4 курс\Современные технологии программирования\time2draw\IO\obj\Debug\net472\IO.dll
 D:\Университет\4 курс\Современные технологии программирования\time2draw\IO\obj\Debug\net472\IO.pdb
+C:\Users\Павел\Source\Repos\time2draw\IO\bin\Debug\net472\IO.dll
+C:\Users\Павел\Source\Repos\time2draw\IO\bin\Debug\net472\IO.pdb
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.csproj.AssemblyReference.cache
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.AssemblyInfoInputs.cache
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.AssemblyInfo.cs
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.csproj.CoreCompileInputs.cache
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.sourcelink.json
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.dll
+C:\Users\Павел\Source\Repos\time2draw\IO\obj\Debug\net472\IO.pdb

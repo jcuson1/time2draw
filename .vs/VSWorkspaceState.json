@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GUI"
+    "\\GUI",
+    "\\obj",
+    "\\Properties"
   ],
-  "SelectedNode": "\\GUI\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

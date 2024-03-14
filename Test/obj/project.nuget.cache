@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "+cDZU6KrmRwGnyBHcWvEqRapto6DrWkTvrLvQOFB1vaARwWnaXOSsJPwB6rEd1n3sc5wYk8rAD7VCCNUXI4ubw==",
+  "dgSpecHash": "jaQNrFuAoyHjIS3Wbpqj5UxQaUTcpdJBnyZRLH0BxFx7j4EENuiExHkFWQU5nkd3ASuuBIwoWWHdr92rgTjRlg==",
   "success": true,
-  "projectFilePath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Test\\Test.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Павел\\source\\repos\\time2draw\\Test\\Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.codecoverage\\17.9.0\\microsoft.codecoverage.17.9.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.net.test.sdk\\17.9.0\\microsoft.net.test.sdk.17.9.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\nuget.frameworks\\6.5.0\\nuget.frameworks.6.5.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\nunit\\4.1.0\\nunit.4.1.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\xunit.runner.visualstudio\\2.5.7\\xunit.runner.visualstudio.2.5.7.nupkg.sha512"
+  ],
   "logs": []
 }

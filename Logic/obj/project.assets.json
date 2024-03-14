@@ -27,19 +27,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\diana\\.nuget\\packages\\": {}
+    "C:\\Users\\Павел\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Logic\\Logic.csproj",
+      "projectUniqueName": "C:\\Users\\Павел\\source\\repos\\time2draw\\Logic\\Logic.csproj",
       "projectName": "Logic",
-      "projectPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Logic\\Logic.csproj",
-      "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
-      "outputPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Logic\\obj\\",
+      "projectPath": "C:\\Users\\Павел\\source\\repos\\time2draw\\Logic\\Logic.csproj",
+      "packagesPath": "C:\\Users\\Павел\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Павел\\source\\repos\\time2draw\\Logic\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Павел\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +58,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj": {
-              "projectPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj"
+            "C:\\Users\\Павел\\source\\repos\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "C:\\Users\\Павел\\source\\repos\\time2draw\\Geometry\\Geometry.csproj"
             }
           }
         }
@@ -68,7 +73,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
