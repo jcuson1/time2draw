@@ -151,13 +151,13 @@ namespace Time2Draw
         private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-            if (e.Source is Shape)
+            if (e.Source is Ellipse)
             {
-                figure = (Shape)e.Source;
+                figure = (Ellipse)e.Source;
+                selectedType = "ellipse";
 
-                
 
-                
+
                 //Figure figure = new Figure();
                 //figure.angle = ((RotateTransform)shape.RenderTransform).Angle;
                 int i = paintSurface.Children.IndexOf(figure);
