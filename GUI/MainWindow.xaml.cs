@@ -27,15 +27,15 @@ namespace Time2Draw
     {
         bool redrawigFlag = false;
         bool rotatingFlag = false;
-        bool stretchingFlag = false;
         Shape figure;
+        public int FigureIndex;
+
 
         public MainWindow()
         {
             InitializeComponent();
             GUIHandler.GetInstance();
         }
-        bool firstClick = true;
         Point p1, p2;
         string selectedType = "line";
 
@@ -68,13 +68,51 @@ namespace Time2Draw
 
             }
         }
-        int countFigure = 0;
+        private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
+            if (EditingToolIsActive())
+                DefineFigureTypeAndIndex(e);
+
+            switch (GUIHandler.instance.SelectedTool)
+            {
+                case Tools.PaintTools.AddRect:
+                case Tools.PaintTools.AddLine:
+                case Tools.PaintTools.AddCircle:
+                case Tools.PaintTools.AddElips:
+                case Tools.PaintTools.AddPolygon:
+                    redrawigFlag = false;
+                    p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
+                    break;
+                case Tools.PaintTools.BorderColorFigure:
+
+                    break;
+                case Tools.PaintTools.DeleteFigure:
+
+                    break;
+                case Tools.PaintTools.FillColorFigure:
+
+                    break;
+                case Tools.PaintTools.RotateFigure:
+                    if (figure != null)
+                    {
+                        rotatingFlag = true;
+                        redrawigFlag = false;
+                    }
+                    break;
+                case Tools.PaintTools.StretchFigure:
+
+                    break;
+                default:
+                    break;
+
+            }
+        }
+
         private void paintSurface_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            countFigure++;
             redrawigFlag = false;
             rotatingFlag = false;
-            stretchingFlag = false;
             if (figure != null)
             {
                 figure = null;
@@ -111,11 +149,7 @@ namespace Time2Draw
                         }
                         break;
                     case Tools.PaintTools.StretchFigure:
-                        if (stretchingFlag)
-                        {
-                            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
-                            Stretching(p2);
-                        }
+
                         break;
                     default:
                         break;
@@ -124,7 +158,8 @@ namespace Time2Draw
                 }
 
         }
-        void Rotating(Point p2)
+
+       void Rotating(Point p2)
         {
             RotateTransform rotateTransform = new RotateTransform();
             if (figure.RenderTransform is RotateTransform)
@@ -143,44 +178,19 @@ namespace Time2Draw
             double angle;
             if (!redrawigFlag)
             {
-                paintSurface.Children.Remove(figure);
-                GUI.Drawer.addFigure(x1, x2, selectedType, paintSurface);
+                //paintSurface.Children.Remove(figure);
+                //GUI.Drawer.addFigure(x1, x2, selectedType, paintSurface);
                 redrawigFlag = true;
             }
             else
             {
                 angle = p1.x - p2.x + stangle;
-                GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
+                //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
+                rotateTransform.Angle += p1.x - p2.x;
+                figure.RenderTransform = rotateTransform;
             }
-        }
 
-        void Stretching(Point p2)
-        {
-            RotateTransform rotateTransform = new RotateTransform();
-            if (figure.RenderTransform is RotateTransform)
-            {
-                rotateTransform = (RotateTransform)figure.RenderTransform;
-            }
-            else if (figure.LayoutTransform is RotateTransform)
-            {
-                rotateTransform = (RotateTransform)figure.LayoutTransform;
-            }
-            var angle = rotateTransform.Angle;
-            var x = Canvas.GetLeft(figure);
-            var y = Canvas.GetTop(figure);
-            Point x1 = new Point((int)x, (int)y);
-            Point x2 = new Point((int)(x + figure.ActualWidth), (int)(y + figure.ActualHeight));
-            Point newPoint = new Point(p2.x, p2.y);
-            if (!redrawigFlag)
-            {
-                paintSurface.Children.Remove(figure);
-                GUI.Drawer.addFigure(x1, x2, selectedType, paintSurface);
-                redrawigFlag = true;
-            }
-            else
-            {
-                GUI.Drawer.rotateFigure(x1, newPoint, angle, selectedType, paintSurface);
-            }
+            paintSurface.Children[FigureIndex] = figure;
         }
 
         private void rotateButton_Click(object sender, RoutedEventArgs e)
@@ -188,85 +198,28 @@ namespace Time2Draw
             GUIHandler.instance.RotateFigure();
         }
 
-        private void stretchButton_Click(object sender, RoutedEventArgs e)
+        private void DefineFigureTypeAndIndex(MouseButtonEventArgs e)
         {
-            GUIHandler.instance.StretchFigure();
+            if (e.Source is Rectangle)
+            {
+                selectedType = "rectangle";
+                figure = (Rectangle)e.Source;
+            }
+
+            else if (e.Source is Ellipse)
+            {
+                selectedType = "ellipse";
+                figure = (Ellipse)e.Source;
+            }
+
+            FigureIndex = paintSurface.Children.IndexOf(figure);
         }
 
-        private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private bool EditingToolIsActive()
         {
-            p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-            if (e.Source is Ellipse)
-            {
-                figure = (Ellipse)e.Source;
-                selectedType = "ellipse";
-
-                int i = paintSurface.Children.IndexOf(figure);
-                var x = Canvas.GetLeft(figure);
-                var y = Canvas.GetTop(figure);
-                var x1 = x + figure.ActualWidth;
-                var y1 = y + figure.ActualHeight;
-                List<Point> points = new List<Point>();
-                Point p1 = new Point((int)x, (int)y);
-                Point p2 = new Point((int)x1, (int)y1);
-                points.Add(p1);
-                points.Add(p2);
-            }
-            else if (e.Source is Rectangle)
-            {
-                figure = (Rectangle)e.Source;
-                selectedType = "rectangle";
-                int i = paintSurface.Children.IndexOf(figure);
-                var x = Canvas.GetLeft(figure);
-                var y = Canvas.GetTop(figure);
-                var x1 = x + figure.ActualWidth;
-                var y1 = y + figure.ActualHeight;
-                List<Point> points = new List<Point>();
-                Point p1 = new Point((int)x, (int)y);
-                Point p2 = new Point((int)x1, (int)y1);
-                points.Add(p1);
-                points.Add(p2);
-            }
-            // Затычка
-            switch (GUIHandler.instance.SelectedTool)
-            {
-                case Tools.PaintTools.AddRect:
-                case Tools.PaintTools.AddLine:
-                case Tools.PaintTools.AddCircle:
-                case Tools.PaintTools.AddElips:
-                case Tools.PaintTools.AddPolygon:
-                    redrawigFlag = false;
-                    p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
-                    break;
-                case Tools.PaintTools.BorderColorFigure:
-
-                    break;
-                case Tools.PaintTools.DeleteFigure:
-
-                    break;
-                case Tools.PaintTools.FillColorFigure:
-
-                    break;
-                case Tools.PaintTools.RotateFigure:
-                    if (figure != null)
-                    {
-                        rotatingFlag = true;
-                        redrawigFlag = false;
-                    }
-                    break;
-                case Tools.PaintTools.StretchFigure:
-                    if (figure != null)
-                    {
-                        stretchingFlag = true;
-                        redrawigFlag = false;
-                    }
-                    break;
-                default:
-                    break;
-
-            }
-
-
+            return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
+                    GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||
+                    GUIHandler.instance.SelectedTool == Tools.PaintTools.MovingFigure);
         }
     }
 
