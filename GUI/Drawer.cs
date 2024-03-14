@@ -97,20 +97,5 @@ namespace GUI
             addFigure(p1, p2, selectedType, canvas);
         }
 
-        public static void rotateFigure(Point p1, Point p2, double angle,  string selectedType, Canvas canvas)
-        {
-            canvas.Children.RemoveAt(canvas.Children.Count - 1);
-            Figure fig1 = new Figure();
-            fig1.type = selectedType;
-            fig1.points = new List<Point>() { p1, p2 };
-            fig1.rectWidth = 2.0;
-            fig1.setFill(255, 255, 255);
-            fig1.setRectFill(0, 0, 0);
-            fig1.setAngle(angle);
-            Figures.Add(fig1);
-            indFigures++;
-            draw(canvas);
-        }
-
     }
 }

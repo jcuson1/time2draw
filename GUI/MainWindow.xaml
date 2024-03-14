@@ -148,7 +148,8 @@
                 Grid.Row="2" 
                 ToolTip="Текст"
                 Style="{StaticResource SideButton}" 
-                Margin="0,282,0,0" >
+                Margin="0,282,0,0" 
+                Click="moveButton_Click">
             <Image Source="Resources/текст text.png" Visibility="Visible"></Image>
         </Button>
 

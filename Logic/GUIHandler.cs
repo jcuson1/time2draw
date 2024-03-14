@@ -75,6 +75,11 @@ namespace Logic
       {
          SelectedTool = Tools.PaintTools.DeleteFigure;
       }
+
+      public void MoveFigure()
+      {
+         SelectedTool = Tools.PaintTools.MovingFigure;
+      }
       public void FigureInfoPanel() 
       { 
 
