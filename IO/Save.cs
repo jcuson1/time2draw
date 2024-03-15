@@ -33,13 +33,13 @@ namespace IO
             switch(fig.type)
             {
                case "line":
-                  parser.DrawLine(new System.Drawing.Point(fig.points[0].x, fig.points[0].y), new System.Drawing.Point(fig.points[1].x, fig.points[1].y), fig.rectWidth);
+                  parser.DrawLine(fig);
                   break;
                case "rectangle":
-                  parser.DrawRectangle(new System.Drawing.Point(fig.points[0].x, fig.points[0].y), new System.Drawing.Point(fig.points[1].x, fig.points[1].y), fig.rectWidth);
+                  parser.DrawRectangle(fig);
                   break;
                case "ellipse":
-                  parser.DrawEllipse(new System.Drawing.Point(fig.points[0].x, fig.points[0].y), new System.Drawing.Point(fig.points[1].x, fig.points[1].y), fig.rectWidth);
+                  parser.DrawEllipse(fig);
                   break;
             }
          }

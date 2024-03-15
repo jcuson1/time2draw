@@ -7,6 +7,7 @@ using System.Windows;
 using System.IO;
 using System.Drawing;
 using System.Collections;
+using Geometry;
 
 namespace IO.SVG_Saver
 {
@@ -51,36 +52,58 @@ namespace IO.SVG_Saver
          // Do nothing.
       }
 
-      public void DrawLine(Point start, Point end, double thickness)
+      public void DrawLine(Figure fig)
       {
          m_writer.WriteStartElement("line");
-         m_writer.WriteAttributeString("x1", start.X.ToString());
-         m_writer.WriteAttributeString("y1", start.Y.ToString());
-         m_writer.WriteAttributeString("x2", end.X.ToString());
-         m_writer.WriteAttributeString("y2", end.Y.ToString());
-         m_writer.WriteAttributeString("style", "stroke:rgb(0,0,0);stroke-linecap:square;stroke-width:" + thickness.ToString());
+         m_writer.WriteAttributeString("x1", fig.points[0].x.ToString());
+         m_writer.WriteAttributeString("y1", fig.points[0].y.ToString());
+         m_writer.WriteAttributeString("x2", fig.points[1].x.ToString());
+         m_writer.WriteAttributeString("y2", fig.points[1].y.ToString());
+         m_writer.WriteAttributeString("style", "stroke:rgb(" + fig.rectFill_R.ToString() + "," + fig.rectFill_G.ToString() + "," + fig.rectFill_B.ToString() + ");stroke-width:" + fig.rectWidth.ToString());
          m_writer.WriteEndElement();
       }
 
-      public void DrawRectangle(Point start, Point end, double thickness)
+      public void DrawRectangle(Figure fig)
       {
+         int startX = fig.points[0].x;
+         int startY = fig.points[0].y;
+         int endX = fig.points[1].x;
+         int endY = fig.points[1].y;
+         int cx = startX + (endX - startX) / 2;
+         int cy = startY + (endY - startY) / 2;
+
          m_writer.WriteStartElement("rect");
-         m_writer.WriteAttributeString("x", start.X.ToString());
-         m_writer.WriteAttributeString("y", start.Y.ToString());
-         m_writer.WriteAttributeString("width", (end.X - start.X).ToString());
-         m_writer.WriteAttributeString("height", (end.Y - start.Y).ToString());
-         m_writer.WriteAttributeString("style", "fill:rgb(255, 255, 255);fill-opacity:1;stroke:rgb(0,0,0);stroke-width:" + thickness.ToString());
+         m_writer.WriteAttributeString("x", startX.ToString());
+         m_writer.WriteAttributeString("y", startY.ToString());
+         m_writer.WriteAttributeString("width", (endX - startX).ToString());
+         m_writer.WriteAttributeString("height", (endY - startY).ToString());
+         m_writer.WriteAttributeString("style",
+                                       "fill-opacity:1;fill:rgb(" + fig.fill_R.ToString() + "," + fig.fill_G.ToString() + "," + fig.fill_B.ToString() + ");" +
+                                       "stroke:rgb(" + fig.rectFill_R.ToString() + "," + fig.rectFill_G.ToString() + "," + fig.rectFill_B.ToString() + ");" +
+                                       "stroke-width:" + fig.rectWidth.ToString());
+                                       //"transform:rotate(" + fig.angle.ToString() + " " + cx.ToString() + " " + cy.ToString() + ")");
          m_writer.WriteEndElement();
       }
 
-      public void DrawEllipse(Point start, Point end, double thickness)
+      public void DrawEllipse(Figure fig)
       {
+         int startX = fig.points[0].x;
+         int startY = fig.points[0].y;
+         int endX = fig.points[1].x;
+         int endY = fig.points[1].y;
+         int cx = startX + (endX - startX) / 2;
+         int cy = startY + (endY - startY) / 2;
+
          m_writer.WriteStartElement("ellipse");
-         m_writer.WriteAttributeString("cx", (start.X + (end.X - start.X)/2).ToString());
-         m_writer.WriteAttributeString("cy", (start.Y + (end.Y - start.Y)/2).ToString());
-         m_writer.WriteAttributeString("rx", ((end.X - start.X) / 2).ToString());
-         m_writer.WriteAttributeString("ry", ((end.Y - start.Y) / 2).ToString());
-         m_writer.WriteAttributeString("style", String.Format("fill-opacity:1;fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:" + thickness.ToString()));
+         m_writer.WriteAttributeString("cx", cx.ToString());
+         m_writer.WriteAttributeString("cy", cy.ToString());
+         m_writer.WriteAttributeString("rx", ((endX - startX) / 2).ToString());
+         m_writer.WriteAttributeString("ry", ((endY - startY) / 2).ToString());
+         m_writer.WriteAttributeString("style",
+                                       "fill:rgb(" + fig.fill_R.ToString() + "," + fig.fill_G.ToString() + "," + fig.fill_B.ToString() + ");" +
+                                       "stroke:rgb(" + fig.rectFill_R.ToString() + "," + fig.rectFill_G.ToString() + "," + fig.rectFill_B.ToString() + ");" +
+                                       "stroke-width:" + fig.rectWidth.ToString()); 
+                                       //"transform:rotate(" + fig.angle.ToString() + " " + cx.ToString() + " " + cy.ToString() + ")");
          m_writer.WriteEndElement();
       }
 
