@@ -43,3 +43,15 @@ D:\GitHubRepos\time2draw\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.c
 D:\GitHubRepos\time2draw\Logic\obj\Debug\net472\Logic.csproj.CopyComplete
 D:\GitHubRepos\time2draw\Logic\obj\Debug\net472\Logic.dll
 D:\GitHubRepos\time2draw\Logic\obj\Debug\net472\Logic.pdb
+D:\Time2Draw\time2draw\Logic\bin\Debug\net472\Logic.dll
+D:\Time2Draw\time2draw\Logic\bin\Debug\net472\Logic.pdb
+D:\Time2Draw\time2draw\Logic\bin\Debug\net472\Geometry.dll
+D:\Time2Draw\time2draw\Logic\bin\Debug\net472\Geometry.pdb
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.csproj.AssemblyReference.cache
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.AssemblyInfoInputs.cache
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.AssemblyInfo.cs
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.csproj.CoreCompileInputs.cache
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.csproj.CopyComplete
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.dll
+D:\Time2Draw\time2draw\Logic\obj\Debug\net472\Logic.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+5f/Y+rY/2IPVYo4HORaJANGjO0IVK6K17xRGSprveSqvEQTlHjSAl0ZZt19I+5B18yEjZQWsf5oHPpRiGAlQg==",
+  "dgSpecHash": "dg/2yWWatlESl2xIFt9kJKT1xEWpO1lhBRFp1KNPABuH+V2FvO9Gm+9VMMV+TA0vXq4XWo4YLn6CCqJ5FJSDrw==",
   "success": true,
-  "projectFilePath": "D:\\GitHubRepos\\time2draw\\Test\\Test.csproj",
+  "projectFilePath": "D:\\Time2Draw\\time2draw\\Test\\Test.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

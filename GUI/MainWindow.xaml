@@ -155,6 +155,27 @@
             <Image Source="Resources/текст text.png" Visibility="Visible"></Image>
         </Button>
 
+        <Button x:Name="Rotation" 
+                Grid.Row="2" 
+                ToolTip="Вращение фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,312,0,0" >
+        </Button>
+        
+        <Button x:Name="Transfer" 
+                Grid.Row="2" 
+                ToolTip="Перемещение фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,342,0,0" >
+        </Button>
+
+        <Button x:Name="Scale" 
+                Grid.Row="2" 
+                ToolTip="Трансформация фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,372,0,0" >
+        </Button>
+
         <Button x:Name="GoBack" 
                 Grid.Row="1" 
                 Grid.Column="1" 
@@ -206,6 +227,25 @@
                  HorizontalAlignment="Left" 
                  Margin="326,0,0,0"
         />
+        
+        <TextBlock Grid.Row="1" 
+                   Grid.Column="1" 
+                   Style="{StaticResource CenterButton}" 
+                   Width="73"
+                   Height="20"
+                   Margin="396,0,0,0">
+            Выбор цвета
+        </TextBlock>
+
+        <Button x:Name="Colour" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Style="{StaticResource CenterButton}" 
+                Margin="480,0,0,0"
+                Height="20"
+                Width="24"
+                BorderBrush="#FFC0BFBF">
+        </Button>
 
         <Canvas Name="paintSurface"
                 MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"
