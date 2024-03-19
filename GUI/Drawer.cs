@@ -5,25 +5,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using Logic;
 
 namespace GUI
 {
     internal class Drawer
     {
-        static List<Figure> Figures = new List<Figure>();
+      public static List<Figure> Figures = new List<Figure>();
         static int indFigures = -1;
 
-        public static void draw(Canvas canvas)
+     
+
+      public static void draw(Canvas canvas)
         {
+
             SolidColorBrush brStroke;
             SolidColorBrush brFill;
-            for (int i = indFigures; i < Figures.Count; i++)
-            {
+            for (int i = indFigures; i < Figures.Count; i++)           
+         {
                 switch (Figures[i].type)
                 {
-                    case "line":
+                  case "line":
                         Line ln = new Line();
                         ln.X1 = Figures[i].points[0].x;
                         ln.Y1 = Figures[i].points[0].y;
@@ -32,7 +37,12 @@ namespace GUI
                         brStroke = new SolidColorBrush(Color.FromRgb(Figures[i].rectFill_R, Figures[i].rectFill_G, Figures[i].rectFill_B));
                         ln.Stroke = brStroke;
                         ln.StrokeThickness = Figures[i].rectWidth;
+                        //if (canvas.Children.Count > 0)
+                        //      if(canvas.Children.Count - countFigure == 1)
+                        //         canvas.Children.RemoveAt(canvas.Children.Count - 1);
                         canvas.Children.Add(ln);
+
+   
                         break;
                     case "ellipse":
                         Ellipse el = new Ellipse();
@@ -50,6 +60,7 @@ namespace GUI
                         rotateEllipse.CenterY = el.Height / 2;
                         el.RenderTransform = rotateEllipse;
                         canvas.Children.Add(el);
+
                         break;
                     case "rectangle":
                         Rectangle r = new Rectangle();
@@ -76,13 +87,19 @@ namespace GUI
             Figure fig1 = new Figure();
             fig1.type = selectedType;
             fig1.points = new List<Point>() { p1, p2 };
-            fig1.rectWidth = 2.0;
-            fig1.setFill(50, 255, 10);
+            fig1.rectWidth = GUIHandler.instance.BrushWidth;
+            fig1.setFill(255, 255, 255);
             fig1.setRectFill(0, 0, 0);
-            fig1.setAngle(45);
+            fig1.setAngle(0);
             Figures.Add(fig1);
             indFigures++;
             draw(canvas);
+        }
+
+        public static void reDraw(Point p1, Point p2, string selectedType, Canvas canvas)
+        {
+            canvas.Children.RemoveAt(canvas.Children.Count - 1);
+            addFigure(p1, p2, selectedType, canvas);
         }
 
     }

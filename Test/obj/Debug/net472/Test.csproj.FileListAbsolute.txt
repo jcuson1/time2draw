@@ -24,3 +24,58 @@ C:\Users\Andrey\Source\Repos\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.c
 C:\Users\Andrey\Source\Repos\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
 C:\Users\Andrey\Source\Repos\time2draw\Test\obj\Debug\net472\Test.dll
 C:\Users\Andrey\Source\Repos\time2draw\Test\obj\Debug\net472\Test.pdb
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\bin\Debug\net472\Test.dll
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\bin\Debug\net472\Test.pdb
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.dll
+C:\Users\Andrey\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.pdb
+C:\hz\учеба\СКТ\Test\bin\Debug\net472\Test.dll
+C:\hz\учеба\СКТ\Test\bin\Debug\net472\Test.pdb
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.dll
+C:\hz\учеба\СКТ\Test\obj\Debug\net472\Test.pdb
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\bin\Debug\net472\Test.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\bin\Debug\net472\Test.pdb
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.sourcelink.json
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\Test\obj\Debug\net472\Test.pdb
+D:\GitHubRepos\time2draw\Test\bin\Debug\net472\Test.dll
+D:\GitHubRepos\time2draw\Test\bin\Debug\net472\Test.pdb
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.dll
+D:\GitHubRepos\time2draw\Test\obj\Debug\net472\Test.pdb
+D:\Time2Draw\time2draw\Test\bin\Debug\net472\Test.dll
+D:\Time2Draw\time2draw\Test\bin\Debug\net472\Test.pdb
+D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.dll
+D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.pdb
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\bin\Debug\net472\Test.dll
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\bin\Debug\net472\Test.pdb
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.dll
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.pdb

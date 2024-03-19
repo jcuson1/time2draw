@@ -1,17 +1,267 @@
-﻿<Window x:Class="GUI.MainWindow"
+﻿<Window x:Class="Time2Draw.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GUI"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:Time2Draw"
         mc:Ignorable="d"
-        Title="Time2Draw" Height="600" Width="800">
+        Title="MainWindow" Height="550" Width="900">
+    <Window.Resources>
+        <Style x:Key="TopButton">
+            <Setter Property="Control.Background" Value="#FFC7C7C7" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.Width" Value="100" />
+            <Setter Property="Control.BorderBrush" Value="#FFC7C7C7" />
+        </Style>
+        <Style x:Key="SideButton">
+            <Setter Property="Control.Background" Value="#FFE0E0E0" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+            <Setter Property="Control.VerticalAlignment" Value="Top" />
+            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.Width" Value="30" />
+            <Setter Property="Control.BorderBrush" Value="#FFADADAD" />
+        </Style>
+        <Style x:Key="CenterButton">
+            <Setter Property="Control.Background" Value="#FFE0E0E0" />
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.Width" Value="30" />
+            <Setter Property="Control.BorderBrush" Value="#FFE0E0E0" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        <DockPanel Height="65" LastChildFill="False" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Left" Width="700"  >
-            <Button Name="lineButton" Content="Line" Width="60" Click="lineButton_Click"/>
-            <Button Name="ellipseButton" Content="Ellipse" Width="60" Click="ellipsseButton_Click"/>
-            <Button Name="rectangleButton" Content="Rectangle" Width="60" Click="rectButton_Click"/>
-        </DockPanel>
-        <Canvas x:Name="paintSurface" HorizontalAlignment="Stretch"  Margin="0,65,0,0" VerticalAlignment="Stretch" Background="White" MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"  />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border  Grid.Row="0" Grid.Column="0" Background="#FFC7C7C7" />
+        <Border  Grid.Row="0" Grid.Column="1" Background="#FFC7C7C7" />
+        <Border  Grid.Row="1" Grid.Column="1" Background="#FFE0E0E0" />
+        <Border  Grid.Row="1" Grid.Column="0" Background="#FFE0E0E0" />
+        <Border  Grid.Row="2" Grid.Column="0" Background="#FFE0E0E0" />
+
+        <Button x:Name="LoadButton" 
+                Content="Загрузить" 
+                Grid.Column="1"
+                Style="{StaticResource TopButton}"/>
+        <Button x:Name="SafeButton" 
+                Content="Сохранить" 
+                Margin="100,0,0,0" 
+                Grid.Column="1"
+                Style="{StaticResource TopButton}" Click="SafeButton_Click"/>
+        <Button x:Name="HelpButton"  
+                Width="100" 
+                Content="Помощь" 
+                Margin="200,0,0,0" 
+                Grid.Column="1"
+                Style="{StaticResource TopButton}"/>
+
+        <Button x:Name="LineSegment" 
+                Grid.Row="2" 
+                ToolTip="Прямая" 
+                Style="{StaticResource SideButton}" 
+                Click="lineButton_Click">
+            <Image Source="Resources/линия(отрезок).png" Visibility="Visible"></Image>
+        </Button>
+
+
+        <Button x:Name="Point" 
+                Grid.Row="2" 
+                ToolTip="Точка"
+                Style="{StaticResource SideButton}" 
+                Margin="0,30,0,0" >
+            <Image Source="Resources/точка(ручка).png" Visibility="Visible"></Image>
+        </Button>
+
+
+
+        <Button x:Name="Circle" 
+                Grid.Row="2" 
+                ToolTip="Окружность"
+                Style="{StaticResource SideButton}" 
+                Margin="0,60,0,0" >
+            <Image Source="Resources/circle.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="Ellipse" 
+                Grid.Row="2" 
+                ToolTip="Эллипс"
+                Style="{StaticResource SideButton}" 
+                Margin="0,90,0,0" 
+                Click="ellipseButton_Click">
+            <Image Source="Resources/эллипс.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="Rectangle" 
+                Grid.Row="2" 
+                ToolTip="Прямоугольник"
+                Style="{StaticResource SideButton}" 
+                Margin="0,120,0,0" 
+                Click="rectButton_Click">
+            <Image Source="Resources/прямоугольник.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="Polygon" 
+                Grid.Row="2" 
+                ToolTip="Многоугольник"
+                Style="{StaticResource SideButton}" 
+                Margin="0,150,0,0">
+            <Image Source="Resources/hexagon многоугольник.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="BezierCurve" 
+                Grid.Row="2" 
+                ToolTip="Кривая Безье"
+                Style="{StaticResource SideButton}" 
+                Margin="0,180,0,0">
+            <Image Source="Resources/bezier-curve (кривая безье).png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="FillBucket" 
+                Grid.Row="2" 
+                ToolTip="Заливка"
+                Style="{StaticResource SideButton}" 
+                Margin="0,222,0,0">
+            <Image Source="Resources/градиентная заливка.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="ColourPicker" 
+                Grid.Row="2" 
+                ToolTip="Выбор цвета"
+                Style="{StaticResource SideButton}" 
+                Margin="0,252,0,0" >
+            <Image Source="Resources/color-picker(выбор цвета).png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="Text" 
+                Grid.Row="2" 
+                ToolTip="Текст"
+                Style="{StaticResource SideButton}" 
+                Margin="0,282,0,0">
+            <Image Source="Resources/текст text.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="Rotation" 
+                Grid.Row="2" 
+                ToolTip="Вращение фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,312,0,0" 
+                Click="rotateButton_Click">
+            <Image Source="Resources/вращение.png" Visibility="Visible"></Image>
+        </Button>
+        
+        <Button x:Name="Transfer" 
+                Grid.Row="2" 
+                ToolTip="Перемещение фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,342,0,0" 
+                Click="moveButton_Click">
+            <Image Source="Resources/кнопка перемещения.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="Stratch" 
+                Grid.Row="2" 
+                ToolTip="Растяжение/сжатие фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,372,0,0" 
+                Click="stretchButton_Click">
+            <Image Source="Resources/растяжение.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="GoBack" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                ToolTip="Отменить действие" 
+                Style="{StaticResource CenterButton}" 
+                Margin="10,0,0,0">
+            <Image Source="Resources/back.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="GoForward" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                ToolTip="Вернуть действие" 
+                Style="{StaticResource CenterButton}" 
+                Margin="40,0,0,0">
+            <Image Source="Resources/forward.png" Visibility="Visible"></Image>
+        </Button>
+
+        <ComboBox Name ="Scale"
+                  Grid.Column="1" 
+                  Width="100" 
+                  Height="20" 
+                  Margin="134,0,0,0" 
+                  Grid.Row="1"
+                  VerticalAlignment="Center" 
+                  HorizontalAlignment="Left" SelectionChanged="ScaleButton">
+            <TextBlock>50%</TextBlock>
+            <TextBlock>75%</TextBlock>
+            <TextBlock>100%</TextBlock>
+            <TextBlock>125%</TextBlock>
+            <TextBlock>150%</TextBlock>
+            <TextBlock>200%</TextBlock>
+        </ComboBox>
+        
+        <TextBlock Grid.Row="1" 
+                   Grid.Column="1" 
+                   Style="{StaticResource CenterButton}" 
+                   Width="55"
+                   Height="20"
+                   Margin="266,0,0,0">
+            Толщина
+        </TextBlock>
+        
+        <TextBox
+                 Name="BrushWidth"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 Width="40"
+                 Height="20"
+                 MaxLength="2" 
+                 VerticalAlignment="Center" 
+                 HorizontalAlignment="Left" 
+                 Margin="326,0,0,0"
+                 TextChanged=" TextBox_TextChanged" PreviewTextInput="BrushWidth_PreviewTextInput"
+        />
+        
+        <TextBlock Grid.Row="1" 
+                   Grid.Column="1" 
+                   Style="{StaticResource CenterButton}" 
+                   Width="73"
+                   Height="20"
+                   Margin="396,0,0,0">
+            Выбор цвета
+        </TextBlock>
+
+        <xctk:ColorPicker 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Style="{StaticResource CenterButton}" 
+                Margin="480,0,0,0"
+                Height="20"
+                Width="50"
+                Background="White"
+        />
+
+        <Canvas Name="paintSurface"
+                MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"
+                MouseRightButtonDown="paintSurface_MouseRightButtonDown"
+                MouseLeftButtonUp="paintSurface_MouseLeftButtonUp"
+                MouseMove="paintSurface_MouseMove"
+                Grid.Row="2" 
+                Grid.Column="1"  
+                Background="White"
+        />
     </Grid>
 </Window>
