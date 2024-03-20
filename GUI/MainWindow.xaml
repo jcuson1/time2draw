@@ -173,13 +173,14 @@
             <Image Source="Resources/forward.png" Visibility="Visible"></Image>
         </Button>
 
-        <ComboBox Grid.Column="1" 
+        <ComboBox Name ="Scale"
+                  Grid.Column="1" 
                   Width="100" 
                   Height="20" 
                   Margin="134,0,0,0" 
                   Grid.Row="1"
                   VerticalAlignment="Center" 
-                  HorizontalAlignment="Left">
+                  HorizontalAlignment="Left" SelectionChanged="ScaleButton">
             <TextBlock>50%</TextBlock>
             <TextBlock>75%</TextBlock>
             <TextBlock>100%</TextBlock>

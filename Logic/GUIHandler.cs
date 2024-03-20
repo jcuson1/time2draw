@@ -10,7 +10,7 @@ namespace Logic
    {
       public static GUIHandler instance;
       public Tools.PaintTools SelectedTool = Tools.PaintTools.AddLine;
-
+      public double scaleValue = 1;
       public static GUIHandler GetInstance()
       {
          if (instance == null)

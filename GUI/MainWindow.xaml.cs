@@ -31,6 +31,8 @@ namespace Time2Draw
         private Point p1, p2;
         private string selectedType = "line";
         private Point startPos = new Point(0, 0);
+        private RotateTransform rotateTransform;
+        private double startAngel = 0;
         private double startWidth = 0;
         private double startHeight = 0;
         public int FigureIndex;
@@ -101,6 +103,15 @@ namespace Time2Draw
                     {
                         rotatingFlag = true;
                         redrawigFlag = false;
+                        if (figure.RenderTransform is RotateTransform)
+                        {
+                           rotateTransform = (RotateTransform)figure.RenderTransform;
+                        }
+                        else if (figure.LayoutTransform is RotateTransform)
+                        {
+                           rotateTransform = (RotateTransform)figure.LayoutTransform;
+                        }
+                        startAngel = rotateTransform.Angle;
                     }
                     break;
                 case Tools.PaintTools.StretchFigure:
@@ -189,18 +200,10 @@ namespace Time2Draw
 
         void Rotating()
         {
-            RotateTransform rotateTransform = new RotateTransform();
-            if (figure.RenderTransform is RotateTransform)
-            {
-                rotateTransform = (RotateTransform)figure.RenderTransform;
-            }
-            else if (figure.LayoutTransform is RotateTransform)
-            {
-                rotateTransform = (RotateTransform)figure.LayoutTransform;
-            }
+            
 
             //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
-            rotateTransform.Angle += (p1.x - p2.x) * 0.01;
+            rotateTransform.Angle = p2.x - p1.x + startAngel;
             figure.RenderTransform = rotateTransform;
 
             paintSurface.Children[FigureIndex] = figure;
@@ -264,12 +267,22 @@ namespace Time2Draw
             GUIHandler.instance.StretchFigure();
         }
 
-        private bool EditingToolIsActive()
+      private void ScaleButton(object sender, SelectionChangedEventArgs e)
+      {
+         string scale = (Scale.SelectedItem as TextBlock).Text;
+         scale = scale.Substring(0, scale.Length - 1);
+         GUIHandler.instance.scaleValue = double.Parse(scale) / 100;
+         paintSurface.LayoutTransform = new ScaleTransform(GUIHandler.instance.scaleValue, GUIHandler.instance.scaleValue);
+        
+      }
+
+      private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.MovingFigure);
         }
+
     }
 
 }
