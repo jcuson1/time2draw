@@ -27,19 +27,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nastj\\.nuget\\packages\\": {}
+<<<<<<< Updated upstream
+    "C:\\Users\\Mvideo\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Даша\\.nuget\\packages\\": {},
+>>>>>>> Stashed changes
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
+<<<<<<< Updated upstream
+      "projectUniqueName": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
-      "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-      "outputPath": "D:\\Time2Draw\\time2draw\\IO\\obj\\",
+      "projectPath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\Mvideo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\IO\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\IO\\IO.csproj",
+      "projectName": "IO",
+      "projectPath": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\Даша\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Даша\\Source\\Repos\\jcuson1\\time2draw\\IO\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< Updated upstream
+        "C:\\Users\\Mvideo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Даша\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +74,13 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj": {
-              "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj"
+<<<<<<< Updated upstream
+            "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\Geometry\\Geometry.csproj"
+=======
+            "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\Geometry\\Geometry.csproj"
+>>>>>>> Stashed changes
             }
           }
         }
@@ -68,7 +94,11 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+<<<<<<< Updated upstream
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }

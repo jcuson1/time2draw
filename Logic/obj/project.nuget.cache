@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "wuxnzt7sWPNeMt1RP6c0QH+79rbMeGT8JTx5lXxG0MJhJwAtYTxIVF3EkFgJXZFURXMMLSz6mmuS5f0oRSbatQ==",
+<<<<<<< Updated upstream
+  "dgSpecHash": "1k41DhmKf36eceI7JTk8pVKTmUC3w3km8fIKv8W5SvPHfA4WzV5ZYaKjPNBA6C1OMm8QehMDUFqWLPW183/UZQ==",
   "success": true,
-  "projectFilePath": "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj",
+  "projectFilePath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\Logic\\Logic.csproj",
+=======
+  "dgSpecHash": "9/3QAJnHdkqc7PNZLFk//44iddXbnjdFLyUKbIi8psVUUb8EyFoOVLwBEfo51QTHgJChsMG0/I4mRY5Oc+hXbg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\Logic\\Logic.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }

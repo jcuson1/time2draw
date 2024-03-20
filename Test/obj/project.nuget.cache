@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "dg/2yWWatlESl2xIFt9kJKT1xEWpO1lhBRFp1KNPABuH+V2FvO9Gm+9VMMV+TA0vXq4XWo4YLn6CCqJ5FJSDrw==",
+<<<<<<< Updated upstream
+  "dgSpecHash": "BsQ2pkUmwHTY5BgNUeQ4pBr2CDQM0+2+HMUPihICtuahyQFzf4Y/5CXAN2b/9IaO4bo2qO4WMkucn89YA1lsFg==",
   "success": true,
-  "projectFilePath": "D:\\Time2Draw\\time2draw\\Test\\Test.csproj",
+  "projectFilePath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\Test\\Test.csproj",
+=======
+  "dgSpecHash": "FG9MUwcPM+W8b1UItHKjB4EUaYkJ1W9wjhWd9sEvh44mbH57Uy2HXN+3V/zY9KySeAsOYW2q0imdKPjLp9cPXQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\Test\\Test.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }
