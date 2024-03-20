@@ -115,9 +115,7 @@
                 Grid.Row="2" 
                 ToolTip="Многоугольник"
                 Style="{StaticResource SideButton}" 
-                Margin="0,150,0,0"
-                
-                Click="stretchButton_Click">
+                Margin="0,150,0,0">
             <Image Source="Resources/hexagon многоугольник.png" Visibility="Visible"></Image>
         </Button>
 
@@ -125,8 +123,7 @@
                 Grid.Row="2" 
                 ToolTip="Кривая Безье"
                 Style="{StaticResource SideButton}" 
-                Margin="0,180,0,0" 
-                Click="rotateButton_Click">
+                Margin="0,180,0,0">
             <Image Source="Resources/bezier-curve (кривая безье).png" Visibility="Visible"></Image>
         </Button>
 
@@ -150,9 +147,33 @@
                 Grid.Row="2" 
                 ToolTip="Текст"
                 Style="{StaticResource SideButton}" 
-                Margin="0,282,0,0" 
-                Click="moveButton_Click">
+                Margin="0,282,0,0">
             <Image Source="Resources/текст text.png" Visibility="Visible"></Image>
+        </Button>
+
+        <Button x:Name="Rotation" 
+                Grid.Row="2" 
+                ToolTip="Вращение фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,312,0,0" 
+                Click="rotateButton_Click">
+        </Button>
+        
+        <Button x:Name="Transfer" 
+                Grid.Row="2" 
+                ToolTip="Перемещение фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,342,0,0" 
+                Click="moveButton_Click">
+        </Button>
+
+        <Button x:Name="Stratch" 
+                Grid.Row="2" 
+                ToolTip="Трансформация фигуры"
+                Style="{StaticResource SideButton}" 
+                Margin="0,372,0,0" 
+                Click="stretchButton_Click">
+            
         </Button>
 
         <Button x:Name="GoBack" 
@@ -173,13 +194,14 @@
             <Image Source="Resources/forward.png" Visibility="Visible"></Image>
         </Button>
 
-        <ComboBox Grid.Column="1" 
+        <ComboBox Name ="Scale"
+                  Grid.Column="1" 
                   Width="100" 
                   Height="20" 
                   Margin="134,0,0,0" 
                   Grid.Row="1"
                   VerticalAlignment="Center" 
-                  HorizontalAlignment="Left">
+                  HorizontalAlignment="Left" SelectionChanged="ScaleButton">
             <TextBlock>50%</TextBlock>
             <TextBlock>75%</TextBlock>
             <TextBlock>100%</TextBlock>
@@ -197,15 +219,37 @@
             Толщина
         </TextBlock>
         
-        <TextBox Grid.Row="1"
+        <TextBox
+                 Name="BrushWidth"
+                 Grid.Row="1"
                  Grid.Column="1"
                  Width="40"
                  Height="20"
-                 MaxLength="3" 
+                 MaxLength="2" 
                  VerticalAlignment="Center" 
                  HorizontalAlignment="Left" 
                  Margin="326,0,0,0"
+                 TextChanged=" TextBox_TextChanged" PreviewTextInput="BrushWidth_PreviewTextInput"
         />
+        
+        <TextBlock Grid.Row="1" 
+                   Grid.Column="1" 
+                   Style="{StaticResource CenterButton}" 
+                   Width="73"
+                   Height="20"
+                   Margin="396,0,0,0">
+            Выбор цвета
+        </TextBlock>
+
+        <Button x:Name="Colour" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Style="{StaticResource CenterButton}" 
+                Margin="480,0,0,0"
+                Height="20"
+                Width="24"
+                BorderBrush="#FFC0BFBF">
+        </Button>
 
         <Canvas Name="paintSurface"
                 MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"

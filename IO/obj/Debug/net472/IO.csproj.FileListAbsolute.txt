@@ -62,3 +62,12 @@ D:\GitHubRepos\time2draw\IO\obj\Debug\net472\IO.AssemblyInfo.cs
 D:\GitHubRepos\time2draw\IO\obj\Debug\net472\IO.csproj.CoreCompileInputs.cache
 D:\GitHubRepos\time2draw\IO\obj\Debug\net472\IO.dll
 D:\GitHubRepos\time2draw\IO\obj\Debug\net472\IO.pdb
+D:\Time2Draw\time2draw\IO\bin\Debug\net472\IO.dll
+D:\Time2Draw\time2draw\IO\bin\Debug\net472\IO.pdb
+D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.csproj.AssemblyReference.cache
+D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.AssemblyInfoInputs.cache
+D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.AssemblyInfo.cs
+D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.csproj.CoreCompileInputs.cache
+D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.dll
+D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.pdb

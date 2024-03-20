@@ -17,9 +17,6 @@ using Point = Geometry.Point;
 using Figure = Geometry.Figure;
 using System.Security.Cryptography;
 using System.Windows.Media.Media3D;
-using IO;
-using System.Xml.Linq;
-using GUI;
 
 namespace Time2Draw
 {
@@ -34,9 +31,12 @@ namespace Time2Draw
         private Point p1, p2;
         private string selectedType = "line";
         private Point startPos = new Point(0, 0);
+        private RotateTransform rotateTransform;
+        private double startAngel = 0;
         private double startWidth = 0;
         private double startHeight = 0;
         public int FigureIndex;
+
 
         public MainWindow()
         {
@@ -64,16 +64,14 @@ namespace Time2Draw
 
         private void paintSurface_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
-         string path = "C:/Users/olgaa/OneDrive/Desktop/nstu/test.svg";
-            SaveFile(path);
-            /*if (e.Source is Shape)
+            if (e.Source is Shape)
             {
                 Shape shape = (Shape)e.Source;
                 Figure figure = new Figure();
                 int i = paintSurface.Children.IndexOf(shape);
                 paintSurface.Children.Remove(shape);
 
-            }*/
+            }
         }
         private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -105,11 +103,22 @@ namespace Time2Draw
                     {
                         rotatingFlag = true;
                         redrawigFlag = false;
+                        if (figure.RenderTransform is RotateTransform)
+                        {
+                           rotateTransform = (RotateTransform)figure.RenderTransform;
+                        }
+                        else if (figure.LayoutTransform is RotateTransform)
+                        {
+                           rotateTransform = (RotateTransform)figure.LayoutTransform;
+                        }
+                        startAngel = rotateTransform.Angle;
                     }
                     break;
                 case Tools.PaintTools.StretchFigure:
                     if (figure != null)
                     {
+                        startPos.x = (int)Canvas.GetLeft(figure);
+                        startPos.y = (int)Canvas.GetTop(figure);
                         startWidth = figure.Width;
                         startHeight = figure.Height;
                     }
@@ -191,18 +200,8 @@ namespace Time2Draw
 
         void Rotating()
         {
-            RotateTransform rotateTransform = new RotateTransform();
-            if (figure.RenderTransform is RotateTransform)
-            {
-                rotateTransform = (RotateTransform)figure.RenderTransform;
-            }
-            else if (figure.LayoutTransform is RotateTransform)
-            {
-                rotateTransform = (RotateTransform)figure.LayoutTransform;
-            }
-
             //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
-            rotateTransform.Angle += (p1.x - p2.x) * 0.01;
+            rotateTransform.Angle = p2.x - p1.x + startAngel;
             figure.RenderTransform = rotateTransform;
 
             paintSurface.Children[FigureIndex] = figure;
@@ -221,7 +220,16 @@ namespace Time2Draw
                 figure.Width = startWidth + p2.x - p1.x;
             if(startHeight + p2.y - p1.y > 0)
                 figure.Height = startHeight + p2.y - p1.y;
-
+            if (startWidth + p2.x - p1.x <= 0)
+            {
+                Canvas.SetLeft(figure, startPos.x - Math.Abs(startWidth + p2.x - p1.x));
+                figure.Width = Math.Abs(startWidth + p2.x - p1.x);
+            }
+            if (startHeight + p2.y - p1.y <= 0)
+            {
+                Canvas.SetTop(figure, startPos.y - Math.Abs(startHeight + p2.y - p1.y));
+                figure.Height = Math.Abs(startHeight + p2.y - p1.y);
+            }
             paintSurface.Children[FigureIndex] = figure;
         }
 
@@ -257,6 +265,41 @@ namespace Time2Draw
             GUIHandler.instance.StretchFigure();
         }
 
+      private void ScaleButton(object sender, SelectionChangedEventArgs e)
+      {
+         string scale = (Scale.SelectedItem as TextBlock).Text;
+         scale = scale.Substring(0, scale.Length - 1);
+         GUIHandler.instance.scaleValue = double.Parse(scale) / 100;
+         paintSurface.LayoutTransform = new ScaleTransform(GUIHandler.instance.scaleValue, GUIHandler.instance.scaleValue);
+        
+      }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var value = BrushWidth.Text;
+            int result;
+
+            if (BrushWidth.Text != null)
+            {
+                if (int.TryParse(value.ToString(), out result))
+                    GUIHandler.instance.ChangeBrushWidth(result);
+            }
+            else
+                return;
+        }
+
+        private void BrushWidth_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            foreach (char c in e.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    e.Handled = true; 
+                    return;
+                }
+            }
+        }
+
         private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
@@ -264,39 +307,6 @@ namespace Time2Draw
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.MovingFigure);
         }
 
-        public void SaveFile(string path)
-        {
-         Save save = new Save("svg");
-
-         /*int i = 0;
-         List<Figure> figures = new List<Figure>();
-
-         foreach (Shape fig in paintSurface.Children)
-         {
-            figures.Add(new Figure());
-            
-            List<Point> points = new List<Point>();
-            Point point = new Point((int)Canvas.GetTop(paintSurface.Children[i]), (int)Canvas.GetLeft(paintSurface.Children[i]));
-            points.Add(point);
-
-            point = new Point((int)Canvas.GetG(paintSurface.Children[i]), (int)Canvas.GetLeft(paintSurface.Children[i]));
-            
-            points.Add(point);
-
-
-            if (paintSurface.Children[i] is Line) figures[i].type = "line";
-            else if (paintSurface.Children[i] is Rectangle) figures[i].type = "rectangle";
-            else if (paintSurface.Children[i] is Ellipse) figures[i].type = "ellipse";
-
-
-            if (!(paintSurface.Children[i] is Line)) figures[i].setAngle((fig.RenderTransform as RotateTransform).Angle);
-            figures[i].setPoints(points);
-            figures[i].setRectWidth(fig.StrokeThickness);
-            i++;
-         }*/
-
-         save.SaveAsSVG(Drawer.Figures, paintSurface.Width, paintSurface.Height, path);
-        }
-
     }
+
 }
