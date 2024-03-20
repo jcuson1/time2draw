@@ -300,7 +300,12 @@ namespace Time2Draw
             }
         }
 
-        private bool EditingToolIsActive()
+        private void SafeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+      }
+
+      private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||

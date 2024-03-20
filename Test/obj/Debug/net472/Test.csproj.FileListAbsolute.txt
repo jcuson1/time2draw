@@ -70,3 +70,12 @@ D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
 D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
 D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.dll
 D:\Time2Draw\time2draw\Test\obj\Debug\net472\Test.pdb
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\bin\Debug\net472\Test.dll
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\bin\Debug\net472\Test.pdb
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.dll
+C:\Users\olgaa\OneDrive\Документы\GitHub\time2draw\Test\obj\Debug\net472\Test.pdb

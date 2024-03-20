@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.7.2": {}
+    ".NETFramework,Version=v4.7.2": {
+      "Geometry/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "compile": {
+          "bin/placeholder/Geometry.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Geometry.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Geometry/1.0.0": {
+      "type": "project",
+      "path": "../Geometry/Geometry.csproj",
+      "msbuildProject": "../Geometry/Geometry.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.7.2": []
+    ".NETFramework,Version=v4.7.2": [
+      "Geometry >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\nastj\\.nuget\\packages\\": {}
+    "C:\\Users\\olgaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
+      "projectUniqueName": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
-      "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-      "outputPath": "D:\\Time2Draw\\time2draw\\IO\\obj\\",
+      "projectPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\olgaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\IO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\olgaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +52,11 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -45,7 +68,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

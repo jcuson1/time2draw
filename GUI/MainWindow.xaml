@@ -58,7 +58,7 @@
                 Content="Сохранить" 
                 Margin="100,0,0,0" 
                 Grid.Column="1"
-                Style="{StaticResource TopButton}"/>
+                Style="{StaticResource TopButton}" Click="SafeButton_Click"/>
         <Button x:Name="HelpButton"  
                 Width="100" 
                 Content="Помощь" 

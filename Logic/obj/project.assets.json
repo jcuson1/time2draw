@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nastj\\.nuget\\packages\\": {}
+    "C:\\Users\\olgaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj",
+      "projectUniqueName": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Logic\\Logic.csproj",
       "projectName": "Logic",
-      "projectPath": "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj",
-      "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-      "outputPath": "D:\\Time2Draw\\time2draw\\Logic\\obj\\",
+      "projectPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Logic\\Logic.csproj",
+      "packagesPath": "C:\\Users\\olgaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Logic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\olgaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj": {
-              "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj"
+            "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj"
             }
           }
         }
@@ -68,7 +68,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
