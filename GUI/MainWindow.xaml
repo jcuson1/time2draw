@@ -157,6 +157,7 @@
                 Style="{StaticResource SideButton}" 
                 Margin="0,312,0,0" 
                 Click="rotateButton_Click">
+            <Image Source="Resources/вращение.png" Visibility="Visible"></Image>
         </Button>
         
         <Button x:Name="Transfer" 
@@ -165,15 +166,16 @@
                 Style="{StaticResource SideButton}" 
                 Margin="0,342,0,0" 
                 Click="moveButton_Click">
+            <Image Source="Resources/кнопка перемещения.png" Visibility="Visible"></Image>
         </Button>
 
         <Button x:Name="Stratch" 
                 Grid.Row="2" 
-                ToolTip="Трансформация фигуры"
+                ToolTip="Растяжение/сжатие фигуры"
                 Style="{StaticResource SideButton}" 
                 Margin="0,372,0,0" 
                 Click="stretchButton_Click">
-            
+            <Image Source="Resources/растяжение.png" Visibility="Visible"></Image>
         </Button>
 
         <Button x:Name="GoBack" 

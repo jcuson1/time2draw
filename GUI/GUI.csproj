@@ -186,5 +186,17 @@
   <ItemGroup>
     <Resource Include="Resources\эллипс.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\вращение.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\кнопка перемещения.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\перемещение.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\растяжение.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

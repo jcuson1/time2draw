@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\olgaa\\.nuget\\packages\\": {}
+    "C:\\Users\\diana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\IO\\IO.csproj",
+      "projectUniqueName": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\IO\\IO.csproj",
-      "packagesPath": "C:\\Users\\olgaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\IO\\obj\\",
+      "projectPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
+      "outputPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\IO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\olgaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj": {
-              "projectPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj"
+            "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj"
             }
           }
         }
@@ -68,7 +68,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

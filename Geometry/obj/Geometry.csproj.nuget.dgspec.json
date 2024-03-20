@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj": {}
+    "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj": {
+    "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj",
+        "projectUniqueName": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj",
         "projectName": "Geometry",
-        "projectPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\Geometry.csproj",
-        "packagesPath": "C:\\Users\\olgaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\olgaa\\OneDrive\\Документы\\GitHub\\time2draw\\Geometry\\obj\\",
+        "projectPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj",
+        "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
+        "outputPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\olgaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +39,7 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
