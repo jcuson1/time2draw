@@ -85,7 +85,7 @@ namespace GUI
 				Geometry.Line ln = (Geometry.Line)(fig);
 				ln.setPoints(p1.x, p1.y, p2.x, p2.y);
 				ln.setRectFill(0, 0, 0);
-				ln.setRectWidth(2);
+				ln.setRectWidth(GUIHandler.instance.BrushWidth);
 				Figures.Add(ln);
 			}
 
@@ -94,7 +94,7 @@ namespace GUI
 				Geometry.Ellipse el = (Geometry.Ellipse)(fig);
 				el.setPoints(new List<Point> { p1, p2 });
 				el.setRectFill(0, 0, 0);
-				el.setRectWidth(2);
+				el.setRectWidth(GUIHandler.instance.BrushWidth);
 				el.setFill(0, 255, 0);
 				Figures.Add(el);
 			}
@@ -104,7 +104,7 @@ namespace GUI
 				Geometry.Rectangle rect = (Geometry.Rectangle)(fig);
 				rect.setPoints(new List<Point> { p1, p2 });
 				rect.setRectFill(0, 0, 0);
-				rect.setRectWidth(2);
+				rect.setRectWidth(GUIHandler.instance.BrushWidth);
 				rect.setFill(0, 255, 0);
 				Figures.Add(rect);
 			}

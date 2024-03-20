@@ -35,7 +35,7 @@ namespace Time2Draw
 		private double startWidth = 0;
 		private double startHeight = 0;
 		public int FigureIndex;
-		Figure selectedFigure;
+		Figure selectedFigure = new Geometry.Line();
 
 		public MainWindow()
 		{
