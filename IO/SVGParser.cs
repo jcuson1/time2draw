@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -107,7 +107,7 @@ namespace IO.SVG_Saver
          m_writer.WriteEndElement();
       }
 
-      /*public void DrawPath(Point start, IList<IPathCommand> commands, double thickness, bool fill = false)
+      *//*public void DrawPath(Point start, IList<IPathCommand> commands, double thickness, bool fill = false)
       {
          string data = "M " + start.X.ToString() + "," + start.Y.ToString();
          Point last = new Point(0, 0);
@@ -123,6 +123,6 @@ namespace IO.SVG_Saver
          m_writer.WriteAttributeString("d", data);
          m_writer.WriteAttributeString("style", "fill-opacity:" + fillOpacity + ";fill:rgb(0,0,0);stroke:rgb(0,0,0);stroke-width:" + thickness.ToString());
          m_writer.WriteEndElement();
-      }*/
+      }*//*
    }
-}
+}*/
