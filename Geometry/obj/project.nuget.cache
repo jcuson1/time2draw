@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "kW/r2ZazOevksiRZlvdXVM1tQAAnm1RV45zU9le50jAjibubHS4W6xIHKZ0pLFogd3L+sCxGwoqddA11Y1yGew==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\Geometry\\Geometry.csproj",
+=======
+  "dgSpecHash": "GOpLpMXVim+hd/VCcXogVtS0hNV8+0kYswEhS1ttp2mLAwQ/J5oGukikW66PAjjz7L9Frm8XoC1sKYHN+duCxg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\Geometry\\Geometry.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }
