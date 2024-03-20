@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHubRepos\\time2draw\\Test\\Test.csproj": {}
+    "D:\\Time2Draw\\time2draw\\Test\\Test.csproj": {}
   },
   "projects": {
-    "D:\\GitHubRepos\\time2draw\\Test\\Test.csproj": {
+    "D:\\Time2Draw\\time2draw\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHubRepos\\time2draw\\Test\\Test.csproj",
+        "projectUniqueName": "D:\\Time2Draw\\time2draw\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "D:\\GitHubRepos\\time2draw\\Test\\Test.csproj",
-        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHubRepos\\time2draw\\Test\\obj\\",
+        "projectPath": "D:\\Time2Draw\\time2draw\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
+        "outputPath": "D:\\Time2Draw\\time2draw\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +39,7 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

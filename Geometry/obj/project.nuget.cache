@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CitYAybD8cGSutH9wPA2Z4xI3cEttMr/4GL0U0EpucbeQoQWGAwzmDU36eZZvhjMf7Bw31limIhBMLi+lnNuSg==",
+  "dgSpecHash": "lYd6qL/AdQ90kLmAB+SgGY4n7yPJnRit9OuhI8QZALzm3TaQE4R7BejthD1n6aP59dMmyHmBw9XT9ZWyKV9+Cg==",
   "success": true,
-  "projectFilePath": "D:\\GitHubRepos\\time2draw\\Geometry\\Geometry.csproj",
+  "projectFilePath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
