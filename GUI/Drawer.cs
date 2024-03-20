@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using Logic;
 
 namespace GUI
 {
@@ -82,7 +83,7 @@ namespace GUI
             Figure fig1 = new Figure();
             fig1.type = selectedType;
             fig1.points = new List<Point>() { p1, p2 };
-            fig1.rectWidth = 2.0;
+            fig1.rectWidth = GUIHandler.instance.BrushWidth;
             fig1.setFill(255, 255, 255);
             fig1.setRectFill(0, 0, 0);
             fig1.setAngle(0);

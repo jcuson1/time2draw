@@ -200,8 +200,6 @@ namespace Time2Draw
 
         void Rotating()
         {
-            
-
             //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
             rotateTransform.Angle = p2.x - p1.x + startAngel;
             figure.RenderTransform = rotateTransform;
@@ -276,7 +274,33 @@ namespace Time2Draw
         
       }
 
-      private bool EditingToolIsActive()
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var value = BrushWidth.Text;
+            int result;
+
+            if (BrushWidth.Text != null)
+            {
+                if (int.TryParse(value.ToString(), out result))
+                    GUIHandler.instance.ChangeBrushWidth(result);
+            }
+            else
+                return;
+        }
+
+        private void BrushWidth_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            foreach (char c in e.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    e.Handled = true; 
+                    return;
+                }
+            }
+        }
+
+        private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||

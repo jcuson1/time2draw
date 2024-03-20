@@ -11,13 +11,13 @@ namespace Logic
       public static GUIHandler instance;
       public Tools.PaintTools SelectedTool = Tools.PaintTools.AddLine;
       public double scaleValue = 1;
+      public double BrushWidth = 1;
       public static GUIHandler GetInstance()
       {
          if (instance == null)
             instance = new GUIHandler();
          return instance;
       }
-
 
       public void Save()
       {
@@ -80,9 +80,9 @@ namespace Logic
       {
          SelectedTool = Tools.PaintTools.MovingFigure;
       }
-      public void FigureInfoPanel() 
-      { 
-
+      public void ChangeBrushWidth(int width) 
+      {
+            BrushWidth = (double)width;
       }
 
    }

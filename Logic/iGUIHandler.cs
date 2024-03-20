@@ -22,6 +22,6 @@ namespace Logic
       void FillColorFigure();
       void BorderColorFigure();
       void DeleteFigure();
-      void FigureInfoPanel();
+      void ChangeBrushWidth(int width);
    }
 }
