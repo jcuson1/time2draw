@@ -8,7 +8,27 @@ namespace Logic
 {
    public class Tools
    {
-      public enum PaintTools { AddFigure, DeleteFigure, StretchFigure, RotateFigure, FillColorFigure, BorderColorFigure, Undo, Redo };
-      public enum IOTools { Save, Load };
+      public enum PaintTools 
+      { 
+         AddLine, 
+         AddCircle, 
+         AddRect, 
+         AddElips, 
+         AddPolygon, 
+         ChoisingFigure,
+         MovingFigure,
+         DeleteFigure, 
+         StretchFigure, 
+         RotateFigure, 
+         FillColorFigure, 
+         BorderColorFigure, 
+         Undo, 
+         Redo 
+      };
+      public enum IOTools 
+      { 
+         Save, 
+         Load 
+      };
     }
 }

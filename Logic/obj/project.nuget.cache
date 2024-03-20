@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yl/ZPJ/k2kyMnIilJHykhwbEgkx7bC5tBL08s+bdBJId96VVGonPUo/piLqnYwOxS2cvCGk+k/j+pD3xvoxgzA==",
+  "dgSpecHash": "wuxnzt7sWPNeMt1RP6c0QH+79rbMeGT8JTx5lXxG0MJhJwAtYTxIVF3EkFgJXZFURXMMLSz6mmuS5f0oRSbatQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Павел\\Documents\\GitHub\\time2draw\\Logic\\Logic.csproj",
+  "projectFilePath": "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

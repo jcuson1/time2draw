@@ -16,9 +16,7 @@ namespace Logic
       {
             switch (GUIHandler.instance.SelectedTool)
             {
-                case Tools.PaintTools.AddFigure:
-                    FigureFabric.instance.AddFigure(cords);
-                    break;
+
                 case Tools.PaintTools.DeleteFigure:
                     FigureFabric.instance.DeleteFigure(cords);
                     break;

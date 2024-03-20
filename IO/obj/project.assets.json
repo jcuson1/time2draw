@@ -1,31 +1,45 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.7.2": {}
+    ".NETFramework,Version=v4.7.2": {
+      "Geometry/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "compile": {
+          "bin/placeholder/Geometry.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Geometry.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Geometry/1.0.0": {
+      "type": "project",
+      "path": "../Geometry/Geometry.csproj",
+      "msbuildProject": "../Geometry/Geometry.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.7.2": []
+    ".NETFramework,Version=v4.7.2": [
+      "Geometry >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Павел\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\nastj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Павел\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
+      "projectUniqueName": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "C:\\Users\\Павел\\Documents\\GitHub\\time2draw\\IO\\IO.csproj",
-      "packagesPath": "C:\\Users\\Павел\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Павел\\Documents\\GitHub\\time2draw\\IO\\obj\\",
+      "projectPath": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
+      "outputPath": "D:\\Time2Draw\\time2draw\\IO\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Павел\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -38,7 +52,11 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -50,7 +68,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
