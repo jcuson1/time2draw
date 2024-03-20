@@ -122,3 +122,9 @@ N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
 N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
 N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.dll
 N:\NSTU\PROJECT\time2draw\Test\obj\Debug\net472\Test.pdb
+C:\Users\Павел\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.AssemblyReference.cache
+C:\Users\Павел\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Павел\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfoInputs.cache
+C:\Users\Павел\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.AssemblyInfo.cs
+C:\Users\Павел\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.csproj.CoreCompileInputs.cache
+C:\Users\Павел\Documents\GitHub\time2draw\Test\obj\Debug\net472\Test.sourcelink.json

@@ -127,10 +127,6 @@
       <Project>{dd94866c-a3f1-435e-9914-ed7d8f28b79e}</Project>
       <Name>Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Test\Test.csproj">
-      <Project>{74d12304-23ca-44a7-8e5f-f6a83bed24bb}</Project>
-      <Name>Test</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

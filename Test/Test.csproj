@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Geometry\Geometry.csproj" />
+    <ProjectReference Include="..\GUI\GUI.csproj" />
     <ProjectReference Include="..\Logic\Logic.csproj" />
   </ItemGroup>
 
