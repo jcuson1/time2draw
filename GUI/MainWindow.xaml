@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Time2Draw"
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="900">
@@ -243,15 +244,15 @@
             Выбор цвета
         </TextBlock>
 
-        <Button x:Name="Colour" 
+        <xctk:ColorPicker 
                 Grid.Row="1" 
                 Grid.Column="1" 
                 Style="{StaticResource CenterButton}" 
                 Margin="480,0,0,0"
                 Height="20"
-                Width="24"
-                BorderBrush="#FFC0BFBF">
-        </Button>
+                Width="50"
+                Background="White"
+        />
 
         <Canvas Name="paintSurface"
                 MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"

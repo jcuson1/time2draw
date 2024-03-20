@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V9Ij3K6tCSkmFnanq2frkFySa4WNfK5euF0fVcrGdcaHyQOJpPqQt7SNfm7gvikENLxlQqJUwjv1iH7ijySrDQ==",
+  "dgSpecHash": "wuxnzt7sWPNeMt1RP6c0QH+79rbMeGT8JTx5lXxG0MJhJwAtYTxIVF3EkFgJXZFURXMMLSz6mmuS5f0oRSbatQ==",
   "success": true,
-  "projectFilePath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Logic\\Logic.csproj",
+  "projectFilePath": "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

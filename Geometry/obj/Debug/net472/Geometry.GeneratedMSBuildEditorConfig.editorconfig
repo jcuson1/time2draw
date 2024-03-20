@@ -1,5 +1,3 @@
 is_global = true
 build_property.RootNamespace = Geometry
-build_property.ProjectDir = D:\Университет\4 курс\Современные технологии программирования\time2draw\Geometry\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = D:\Time2Draw\time2draw\Geometry\

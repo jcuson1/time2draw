@@ -17,6 +17,8 @@ using Point = Geometry.Point;
 using Figure = Geometry.Figure;
 using System.Security.Cryptography;
 using System.Windows.Media.Media3D;
+using Xceed.Wpf.Toolkit;
+
 
 namespace Time2Draw
 {
