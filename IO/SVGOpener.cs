@@ -15,6 +15,8 @@ namespace IO.SVG_Opener
 
       public List<Figure> ReadSVG(string path)
       {
+         char[] delimeters = { ',', '(', ')'};
+
          List<Figure> svgFigures = new List<Figure>();
          double width = 0;
          double height = 0;
@@ -23,10 +25,32 @@ namespace IO.SVG_Opener
 
          foreach (XElement el in svgFile.Root.Elements())
          {
-            if (el.Name == "sql")
+            if (el.Name == "rect")
             {
-               width = double.Parse(el.Attribute("width").Value);
-               height = double.Parse(el.Attribute("height").Value);
+               Rectangle rect = new Rectangle();
+               List<Point> points = new List<Point>();
+               
+               points.Add(new Point(int.Parse(el.Attribute("x").Value),
+                                    int.Parse(el.Attribute("y").Value)));
+               points.Add(new Point(int.Parse((el.Attribute("x").Value)) + int.Parse((el.Attribute("width").Value)),
+                                    int.Parse((el.Attribute("y").Value)) + int.Parse((el.Attribute("height").Value))));
+               rect.setPoints(points);
+               rect.setRectWidth(int.Parse(el.Attribute("stroke-width").Value));
+
+               string[] FillRGB = el.Attribute("fill").Value.Split(delimeters);
+
+               rect.setFill(byte.Parse(FillRGB[1]),
+                            byte.Parse(FillRGB[2]),
+                            byte.Parse(FillRGB[3]));
+
+               string[] RectFillRGB = el.Attribute("stroke").Value.Split(delimeters);
+
+               rect.setFill(byte.Parse(RectFillRGB[1]),
+                            byte.Parse(RectFillRGB[2]),
+                            byte.Parse(RectFillRGB[3]));
+
+               svgFigures.Add(rect);
+
             }
          }
 

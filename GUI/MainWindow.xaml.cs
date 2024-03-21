@@ -75,6 +75,8 @@ namespace Time2Draw
                 Shape shape = (Shape)e.Source;
                 int i = paintSurface.Children.IndexOf(shape);
                 paintSurface.Children.Remove(shape);
+               GUI.Drawer.Figures.RemoveAt(i);
+               GUI.Drawer.indFigures--;
 
             }
         }
@@ -408,6 +410,8 @@ namespace Time2Draw
         {
          SVGOpener open = new SVGOpener();
          List<Figure> svgFigures = open.ReadSVG("C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+
+         svgFigures.Reverse();
         }
 
       private bool EditingToolIsActive()
