@@ -280,8 +280,13 @@
                 Width="50"
                 Background="White" 
         />
-        
-        <Canvas Name="paintSurface"
+
+        <ScrollViewer
+            Grid.Row="2"
+            Grid.Column="1"
+            HorizontalScrollBarVisibility="Visible"
+            VerticalScrollBarVisibility="Visible">
+            <Canvas Name="paintSurface"
                 MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"
                 MouseRightButtonDown="paintSurface_MouseRightButtonDown"
                 MouseLeftButtonUp="paintSurface_MouseLeftButtonUp"
@@ -289,6 +294,8 @@
                 Grid.Row="2" 
                 Grid.Column="1"  
                 Background="White"
-        />
+            />
+        </ScrollViewer>
+        
     </Grid>
 </Window>

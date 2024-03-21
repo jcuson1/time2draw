@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj": {}
+    "D:\\time2draaaw\\time2draw\\Logic\\Logic.csproj": {}
   },
   "projects": {
-    "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj": {
+    "D:\\time2draaaw\\time2draw\\Geometry\\Geometry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj",
+        "projectUniqueName": "D:\\time2draaaw\\time2draw\\Geometry\\Geometry.csproj",
         "projectName": "Geometry",
-        "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj",
+        "projectPath": "D:\\time2draaaw\\time2draw\\Geometry\\Geometry.csproj",
         "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-        "outputPath": "D:\\Time2Draw\\time2draw\\Geometry\\obj\\",
+        "outputPath": "D:\\time2draaaw\\time2draw\\Geometry\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,14 +43,14 @@
         }
       }
     },
-    "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj": {
+    "D:\\time2draaaw\\time2draw\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj",
+        "projectUniqueName": "D:\\time2draaaw\\time2draw\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "D:\\Time2Draw\\time2draw\\Logic\\Logic.csproj",
+        "projectPath": "D:\\time2draaaw\\time2draw\\Logic\\Logic.csproj",
         "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-        "outputPath": "D:\\Time2Draw\\time2draw\\Logic\\obj\\",
+        "outputPath": "D:\\time2draaaw\\time2draw\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,8 +67,8 @@
           "net472": {
             "targetAlias": "net472",
             "projectReferences": {
-              "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj": {
-                "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj"
+              "D:\\time2draaaw\\time2draw\\Geometry\\Geometry.csproj": {
+                "projectPath": "D:\\time2draaaw\\time2draw\\Geometry\\Geometry.csproj"
               }
             }
           }
