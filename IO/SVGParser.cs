@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Windows;
 using System.IO;
 using System.Collections;
 using Geometry;
 
-namespace IO.SVG_Saver
+namespace IO.SVG_Parser
 {
    public class SVGRenderer //: IRenderContext
    {
@@ -36,20 +37,15 @@ namespace IO.SVG_Saver
          Writer.WriteDocType("svg", "-//W3C//DTD SVG 1.1//EN", "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd", null);
          Writer.WriteStartElement("svg", "http://www.w3.org/2000/svg");
          Writer.WriteAttributeString("version", "1.1");
-         Writer.WriteAttributeString("width", "1000");
-         Writer.WriteAttributeString("height", "1000");
-         Writer.WriteAttributeString("viewBox", "0 0 1000 1000");
+         Writer.WriteAttributeString("width", this.Width.ToString());
+         Writer.WriteAttributeString("height", this.Height.ToString());
+         //Writer.WriteAttributeString("viewBox", "0 0 1000 1000");
       }
 
       public void End()
       {
          Writer.WriteEndDocument();
          Writer.Flush();
-      }
-
-      public void StartSection(object tag)
-      {
-         // Do nothing.
       }
 
       public void WriteLine(Line line)
@@ -111,6 +107,18 @@ namespace IO.SVG_Saver
             m_writer.WriteAttributeString("transform", "rotate(" + el.angle.ToString() + "," + cx.ToString() + "," + cy.ToString() + ")");
  
          m_writer.WriteEndElement();
+      }
+
+      public void ReadSVG(string path)
+      {
+         List<Figure> svgFigures = new List<Figure>();
+
+         XDocument svgFile = XDocument.Load(path);
+
+         foreach(XElement fig in svgFile.Root.Elements())
+         {
+
+         }
       }
    }
 }

@@ -18,6 +18,7 @@ using Figure = Geometry.Figure;
 using System.Security.Cryptography;
 using System.Windows.Media.Media3D;
 using System.Runtime.InteropServices.ComTypes;
+using System.Diagnostics.Eventing.Reader;
 using IO;
 using System.IO;
 
@@ -160,9 +161,17 @@ namespace Time2Draw
         {
             redrawigFlag = false;
             rotatingFlag = false;
+            if(selectedFigure is Geometry.Line)
+               selectedFigure = new Geometry.Line();
+            else if (selectedFigure is Geometry.Ellipse)
+               selectedFigure = new Geometry.Ellipse();
+            else if (selectedFigure is Geometry.Rectangle)
+               selectedFigure = new Geometry.Rectangle();
+    
             if (figure != null)
             {
                 figure = null;
+                
             }
         }
 
@@ -238,9 +247,9 @@ namespace Time2Draw
         void Moving()
         {
 
-            if (startPos.x + p2.x - p1.x > 0)
+            //if (startPos.x + p2.x - p1.x > 0)
                 Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
-            if (startPos.y + p2.y - p1.y > 0)
+            //if (startPos.y + p2.y - p1.y > 0)
                 Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
 
             paintSurface.Children[FigureIndex] = figure;
