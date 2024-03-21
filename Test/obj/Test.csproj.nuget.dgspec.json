@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\time2draaaw\\time2draw\\Test\\Test.csproj": {}
+    "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Test\\Test.csproj": {}
   },
   "projects": {
-    "D:\\time2draaaw\\time2draw\\Test\\Test.csproj": {
+    "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\time2draaaw\\time2draw\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "D:\\time2draaaw\\time2draw\\Test\\Test.csproj",
-        "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-        "outputPath": "D:\\time2draaaw\\time2draw\\Test\\obj\\",
+        "projectPath": "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +39,7 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
