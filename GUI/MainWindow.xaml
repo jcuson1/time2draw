@@ -255,13 +255,14 @@
         </TextBlock>
 
         <xctk:ColorPicker 
+                Name="ColorPicker"
                 Grid.Row="1" 
                 Grid.Column="1" 
                 Style="{StaticResource CenterButton}" 
                 Margin="480,0,0,0"
                 Height="20"
                 Width="50"
-                Background="White"
+                Background="White" SelectedColorChanged="ColorPicker_SelectedColorChanged"
         />
 
         <Canvas Name="paintSurface"
