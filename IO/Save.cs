@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 using IO.SVG_Saver;
 using Geometry;
 using System.Xml;
-using System.Drawing;
 
 
 namespace IO
 {
-    public class Save
-    {
+   public class Save
+   {
       public string type;
 
       public Save(string type)
@@ -20,9 +19,9 @@ namespace IO
          this.type = type;
       }
 
-      public List<Figure> figuers = new List<Figure>();   
+      public List<Figure> figuers = new List<Figure>();
 
-      public void SaveAsSVG(List<Figure> figure, double w, double h, string path) 
+      public void SaveAsSVG(List<Figure> figure, double w, double h, string path)
       {
          SVGRenderer parser = new SVGRenderer(w, h, path);
 
@@ -30,23 +29,27 @@ namespace IO
 
          foreach (Figure fig in figure)
          {
-            switch(fig.type)
+            if (fig is Line)
             {
-               case "line":
-                  parser.DrawLine(fig);
-                  break;
-               case "rectangle":
-                  parser.DrawRectangle(fig);
-                  break;
-               case "ellipse":
-                  parser.DrawEllipse(fig);
-                  break;
+               parser.WriteLine(fig as Line);
+            }
+            else if (fig is Rectangle) 
+            {
+               parser.WriteRectangle(fig as Rectangle);
+            }
+            else if (fig is Ellipse)
+            {
+               parser.WriteEllipse(fig as Ellipse);
             }
          }
 
          parser.End();
       }
 
-    }
+      public void OpenSVG(string path)
+      {
+
+      }
+
+   }
 }
-*/

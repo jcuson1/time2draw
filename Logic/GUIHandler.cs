@@ -14,12 +14,14 @@ namespace Logic
       public double scaleValue = 1;
       public double BrushWidth = 1;
       public Color SelectedColor = Color.White;
-      public static GUIHandler GetInstance()
-      {
+      public Color SelectedRectColor = Color.Black;
+
+        public static GUIHandler GetInstance()
+        {
          if (instance == null)
             instance = new GUIHandler();
          return instance;
-      }
+        }
 
       public void Save()
       {
@@ -69,7 +71,7 @@ namespace Logic
       {
          SelectedTool = Tools.PaintTools.FillColorFigure;
       }
-      public void BorderColorFigure()
+      public void RectColorFigure()
       {
          SelectedTool = Tools.PaintTools.BorderColorFigure;
       }

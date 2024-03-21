@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U1N7UxNSiESm+yPwBUWnbapSmEYkLNXlia8xlJnF0iUP6XwZNuGNXCDTI0YJwgW+2enthyl2tqy68YjVa1IrBg==",
+  "dgSpecHash": "MGQ47L49WtIPwoZdP3n/qvcQwDln5K/qsrV92HEK9ZFvp+fekQEAyPN8T1OgXnN8TTCQD+QPw/puGxcPB5hl5w==",
   "success": true,
-  "projectFilePath": "N:\\NSTU\\PROJECT\\time2draw\\IO\\IO.csproj",
+  "projectFilePath": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

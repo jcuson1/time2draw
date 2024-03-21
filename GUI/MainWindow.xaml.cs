@@ -18,6 +18,10 @@ using Figure = Geometry.Figure;
 using System.Security.Cryptography;
 using System.Windows.Media.Media3D;
 using System.Runtime.InteropServices.ComTypes;
+using System.Diagnostics.Eventing.Reader;
+using IO;
+using IO.SVG_Opener;
+using System.IO;
 
 namespace Time2Draw
 {
@@ -40,9 +44,10 @@ namespace Time2Draw
 
         public MainWindow()
         {
-            InitializeComponent();
-            GUIHandler.GetInstance();
-            paintSurface.ClipToBounds = true;
+           InitializeComponent();
+           GUIHandler.GetInstance();
+           paintSurface.ClipToBounds = true;
+           this.WindowState = WindowState.Maximized;
         }
 
         private void lineButton_Click(object sender, RoutedEventArgs e)
@@ -70,6 +75,8 @@ namespace Time2Draw
                 Shape shape = (Shape)e.Source;
                 int i = paintSurface.Children.IndexOf(shape);
                 paintSurface.Children.Remove(shape);
+               GUI.Drawer.Figures.RemoveAt(i);
+               GUI.Drawer.indFigures--;
 
             }
         }
@@ -100,6 +107,11 @@ namespace Time2Draw
                     {
                         figure.Fill = new SolidColorBrush(Color.FromRgb(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B));
                         GUI.Drawer.Figures[FigureIndex].setFill(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B);
+                        figure.Stroke = new SolidColorBrush(Color.FromRgb(GUIHandler.instance.SelectedRectColor.R, GUIHandler.instance.SelectedRectColor.G, GUIHandler.instance.SelectedRectColor.B));
+                        GUI.Drawer.Figures[FigureIndex].setRectFill(GUIHandler.instance.SelectedRectColor.R, GUIHandler.instance.SelectedRectColor.G, GUIHandler.instance.SelectedRectColor.B);
+                        figure.StrokeThickness = GUIHandler.instance.BrushWidth;
+                        GUI.Drawer.Figures[FigureIndex].setRectWidth(GUIHandler.instance.BrushWidth);
+
                     }
                     break;
                 case Tools.PaintTools.RotateFigure:
@@ -153,9 +165,17 @@ namespace Time2Draw
         {
             redrawigFlag = false;
             rotatingFlag = false;
+            if(selectedFigure is Geometry.Line)
+               selectedFigure = new Geometry.Line();
+            else if (selectedFigure is Geometry.Ellipse)
+               selectedFigure = new Geometry.Ellipse();
+            else if (selectedFigure is Geometry.Rectangle)
+               selectedFigure = new Geometry.Rectangle();
+    
             if (figure != null)
             {
                 figure = null;
+                
             }
         }
 
@@ -231,9 +251,9 @@ namespace Time2Draw
         void Moving()
         {
 
-            if (startPos.x + p2.x - p1.x > 0)
+            //if (startPos.x + p2.x - p1.x > 0)
                 Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
-            if (startPos.y + p2.y - p1.y > 0)
+            //if (startPos.y + p2.y - p1.y > 0)
                 Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
 
             paintSurface.Children[FigureIndex] = figure;
@@ -308,7 +328,8 @@ namespace Time2Draw
             scale = scale.Substring(0, scale.Length - 1);
             GUIHandler.instance.scaleValue = double.Parse(scale) / 100;
             paintSurface.LayoutTransform = new ScaleTransform(GUIHandler.instance.scaleValue, GUIHandler.instance.scaleValue);
-
+            paintSurface.Height = paintSurface.ActualHeight;
+            paintSurface.Width = paintSurface.ActualWidth;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -340,16 +361,60 @@ namespace Time2Draw
 
         private void SafeButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
+            string format = (SaveBox.SelectedItem as TextBlock).Text;
+            switch (format)
+            {
+                case ".svg":
+                    Save save = new Save("svg");
+                    save.SaveAsSVG(GUI.Drawer.Figures, paintSurface.ActualWidth, paintSurface.ActualHeight, "C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+                    break;
+                case ".png":
+                    RenderTargetBitmap bmp = new RenderTargetBitmap((int)paintSurface.ActualWidth, (int)paintSurface.ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
+                    bmp.Render(paintSurface);
+                    PngBitmapEncoder encoder = new PngBitmapEncoder();
+                    encoder.Frames.Add(BitmapFrame.Create(bmp));
+                    Microsoft.Win32.SaveFileDialog saveimg = new Microsoft.Win32.SaveFileDialog();
+                    Canvas can = new Canvas();
+                    saveimg.DefaultExt = ".PNG";
+                    saveimg.Filter = "Image (.PNG)|*.PNG";
+                    if (saveimg.ShowDialog() == true)
+                    {
+                        using (FileStream file = File.Create(saveimg.FileName))
+                        {
+                            encoder.Save(file);
+                        }
+                    }
+                    break;
+                case ".t2d":
+                    break;
+            }
+      }
 
         private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
-            var R = ColorPicker.SelectedColor.Value.R; var G = ColorPicker.SelectedColor.Value.G; var B = ColorPicker.SelectedColor.Value.B;
+            var R = ColorPicker.SelectedColor.Value.R; 
+            var G = ColorPicker.SelectedColor.Value.G; 
+            var B = ColorPicker.SelectedColor.Value.B;
             GUIHandler.instance.SelectedColor = System.Drawing.Color.FromArgb(R, G, B);
         }
 
-        private bool EditingToolIsActive()
+        private void ColorPickerRect_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            var R = ColorPickerRect.SelectedColor.Value.R; 
+            var G = ColorPickerRect.SelectedColor.Value.G; 
+            var B = ColorPickerRect.SelectedColor.Value.B;
+            GUIHandler.instance.SelectedRectColor = System.Drawing.Color.FromArgb(R, G, B);
+        }
+
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        {
+         SVGOpener open = new SVGOpener();
+         List<Figure> svgFigures = open.ReadSVG("C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+
+         svgFigures.Reverse();
+        }
+
+      private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||

@@ -15,7 +15,7 @@ namespace GUI
     internal class Drawer
     {
       public static List<Figure> Figures = new List<Figure>();
-      static int indFigures = -1;
+      public static int indFigures = -1;
 
      
 
@@ -84,7 +84,7 @@ namespace GUI
 			{
 				Geometry.Line ln = (Geometry.Line)(fig);
 				ln.setPoints(p1.x, p1.y, p2.x, p2.y);
-				ln.setRectFill(0, 0, 0);
+				ln.setRectFill(GUIHandler.instance.SelectedRectColor.R, GUIHandler.instance.SelectedRectColor.G, GUIHandler.instance.SelectedRectColor.B);
 				ln.setRectWidth(GUIHandler.instance.BrushWidth);
 				Figures.Add(ln);
 			}
@@ -93,7 +93,7 @@ namespace GUI
 			{
 				Geometry.Ellipse el = (Geometry.Ellipse)(fig);
 				el.setPoints(new List<Point> { p1, p2 });
-				el.setRectFill(0, 0, 0);
+				el.setRectFill(GUIHandler.instance.SelectedRectColor.R, GUIHandler.instance.SelectedRectColor.G, GUIHandler.instance.SelectedRectColor.B);
 				el.setRectWidth(GUIHandler.instance.BrushWidth);
 				el.setFill(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B);
 				Figures.Add(el);
@@ -103,7 +103,7 @@ namespace GUI
 			{
 				Geometry.Rectangle rect = (Geometry.Rectangle)(fig);
 				rect.setPoints(new List<Point> { p1, p2 });
-				rect.setRectFill(0, 0, 0);
+				rect.setRectFill(GUIHandler.instance.SelectedRectColor.R, GUIHandler.instance.SelectedRectColor.G, GUIHandler.instance.SelectedRectColor.B);
 				rect.setRectWidth(GUIHandler.instance.BrushWidth);
 				rect.setFill(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B);
 				Figures.Add(rect);
