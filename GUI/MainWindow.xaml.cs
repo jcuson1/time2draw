@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Logic;
+using IO;
 using Point = Geometry.Point;
 using Figure = Geometry.Figure;
 using System.Security.Cryptography;
@@ -331,7 +332,8 @@ namespace Time2Draw
 			switch (format)
 			{
 				case ".svg":
-
+					Save save = new Save("svg");
+					save.SaveAsSVG(GUI.Drawer.Figures, paintSurface.Width, paintSurface.Height, "C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
 					break;
 				case ".png":
 					break;
