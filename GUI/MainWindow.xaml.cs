@@ -319,7 +319,8 @@ namespace Time2Draw
             if (BrushWidth.Text != null)
             {
                 if (int.TryParse(value.ToString(), out result))
-                    GUIHandler.instance.ChangeBrushWidth(result);
+                    if (GUIHandler.instance != null) 
+                        GUIHandler.instance.ChangeBrushWidth(result);
             }
             else
                 return;

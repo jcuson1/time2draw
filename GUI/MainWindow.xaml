@@ -142,7 +142,8 @@
                 Grid.Row="2" 
                 ToolTip="Заливка"
                 Style="{StaticResource SideButton}" 
-                Margin="0,222,0,0">
+                Margin="0,222,0,0"
+                Click= "fillButton_Click">
             <Image Source="Resources/градиентная заливка.png" Visibility="Visible"></Image>
         </Button>
 
