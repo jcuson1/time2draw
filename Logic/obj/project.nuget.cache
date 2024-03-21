@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "1k41DhmKf36eceI7JTk8pVKTmUC3w3km8fIKv8W5SvPHfA4WzV5ZYaKjPNBA6C1OMm8QehMDUFqWLPW183/UZQ==",
+  "dgSpecHash": "V9Ij3K6tCSkmFnanq2frkFySa4WNfK5euF0fVcrGdcaHyQOJpPqQt7SNfm7gvikENLxlQqJUwjv1iH7ijySrDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\Logic\\Logic.csproj",
-=======
-  "dgSpecHash": "9/3QAJnHdkqc7PNZLFk//44iddXbnjdFLyUKbIi8psVUUb8EyFoOVLwBEfo51QTHgJChsMG0/I4mRY5Oc+hXbg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\Logic\\Logic.csproj",
->>>>>>> Stashed changes
+  "projectFilePath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Logic\\Logic.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ошибка чтения файла кэша D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Logic\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "BsQ2pkUmwHTY5BgNUeQ4pBr2CDQM0+2+HMUPihICtuahyQFzf4Y/5CXAN2b/9IaO4bo2qO4WMkucn89YA1lsFg==",
+  "dgSpecHash": "+cDZU6KrmRwGnyBHcWvEqRapto6DrWkTvrLvQOFB1vaARwWnaXOSsJPwB6rEd1n3sc5wYk8rAD7VCCNUXI4ubw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mvideo\\Documents\\GitHub\\time2draw\\Test\\Test.csproj",
-=======
-  "dgSpecHash": "FG9MUwcPM+W8b1UItHKjB4EUaYkJ1W9wjhWd9sEvh44mbH57Uy2HXN+3V/zY9KySeAsOYW2q0imdKPjLp9cPXQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Даша\\source\\repos\\jcuson1\\time2draw\\Test\\Test.csproj",
->>>>>>> Stashed changes
+  "projectFilePath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Test\\Test.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ошибка чтения файла кэша D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Test\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

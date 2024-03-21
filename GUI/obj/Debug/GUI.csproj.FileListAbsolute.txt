@@ -238,3 +238,21 @@ D:\Time2Draw\time2draw\GUI\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
 D:\Time2Draw\time2draw\GUI\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 D:\Time2Draw\time2draw\GUI\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 D:\Time2Draw\time2draw\GUI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
