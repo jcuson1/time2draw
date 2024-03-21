@@ -363,7 +363,7 @@ namespace Time2Draw
             {
                 case ".svg":
                     Save save = new Save("svg");
-                    save.SaveAsSVG(GUI.Drawer.Figures, paintSurface.Width, paintSurface.Height, "C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+                    save.SaveAsSVG(GUI.Drawer.Figures, paintSurface.ActualWidth, paintSurface.ActualHeight, "C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
                     break;
                 case ".png":
                     RenderTargetBitmap bmp = new RenderTargetBitmap((int)paintSurface.ActualWidth, (int)paintSurface.ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
