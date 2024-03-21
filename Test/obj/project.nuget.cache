@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+cDZU6KrmRwGnyBHcWvEqRapto6DrWkTvrLvQOFB1vaARwWnaXOSsJPwB6rEd1n3sc5wYk8rAD7VCCNUXI4ubw==",
+  "dgSpecHash": "dg/2yWWatlESl2xIFt9kJKT1xEWpO1lhBRFp1KNPABuH+V2FvO9Gm+9VMMV+TA0vXq4XWo4YLn6CCqJ5FJSDrw==",
   "success": true,
-  "projectFilePath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Test\\Test.csproj",
+  "projectFilePath": "D:\\Time2Draw\\time2draw\\Test\\Test.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ошибка чтения файла кэша D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Test\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
