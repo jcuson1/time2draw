@@ -43,9 +43,10 @@ namespace Time2Draw
 
         public MainWindow()
         {
-            InitializeComponent();
-            GUIHandler.GetInstance();
-            paintSurface.ClipToBounds = true;
+           InitializeComponent();
+           GUIHandler.GetInstance();
+           paintSurface.ClipToBounds = true;
+           this.WindowState = WindowState.Maximized;
         }
 
         private void lineButton_Click(object sender, RoutedEventArgs e)
@@ -324,7 +325,8 @@ namespace Time2Draw
             scale = scale.Substring(0, scale.Length - 1);
             GUIHandler.instance.scaleValue = double.Parse(scale) / 100;
             paintSurface.LayoutTransform = new ScaleTransform(GUIHandler.instance.scaleValue, GUIHandler.instance.scaleValue);
-
+            paintSurface.Height = paintSurface.ActualHeight;
+            paintSurface.Width = paintSurface.ActualWidth;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
