@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IO.SVG_Saver;
+using IO.SVG_Parser;
 using Geometry;
 using System.Xml;
 
@@ -44,6 +44,11 @@ namespace IO
          }
 
          parser.End();
+      }
+
+      public void OpenSVG(string path)
+      {
+
       }
 
    }
