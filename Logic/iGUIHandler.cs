@@ -20,7 +20,7 @@ namespace Logic
       void StretchFigure();
       void RotateFigure();
       void FillColorFigure();
-      void BorderColorFigure();
+      void RectColorFigure();
       void DeleteFigure();
       void ChangeBrushWidth(int width);
    }

@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
+      "projectUniqueName": "D:\\time2draaaw\\time2draw\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
+      "projectPath": "D:\\time2draaaw\\time2draw\\IO\\IO.csproj",
       "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-      "outputPath": "D:\\Time2Draw\\time2draw\\IO\\obj\\",
+      "outputPath": "D:\\time2draaaw\\time2draw\\IO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj": {
-              "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj"
+            "D:\\time2draaaw\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "D:\\time2draaaw\\time2draw\\Geometry\\Geometry.csproj"
             }
           }
         }
