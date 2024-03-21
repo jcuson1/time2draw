@@ -8,19 +8,19 @@
     ".NETFramework,Version=v4.7.2": []
   },
   "packageFolders": {
-    "C:\\Users\\Alexa\\.nuget\\packages\\": {}
+    "C:\\Users\\nastj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Geometry\\Geometry.csproj",
+      "projectUniqueName": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj",
       "projectName": "Geometry",
-      "projectPath": "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Geometry\\Geometry.csproj",
-      "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexa\\Source\\Repos\\time2draw\\Geometry\\obj\\",
+      "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj",
+      "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
+      "outputPath": "D:\\Time2Draw\\time2draw\\Geometry\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,7 +45,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
