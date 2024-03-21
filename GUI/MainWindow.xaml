@@ -55,7 +55,7 @@
                 Content="Загрузить" 
                 Grid.Column="1"
                 Style="{StaticResource TopButton}"
-                Background="#ADD8E6"/>
+                Background="#ADD8E6" Click="LoadButton_Click"/>
         <Button x:Name="SafeButton" 
                 Content="Сохранить как:" 
                 Margin="200,0,0,0" 

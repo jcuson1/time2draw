@@ -9,7 +9,7 @@ using System.IO;
 using System.Collections;
 using Geometry;
 
-namespace IO.SVG_Parser
+namespace IO.SVG_Saver
 {
    public class SVGRenderer //: IRenderContext
    {
@@ -95,18 +95,6 @@ namespace IO.SVG_Parser
                                                                    ((int)el.getTop() + (int)el.getHeight() / 2).ToString() + ")");
  
          m_writer.WriteEndElement();
-      }
-
-      public void ReadSVG(string path)
-      {
-         List<Figure> svgFigures = new List<Figure>();
-
-         XDocument svgFile = XDocument.Load(path);
-
-         foreach(XElement fig in svgFile.Root.Elements())
-         {
-            
-         }
       }
    }
 }

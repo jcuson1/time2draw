@@ -20,6 +20,7 @@ using System.Windows.Media.Media3D;
 using System.Runtime.InteropServices.ComTypes;
 using System.Diagnostics.Eventing.Reader;
 using IO;
+using IO.SVG_Opener;
 using System.IO;
 
 namespace Time2Draw
@@ -403,7 +404,13 @@ namespace Time2Draw
             GUIHandler.instance.SelectedRectColor = System.Drawing.Color.FromArgb(R, G, B);
         }
 
-        private bool EditingToolIsActive()
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        {
+         SVGOpener open = new SVGOpener();
+         List<Figure> svgFigures = open.ReadSVG("C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+        }
+
+      private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||
