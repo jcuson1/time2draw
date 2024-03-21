@@ -19,6 +19,7 @@ using System.Security.Cryptography;
 using System.Windows.Media.Media3D;
 using System.Runtime.InteropServices.ComTypes;
 using System.Diagnostics.Eventing.Reader;
+using IO;
 
 namespace Time2Draw
 {
@@ -354,8 +355,19 @@ namespace Time2Draw
 
         private void SafeButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
+         string format = (SaveBox.SelectedItem as TextBlock).Text;
+         switch (format)
+         {
+            case ".svg":
+               Save save = new Save("svg");
+               save.SaveAsSVG(GUI.Drawer.Figures, paintSurface.Width, paintSurface.Height, "C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+               break;
+            case ".png":
+               break;
+            case ".t2d":
+               break;
+         }
+      }
 
         private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
