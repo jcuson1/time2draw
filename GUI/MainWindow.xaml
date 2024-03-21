@@ -109,20 +109,11 @@
             <Image Source="Resources/прямоугольник.png" Visibility="Visible"></Image>
         </Button>
 
-        <Button x:Name="Polygon" 
-                Grid.Row="2" 
-                ToolTip="Многоугольник"
-                Style="{StaticResource SideButton}" 
-                Margin="0,90,0,0"
-                Background="#ADD8E6">
-            <Image Source="Resources/hexagon многоугольник.png" Visibility="Visible"></Image>
-        </Button>
-
         <Button x:Name="FillBucket" 
                 Grid.Row="2" 
                 ToolTip="Заливка"
                 Style="{StaticResource SideButton}" 
-                Margin="0,120,0,0"
+                Margin="0,90,0,0"
                 Click="fillButton_Click"
                 Background="#ADD8E6">
             <Image Source="Resources/градиентная заливка.png" Visibility="Visible" RenderTransformOrigin="0.442,-0.556"/>
@@ -133,7 +124,7 @@
                 Grid.Row="2" 
                 ToolTip="Вращение фигуры"
                 Style="{StaticResource SideButton}" 
-                Margin="0,150,0,0" 
+                Margin="0,120,0,0" 
                 Click="rotateButton_Click"
                 Background="#ADD8E6">
             <Image Source="Resources/вращение.png" Visibility="Visible"></Image>
@@ -143,7 +134,7 @@
                 Grid.Row="2" 
                 ToolTip="Перемещение фигуры"
                 Style="{StaticResource SideButton}" 
-                Margin="0,180,0,0" 
+                Margin="0,150,0,0" 
                 Click="moveButton_Click"
                 Background="#ADD8E6">
             <Image Source="Resources/кнопка перемещения.png" Visibility="Visible"></Image>
@@ -153,7 +144,7 @@
                 Grid.Row="2" 
                 ToolTip="Растяжение/сжатие фигуры"
                 Style="{StaticResource SideButton}" 
-                Margin="0,210,0,0" 
+                Margin="0,180,0,0" 
                 Click="stretchButton_Click"
                 Background="#ADD8E6">
             <Image Source="Resources/растяжение.png" Visibility="Visible"></Image>
