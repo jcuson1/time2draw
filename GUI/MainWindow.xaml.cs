@@ -100,6 +100,11 @@ namespace Time2Draw
                     {
                         figure.Fill = new SolidColorBrush(Color.FromRgb(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B));
                         GUI.Drawer.Figures[FigureIndex].setFill(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B);
+                        figure.Stroke = new SolidColorBrush(Color.FromRgb(GUIHandler.instance.SelectedRectColor.R, GUIHandler.instance.SelectedRectColor.G, GUIHandler.instance.SelectedRectColor.B));
+                        GUI.Drawer.Figures[FigureIndex].setRectFill(GUIHandler.instance.SelectedRectColor.R, GUIHandler.instance.SelectedRectColor.G, GUIHandler.instance.SelectedRectColor.B);
+                        figure.StrokeThickness = GUIHandler.instance.BrushWidth;
+                        GUI.Drawer.Figures[FigureIndex].setRectWidth(GUIHandler.instance.BrushWidth);
+
                     }
                     break;
                 case Tools.PaintTools.RotateFigure:
