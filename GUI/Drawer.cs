@@ -15,7 +15,7 @@ namespace GUI
     internal class Drawer
     {
       public static List<Figure> Figures = new List<Figure>();
-      static int indFigures = -1;
+      public static int indFigures = -1;
 
      
 
