@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = Logic
-build_property.ProjectDir = D:\Time2Draw\time2draw\Logic\
+build_property.ProjectDir = D:\Университет\4 курс\Современные технологии программирования\time2draw\Logic\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

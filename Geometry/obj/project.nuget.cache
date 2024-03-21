@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "lYd6qL/AdQ90kLmAB+SgGY4n7yPJnRit9OuhI8QZALzm3TaQE4R7BejthD1n6aP59dMmyHmBw9XT9ZWyKV9+Cg==",
+  "dgSpecHash": "O9llcdcjQXZmKemcEupz5WX2WzhAkIfotxAcqPL7tBUveDCv5qABCtXnNdNukYcKvhHhyoLYC0cTlO/vY5GKaQ==",
   "success": true,
-  "projectFilePath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj",
+  "projectFilePath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ошибка чтения файла кэша D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

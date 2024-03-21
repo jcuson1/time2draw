@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nastj\\.nuget\\packages\\": {}
+    "C:\\Users\\diana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
+      "projectUniqueName": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "D:\\Time2Draw\\time2draw\\IO\\IO.csproj",
-      "packagesPath": "C:\\Users\\nastj\\.nuget\\packages\\",
-      "outputPath": "D:\\Time2Draw\\time2draw\\IO\\obj\\",
+      "projectPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\diana\\.nuget\\packages\\",
+      "outputPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\IO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nastj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj": {
-              "projectPath": "D:\\Time2Draw\\time2draw\\Geometry\\Geometry.csproj"
+            "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj": {
+              "projectPath": "D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\Geometry\\Geometry.csproj"
             }
           }
         }
@@ -68,8 +68,16 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ошибка чтения файла кэша D:\\Университет\\4 курс\\Современные технологии программирования\\time2draw\\IO\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
