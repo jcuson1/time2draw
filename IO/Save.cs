@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using IO.SVG_Saver;
 using Geometry;
 using System.Xml;
-using System.Drawing;
 
 
 namespace IO
@@ -30,17 +29,17 @@ namespace IO
 
          foreach (Figure fig in figure)
          {
-            switch (fig)
+            if (fig is Line)
             {
-               case "line":
-                  parser.DrawLine(fig);
-                  break;
-               case "rectangle":
-                  parser.DrawRectangle(fig);
-                  break;
-               case "ellipse":
-                  parser.DrawEllipse(fig);
-                  break;
+               parser.WriteLine(fig as Line);
+            }
+            else if (fig is Rectangle) 
+            {
+               parser.WriteRectangle(fig as Rectangle);
+            }
+            else if (fig is Ellipse)
+            {
+               parser.WriteEllipse(fig as Ellipse);
             }
          }
 
