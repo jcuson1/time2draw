@@ -256,3 +256,44 @@ D:\Университет\4 курс\Современные технологии
 D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 D:\Университет\4 курс\Современные технологии программирования\time2draw\GUI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\GUI.exe.config
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\GUI.exe
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\GUI.pdb
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Geometry.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\IO.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Logic.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Xceed.Wpf.Toolkit.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Geometry.pdb
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\IO.pdb
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\Logic.pdb
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\MainWindow.g.cs
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\App.g.cs
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI_MarkupCompile.cache
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI_MarkupCompile.lref
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\MainWindow.baml
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.g.resources
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.Properties.Resources.resources
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.csproj.CopyComplete
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.exe
+N:\NSTU\PROJECT\time2draw\GUI\obj\Debug\GUI.pdb

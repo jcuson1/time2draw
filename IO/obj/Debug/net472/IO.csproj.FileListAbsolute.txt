@@ -89,3 +89,15 @@ D:\Университет\4 курс\Современные технологии
 D:\Time2Draw\time2draw\IO\bin\Debug\net472\Geometry.dll
 D:\Time2Draw\time2draw\IO\bin\Debug\net472\Geometry.pdb
 D:\Time2Draw\time2draw\IO\obj\Debug\net472\IO.csproj.CopyComplete
+N:\NSTU\PROJECT\time2draw\IO\bin\Debug\net472\IO.dll
+N:\NSTU\PROJECT\time2draw\IO\bin\Debug\net472\IO.pdb
+N:\NSTU\PROJECT\time2draw\IO\bin\Debug\net472\Geometry.dll
+N:\NSTU\PROJECT\time2draw\IO\bin\Debug\net472\Geometry.pdb
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.csproj.AssemblyReference.cache
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.GeneratedMSBuildEditorConfig.editorconfig
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.AssemblyInfoInputs.cache
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.AssemblyInfo.cs
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.csproj.CoreCompileInputs.cache
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.csproj.CopyComplete
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.dll
+N:\NSTU\PROJECT\time2draw\IO\obj\Debug\net472\IO.pdb

@@ -76,11 +76,15 @@ namespace Geometry.Tests // comment
     [TestFixture]
     public class FigureTests
     {
-        [Test]
+      public class ConcreteFigure : Figure
+      {
+      }
+
+      [Test]
         public void SetPoints_SetsPointsCorrectly()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             List<Point> points = new List<Point>
             {
                 new Point(1, 2),
@@ -98,7 +102,7 @@ namespace Geometry.Tests // comment
         public void SetAngle_SetsAngleCorrectly()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             double angle = 45.0;
 
             // Act
@@ -112,7 +116,7 @@ namespace Geometry.Tests // comment
         public void SetAngle_SetsAngleCorrectly2()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             double angle = 363.0;
 
             // Act
@@ -125,7 +129,7 @@ namespace Geometry.Tests // comment
         public void SetAngle_SetsAngleCorrectlyMinus()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             double angle = -363.0;
 
             // Act
@@ -138,7 +142,7 @@ namespace Geometry.Tests // comment
         public void SetAngle_SetsAngleCorrectlyNull()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             double angle = 0;
 
             // Act
@@ -151,7 +155,7 @@ namespace Geometry.Tests // comment
         public void SetW_SetsWCorrectlyMinus()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             double RectWidth = -10;
 
             // Act
@@ -164,7 +168,7 @@ namespace Geometry.Tests // comment
         public void SetW_SetsWCorrectlyMinusDouble()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             double RectWidth = -10.23523;
 
             // Act
@@ -176,8 +180,10 @@ namespace Geometry.Tests // comment
         [Test]
         public void SetW_SetsWCorrectly()
         {
+
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
+            //Figure figure = new Figure();
             double RectWidth = 1000000000;
 
             // Act
@@ -190,7 +196,7 @@ namespace Geometry.Tests // comment
         public void SetW_SetsWCorrectlyNull()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             double RectWidth = 0;
 
             // Act
@@ -204,7 +210,7 @@ namespace Geometry.Tests // comment
         public void Set_Fill()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             byte R = 0;
             byte G = 0;
             byte B = 0;
@@ -221,7 +227,7 @@ namespace Geometry.Tests // comment
         public void Set_Fill2()
         {
             // Arrange
-            Figure figure = new Figure();
+            ConcreteFigure figure = new ConcreteFigure();
             byte R = 100;
             byte G = 20;
             byte B = 255;
