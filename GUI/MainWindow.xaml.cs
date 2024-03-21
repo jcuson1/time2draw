@@ -42,6 +42,7 @@ namespace Time2Draw
 		{
 			InitializeComponent();
 			GUIHandler.GetInstance();
+			paintSurface.ClipToBounds = true;
 		}
 
 		private void lineButton_Click(object sender, RoutedEventArgs e)
@@ -207,18 +208,21 @@ namespace Time2Draw
 
 		void Rotating()
 		{
-			//GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
-			rotateTransform.Angle = p2.x - p1.x + startAngel;
-			figure.RenderTransform = rotateTransform;
+         //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
 
-			paintSurface.Children[FigureIndex] = figure;
-         GUI.Drawer.Figures[FigureIndex].setAngle(rotateTransform.Angle);
-
+		   rotateTransform.Angle = p2.x - p1.x + startAngel;
+		   figure.RenderTransform = rotateTransform;
+		   paintSurface.Children[FigureIndex] = figure;
+		   GUI.Drawer.Figures[FigureIndex].setAngle(rotateTransform.Angle);
+			
       }
 		void Moving()
 		{
-			Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
-			Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
+
+			if(startPos.x + p2.x - p1.x > 0)
+				Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
+         if (startPos.y + p2.y - p1.y > 0)
+            Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
 
 			paintSurface.Children[FigureIndex] = figure;
 			GUI.Drawer.Figures[FigureIndex].setPoints(new List<Point> { new Point(startPos.x + p2.x - p1.x, startPos.y + p2.y - p1.y), new Point(startPos.x + p2.x - p1.x + (int)figure.Width, startPos.y + p2.y - p1.y + (int)figure.Height) });
