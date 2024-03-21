@@ -322,7 +322,17 @@ namespace Time2Draw
 
 		private void SafeButton_Click(object sender, RoutedEventArgs e)
 		{
+			string format = (SaveBox.SelectedItem as TextBlock).Text;
+			switch (format)
+			{
+				case ".svg":
 
+					break;
+				case ".png":
+					break;
+				case ".t2d":
+					break;
+			}
 		}
 
       private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)

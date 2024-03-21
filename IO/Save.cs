@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +11,8 @@ using System.Drawing;
 
 namespace IO
 {
-    public class Save
-    {
+   public class Save
+   {
       public string type;
 
       public Save(string type)
@@ -20,9 +20,9 @@ namespace IO
          this.type = type;
       }
 
-      public List<Figure> figuers = new List<Figure>();   
+      public List<Figure> figuers = new List<Figure>();
 
-      public void SaveAsSVG(List<Figure> figure, double w, double h, string path) 
+      public void SaveAsSVG(List<Figure> figure, double w, double h, string path)
       {
          SVGRenderer parser = new SVGRenderer(w, h, path);
 
@@ -30,7 +30,7 @@ namespace IO
 
          foreach (Figure fig in figure)
          {
-            switch(fig.type)
+            switch (fig)
             {
                case "line":
                   parser.DrawLine(fig);
@@ -47,6 +47,5 @@ namespace IO
          parser.End();
       }
 
-    }
+   }
 }
-*/
