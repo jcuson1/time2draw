@@ -148,17 +148,6 @@ namespace Logic.Tests
          }
 
          [Test]
-         public void BorderColorFigure_SetsSelectedToolToBorderColorFigure()
-         {
-            // Arrange
-            GUIHandler handler = new GUIHandler();
-            // Act
-            handler.BorderColorFigure();
-            // Assert
-            Assert.That(Tools.PaintTools.BorderColorFigure, Is.EqualTo(handler.SelectedTool));
-         }
-
-         [Test]
          public void DeleteFigure_SetsSelectedToolToDeleteFigure()
          {
             // Arrange

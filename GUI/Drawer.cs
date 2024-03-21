@@ -12,7 +12,7 @@ using Logic;
 
 namespace GUI
 {
-    internal class Drawer
+    public class Drawer
     {
       public static List<Figure> Figures = new List<Figure>();
       public static int indFigures = -1;
