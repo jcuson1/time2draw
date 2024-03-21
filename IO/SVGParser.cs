@@ -61,50 +61,38 @@ namespace IO.SVG_Parser
 
       public void WriteRectangle(Rectangle rect)
       {
-         int startX = rect.points[0].x;
-         int startY = rect.points[0].y;
-         int endX = rect.points[1].x;
-         int endY = rect.points[1].y;
-
-         int cx = startX + Math.Abs(endX - startX) / 2;
-         int cy = startY + Math.Abs(endY - startY) / 2;
-
          m_writer.WriteStartElement("rect");
-         m_writer.WriteAttributeString("x", startX.ToString());
-         m_writer.WriteAttributeString("y", startY.ToString());
-         m_writer.WriteAttributeString("width", Math.Abs(endX - startX).ToString());
-         m_writer.WriteAttributeString("height", Math.Abs(endY - startY).ToString());
+         m_writer.WriteAttributeString("x", rect.getLeft().ToString());
+         m_writer.WriteAttributeString("y", rect.getTop().ToString());
+         m_writer.WriteAttributeString("width", rect.getWidth().ToString());
+         m_writer.WriteAttributeString("height",rect.getHeight().ToString());
          m_writer.WriteAttributeString("fill-opacity", "1");
          m_writer.WriteAttributeString("fill", "rgb(" + rect.fill_R.ToString() + "," + rect.fill_G.ToString() + "," + rect.fill_B.ToString() + ")");
          m_writer.WriteAttributeString("stroke", "rgb(" + rect.rectFill_R.ToString() + "," + rect.rectFill_G.ToString() + "," + rect.rectFill_B.ToString() + ")");
          m_writer.WriteAttributeString("stroke-width", rect.rectWidth.ToString());
          if (rect.angle != 0)
-            m_writer.WriteAttributeString("transform", "rotate(" + rect.angle.ToString() + "," + cx.ToString() + "," + cy.ToString() + ")");                   
+            m_writer.WriteAttributeString("transform", "rotate(" + rect.angle.ToString() + "," + 
+                                                                   ((int)rect.getLeft() + (int)rect.getWidth()/2).ToString() + "," +
+                                                                   ((int)rect.getTop() + (int)rect.getHeight() / 2).ToString() + ")");                   
              
          m_writer.WriteEndElement();
       }
 
       public void WriteEllipse(Ellipse el)
       {
-         int startX = el.points[0].x;
-         int startY = el.points[0].y;
-         int endX = el.points[1].x;
-         int endY = el.points[1].y;
-
-         int cx = startX + Math.Abs(endX - startX) / 2;
-         int cy = startY + Math.Abs(endY - startY) / 2;
-
          m_writer.WriteStartElement("ellipse");
-         m_writer.WriteAttributeString("cx", cx.ToString());
-         m_writer.WriteAttributeString("cy", cy.ToString());
-         m_writer.WriteAttributeString("rx", (Math.Abs(endX - startX) / 2).ToString());
-         m_writer.WriteAttributeString("ry", (Math.Abs(endY - startY) / 2).ToString());
+         m_writer.WriteAttributeString("cx", ((int)el.getLeft() + (int)el.getWidth() / 2).ToString());
+         m_writer.WriteAttributeString("cy", ((int)el.getTop() + (int)el.getHeight() / 2).ToString());
+         m_writer.WriteAttributeString("rx", ((int)el.getWidth()/2).ToString());
+         m_writer.WriteAttributeString("ry", ((int)el.getHeight() / 2).ToString());
          m_writer.WriteAttributeString("fill-opacity", "1");
          m_writer.WriteAttributeString("fill", "rgb(" + el.fill_R.ToString() + "," + el.fill_G.ToString() + "," + el.fill_B.ToString() + ")");
          m_writer.WriteAttributeString("stroke", "rgb(" + el.rectFill_R.ToString() + "," + el.rectFill_G.ToString() + "," + el.rectFill_B.ToString() + ")");
          m_writer.WriteAttributeString("stroke-width", el.rectWidth.ToString());
          if(el.angle != 0)
-            m_writer.WriteAttributeString("transform", "rotate(" + el.angle.ToString() + "," + cx.ToString() + "," + cy.ToString() + ")");
+            m_writer.WriteAttributeString("transform", "rotate(" + el.angle.ToString() + "," + 
+                                                                   ((int)el.getLeft() + (int)el.getWidth() / 2).ToString() + "," + 
+                                                                   ((int)el.getTop() + (int)el.getHeight() / 2).ToString() + ")");
  
          m_writer.WriteEndElement();
       }
@@ -117,7 +105,7 @@ namespace IO.SVG_Parser
 
          foreach(XElement fig in svgFile.Root.Elements())
          {
-
+            
          }
       }
    }
