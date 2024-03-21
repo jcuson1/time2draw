@@ -73,7 +73,8 @@ namespace Time2Draw
 
 			}
 		}
-		private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+        private void paintSurface_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{
 			p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
 			if (EditingToolIsActive())
@@ -299,9 +300,13 @@ namespace Time2Draw
 			var value = BrushWidth.Text;
 			int result;
 
-			if (BrushWidth.Text != null)
+			if (BrushWidth.Text == "1")
 			{
-				if (int.TryParse(value.ToString(), out result))
+				return;
+			}
+            if (BrushWidth.Text != null)
+			{
+                if (int.TryParse(value.ToString(), out result))
 					GUIHandler.instance.ChangeBrushWidth(result);
 			}
 			else
@@ -337,7 +342,7 @@ namespace Time2Draw
 
       private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
       {
-			var R = ColorPicker.SelectedColor.Value.R; var G = ColorPicker.SelectedColor.Value.G; var B = ColorPicker.SelectedColor.Value.B;
+		 var R = ColorPicker.SelectedColor.Value.R; var G = ColorPicker.SelectedColor.Value.G; var B = ColorPicker.SelectedColor.Value.B;
          GUIHandler.instance.SelectedColor = System.Drawing.Color.FromArgb(R, G, B);
       }
 

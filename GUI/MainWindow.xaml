@@ -189,32 +189,25 @@
             <Image Source="Resources/растяжение.png" Visibility="Visible"></Image>
         </Button>
 
-        <Button x:Name="GoBack" 
-                Grid.Row="1" 
-                Grid.Column="1" 
-                ToolTip="Отменить действие" 
-                Style="{StaticResource CenterButton}" 
-                Margin="10,0,0,0">
-            <Image Source="Resources/back.png" Visibility="Visible"></Image>
-        </Button>
-
-        <Button x:Name="GoForward" 
-                Grid.Row="1" 
-                Grid.Column="1" 
-                ToolTip="Вернуть действие" 
-                Style="{StaticResource CenterButton}" 
-                Margin="40,0,0,0">
-            <Image Source="Resources/forward.png" Visibility="Visible"></Image>
-        </Button>
+        <TextBlock Grid.Row="1" 
+                   Grid.Column="1" 
+                   Style="{StaticResource CenterButton}" 
+                   Width="55"
+                   Height="20"
+                   Margin="22,0,0,0">
+            Масштаб
+        </TextBlock>
 
         <ComboBox Name ="Scale"
                   Grid.Column="1" 
                   Width="100" 
                   Height="20" 
-                  Margin="134,0,0,0" 
+                  Margin="82,0,0,0" 
                   Grid.Row="1"
                   VerticalAlignment="Center" 
-                  HorizontalAlignment="Left" SelectionChanged="ScaleButton">
+                  HorizontalAlignment="Left" 
+                  SelectionChanged="ScaleButton">
+
             <TextBlock>50%</TextBlock>
             <TextBlock>75%</TextBlock>
             <TextBlock>100%</TextBlock>
@@ -228,7 +221,7 @@
                    Style="{StaticResource CenterButton}" 
                    Width="55"
                    Height="20"
-                   Margin="266,0,0,0">
+                   Margin="192,0,0,0">
             Толщина
         </TextBlock>
 
@@ -241,8 +234,10 @@
                  MaxLength="2" 
                  VerticalAlignment="Center" 
                  HorizontalAlignment="Left" 
-                 Margin="326,0,0,0"
-                 TextChanged=" TextBox_TextChanged" PreviewTextInput="BrushWidth_PreviewTextInput"
+                 Margin="248,0,0,0"
+                 TextChanged=" TextBox_TextChanged" 
+                 PreviewTextInput="BrushWidth_PreviewTextInput" 
+                 Text="1" 
         />
 
         <TextBlock Grid.Row="1" 
@@ -250,7 +245,7 @@
                    Style="{StaticResource CenterButton}" 
                    Width="73"
                    Height="20"
-                   Margin="396,0,0,0">
+                   Margin="300,0,0,0">
             Выбор цвета
         </TextBlock>
 
@@ -259,12 +254,33 @@
                 Grid.Row="1" 
                 Grid.Column="1" 
                 Style="{StaticResource CenterButton}" 
-                Margin="480,0,0,0"
+                Margin="520,0,0,0"
                 Height="20"
                 Width="50"
-                Background="White" SelectedColorChanged="ColorPicker_SelectedColorChanged"
+                Background="White" 
+                SelectedColorChanged="ColorPicker_SelectedColorChanged"
         />
+        
+        <TextBlock Grid.Row="1" 
+                   Grid.Column="1" 
+                   Style="{StaticResource CenterButton}" 
+                   Width="73"
+                   Height="20"
+                   Margin="440,0,0,0">
+            Цвет заливки
+        </TextBlock>
 
+        <xctk:ColorPicker 
+                Name="ColorPicker2"
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Style="{StaticResource CenterButton}" 
+                Margin="380,0,0,0"
+                Height="20"
+                Width="50"
+                Background="White" 
+        />
+        
         <Canvas Name="paintSurface"
                 MouseLeftButtonDown="paintSurface_MouseLeftButtonDown"
                 MouseRightButtonDown="paintSurface_MouseRightButtonDown"
