@@ -17,6 +17,7 @@ using Point = Geometry.Point;
 using Figure = Geometry.Figure;
 using System.Security.Cryptography;
 using System.Windows.Media.Media3D;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Time2Draw
 {
@@ -119,7 +120,15 @@ namespace Time2Draw
 						startPos.y = (int)Canvas.GetTop(figure);
 						startWidth = figure.Width;
 						startHeight = figure.Height;
-					}
+                  if (figure.RenderTransform is RotateTransform)
+                  {
+                     rotateTransform = (RotateTransform)figure.RenderTransform;
+                  }
+                  else if (figure.LayoutTransform is RotateTransform)
+                  {
+                     rotateTransform = (RotateTransform)figure.LayoutTransform;
+                  }
+               }
 					break;
 				case Tools.PaintTools.MovingFigure:
 					if (figure != null)
@@ -203,21 +212,24 @@ namespace Time2Draw
 			figure.RenderTransform = rotateTransform;
 
 			paintSurface.Children[FigureIndex] = figure;
-		}
+         GUI.Drawer.Figures[FigureIndex].setAngle(rotateTransform.Angle);
+
+      }
 		void Moving()
 		{
 			Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
 			Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
 
 			paintSurface.Children[FigureIndex] = figure;
+			GUI.Drawer.Figures[FigureIndex].setPoints(new List<Point> { new Point(startPos.x + p2.x - p1.x, startPos.y + p2.y - p1.y), new Point(startPos.x + p2.x - p1.x + (int)figure.Width, startPos.y + p2.y - p1.y + (int)figure.Height) });
 		}
 
 		void Stretching()
 		{
 			if (startWidth + p2.x - p1.x > 0)
-				figure.Width = startWidth + p2.x - p1.x;
+				figure.Width = startWidth + (p2.x - p1.x);
 			if (startHeight + p2.y - p1.y > 0)
-				figure.Height = startHeight + p2.y - p1.y;
+				figure.Height = startHeight + (p2.y - p1.y);
 			if (startWidth + p2.x - p1.x <= 0)
 			{
 				Canvas.SetLeft(figure, startPos.x - Math.Abs(startWidth + p2.x - p1.x));
@@ -228,8 +240,14 @@ namespace Time2Draw
 				Canvas.SetTop(figure, startPos.y - Math.Abs(startHeight + p2.y - p1.y));
 				figure.Height = Math.Abs(startHeight + p2.y - p1.y);
 			}
+			rotateTransform.CenterX = figure.Width / 2;
+			rotateTransform.CenterY = figure.Height / 2;
+			
+			figure.RenderTransform = rotateTransform;
 			paintSurface.Children[FigureIndex] = figure;
-		}
+			GUI.Drawer.Figures[FigureIndex].points[1].x = (int)startWidth + p2.x - p1.x;
+			GUI.Drawer.Figures[FigureIndex].points[1].y = (int)startHeight + p2.y - p1.y;
+      }
 
 		private void rotateButton_Click(object sender, RoutedEventArgs e)
 		{
@@ -303,7 +321,13 @@ namespace Time2Draw
 
 		}
 
-		private bool EditingToolIsActive()
+      private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+      {
+			var R = ColorPicker.SelectedColor.Value.R; var G = ColorPicker.SelectedColor.Value.G; var B = ColorPicker.SelectedColor.Value.B;
+         GUIHandler.instance.SelectedColor = System.Drawing.Color.FromArgb(R, G, B);
+      }
+
+      private bool EditingToolIsActive()
 		{
 			return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
 					GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||

@@ -15,7 +15,7 @@ namespace GUI
     internal class Drawer
     {
       public static List<Figure> Figures = new List<Figure>();
-        static int indFigures = -1;
+      static int indFigures = -1;
 
      
 
@@ -95,7 +95,7 @@ namespace GUI
 				el.setPoints(new List<Point> { p1, p2 });
 				el.setRectFill(0, 0, 0);
 				el.setRectWidth(GUIHandler.instance.BrushWidth);
-				el.setFill(0, 255, 0);
+				el.setFill(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B);
 				Figures.Add(el);
 			}
 
@@ -105,7 +105,7 @@ namespace GUI
 				rect.setPoints(new List<Point> { p1, p2 });
 				rect.setRectFill(0, 0, 0);
 				rect.setRectWidth(GUIHandler.instance.BrushWidth);
-				rect.setFill(0, 255, 0);
+				rect.setFill(GUIHandler.instance.SelectedColor.R, GUIHandler.instance.SelectedColor.G, GUIHandler.instance.SelectedColor.B);
 				Figures.Add(rect);
 			}
 

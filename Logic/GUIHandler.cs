@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace Logic
       public Tools.PaintTools SelectedTool = Tools.PaintTools.AddLine;
       public double scaleValue = 1;
       public double BrushWidth = 1;
+      public Color SelectedColor = Color.White;
       public static GUIHandler GetInstance()
       {
          if (instance == null)
