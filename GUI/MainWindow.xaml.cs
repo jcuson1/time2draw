@@ -345,8 +345,18 @@ namespace Time2Draw
 
         private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
-            var R = ColorPicker.SelectedColor.Value.R; var G = ColorPicker.SelectedColor.Value.G; var B = ColorPicker.SelectedColor.Value.B;
+            var R = ColorPicker.SelectedColor.Value.R; 
+            var G = ColorPicker.SelectedColor.Value.G; 
+            var B = ColorPicker.SelectedColor.Value.B;
             GUIHandler.instance.SelectedColor = System.Drawing.Color.FromArgb(R, G, B);
+        }
+
+        private void ColorPickerRect_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            var R = ColorPickerRect.SelectedColor.Value.R; 
+            var G = ColorPickerRect.SelectedColor.Value.G; 
+            var B = ColorPickerRect.SelectedColor.Value.B;
+            GUIHandler.instance.SelectedRectColor = System.Drawing.Color.FromArgb(R, G, B);
         }
 
         private bool EditingToolIsActive()

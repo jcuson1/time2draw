@@ -232,14 +232,15 @@
         </TextBlock>
 
         <xctk:ColorPicker 
-                Name="ColorPicker2"
+                Name="ColorPickerRect"
                 Grid.Row="1" 
                 Grid.Column="1" 
                 Style="{StaticResource CenterButton}" 
                 Margin="380,0,0,0"
                 Height="20"
                 Width="50"
-                Background="White" 
+                Background="Black" 
+                SelectedColorChanged="ColorPickerRect_SelectedColorChanged"
         />
         <ScrollViewer
             Grid.Row="2"
