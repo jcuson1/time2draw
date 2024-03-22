@@ -20,7 +20,6 @@ using System.Windows.Media.Media3D;
 using System.Runtime.InteropServices.ComTypes;
 using System.Diagnostics.Eventing.Reader;
 using IO;
-using IO.SVG_Opener;
 using System.IO;
 
 namespace Time2Draw
@@ -366,8 +365,21 @@ namespace Time2Draw
             {
                 case ".svg":
                     Save save = new Save("svg");
-                    save.SaveAsSVG(GUI.Drawer.Figures, paintSurface.ActualWidth, paintSurface.ActualHeight, "C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+
+                    var savesvg = new Microsoft.Win32.SaveFileDialog();
+                    savesvg.FileName = "MyFile";
+                    savesvg.DefaultExt = ".svg";
+                    string path = "";
+                    
+                    if(savesvg.ShowDialog() == true)
+                    {
+                        System.IO.Path.GetFullPath(savesvg.FileName);
+                    }
+                    path = System.IO.Path.GetFullPath(savesvg.FileName);
+
+                    save.SaveAsSVG(GUI.Drawer.Figures, paintSurface.ActualWidth, paintSurface.ActualHeight, path);
                     break;
+
                 case ".png":
                     RenderTargetBitmap bmp = new RenderTargetBitmap((int)paintSurface.ActualWidth, (int)paintSurface.ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
                     bmp.Render(paintSurface);
@@ -408,10 +420,7 @@ namespace Time2Draw
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-         SVGOpener open = new SVGOpener();
-         List<Figure> svgFigures = open.ReadSVG("C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
-
-         svgFigures.Reverse();
+        
         }
 
       private bool EditingToolIsActive()
