@@ -176,6 +176,7 @@ namespace Time2Draw
                 figure = null;
                 
             }
+            p1 = null;
         }
 
         private void paintSurface_MouseMove(object sender, MouseEventArgs e)
@@ -188,17 +189,18 @@ namespace Time2Draw
                     case Tools.PaintTools.AddCircle:
                     case Tools.PaintTools.AddElips:
                     case Tools.PaintTools.AddPolygon:
-                        if (!redrawigFlag)
-                        {
-                            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
-                            GUI.Drawer.addFigure(selectedFigure, p1, p2, paintSurface);
-                            redrawigFlag = true;
-                        }
-                        else
-                        {
-                            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
-                            GUI.Drawer.reDraw(selectedFigure, p1, p2, paintSurface);
-                        }
+                        if(p1 != null)
+                            if (!redrawigFlag)
+                            {
+                                p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                                GUI.Drawer.addFigure(selectedFigure, p1, p2, paintSurface);
+                                redrawigFlag = true;
+                            }
+                            else
+                            {
+                                p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                                GUI.Drawer.reDraw(selectedFigure, p1, p2, paintSurface);
+                            }
                         break;
                     case Tools.PaintTools.RotateFigure:
                         if (rotatingFlag)
