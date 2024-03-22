@@ -12,9 +12,9 @@
             <Setter Property="Control.Background" Value="#8dc7da" />
             <Setter Property="Control.HorizontalAlignment" Value="Left" />
             <Setter Property="Control.VerticalAlignment" Value="Center" />
-            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.Height" Value="28" />
             <Setter Property="Control.Width" Value="100" />
-            <Setter Property="Control.BorderBrush" Value="#73bad1" />
+            <Setter Property="Control.BorderBrush" Value="#8dc7da" />
         </Style>
         <Style x:Key="SideButton">
             <Setter Property="Control.Background" Value="#ADD8E6" />
@@ -51,29 +51,16 @@
         <Border  Grid.Row="1" Grid.Column="0" Background="#ADD8E6" />
         <Border  Grid.Row="2" Grid.Column="0" Background="#ADD8E6" />
 
-        <Button x:Name="LoadButton" 
-                Content="Загрузить" 
-                Grid.Column="1"
-                Style="{StaticResource TopButton}"
-                Click="LoadButton_Click"/>
-
         <Button x:Name="SafeButton" 
-                Content="Сохранить как:" 
-                Margin="200,0,0,0" 
+                Content="Сохранить как:"                
                 Grid.Column="1"
+                Margin="13,0,0,0"
                 Style="{StaticResource TopButton}" Click="SafeButton_Click"/>
-
-        <Button x:Name="HelpButton"  
-                Width="100" 
-                Content="Помощь" 
-                Margin="100,0,0,0" 
-                Grid.Column="1"
-                Style="{StaticResource TopButton}"/>
 
         <ComboBox Name ="SaveBox"
                   Grid.Column="1" 
                   Style="{StaticResource TopButton}"
-                  Margin="300,0,0,0"
+                  Margin="120,0,0,0"
                   Height="25">
             <TextBlock>.svg</TextBlock>
             <TextBlock>.png</TextBlock>
