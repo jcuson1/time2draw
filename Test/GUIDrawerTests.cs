@@ -39,10 +39,28 @@ namespace Test
          Assert.That(canvas.Children[0], Is.InstanceOf<System.Windows.Shapes.Line>());
          var drawnLine = (System.Windows.Shapes.Line)canvas.Children[0];
       }
+        [Test]
+        public void AddFigure_2()
+        {
+            // Arrange
+            GUIHandler.instance = new GUIHandler(); // Создание экземпляра класса GUIHandler
+            GUI.Drawer.Figures.Clear();
+            var canvas = new Canvas();
+            var figure = new Geometry.Line();
+            var p1 = new Geometry.Point(0, 0);
+            var p2 = new Geometry.Point(-100, -100);
 
+            // Act
+            GUI.Drawer.addFigure(figure, p1, p2, canvas);
 
-      // Удалили и восстановили фигуру: на canvas должна быть одна фигура эллипс
-      [Test]
+            // Assert
+            Assert.That(1, Is.EqualTo(canvas.Children.Count));
+            Assert.That(canvas.Children[0], Is.InstanceOf<System.Windows.Shapes.Line>());
+            var drawnLine = (System.Windows.Shapes.Line)canvas.Children[0];
+        }
+
+        // Удалили и восстановили фигуру: на canvas должна быть одна фигура эллипс
+        [Test]
       public void ReDraw_RemovesLastFigureAndAddsNewFigureToCanvas()
       {
          // Arrange
