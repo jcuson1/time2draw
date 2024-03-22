@@ -45,11 +45,5 @@ namespace IO
 
          parser.End();
       }
-
-      public void OpenSVG(string path)
-      {
-
-      }
-
    }
 }
