@@ -44,10 +44,10 @@ namespace Time2Draw
 
         public MainWindow()
         {
-           InitializeComponent();
-           GUIHandler.GetInstance();
-           paintSurface.ClipToBounds = true;
-           this.WindowState = WindowState.Maximized;
+            InitializeComponent();
+            GUIHandler.GetInstance();
+            paintSurface.ClipToBounds = true;
+            this.WindowState = WindowState.Maximized;
         }
 
         private void lineButton_Click(object sender, RoutedEventArgs e)
@@ -83,7 +83,6 @@ namespace Time2Draw
             p1 = new Point((int)e.GetPosition(paintSurface).X, (int)e.GetPosition(paintSurface).Y);
             if (EditingToolIsActive())
                 DefineFigureTypeAndIndex(e);
-
             switch (GUIHandler.instance.SelectedTool)
             {
                 case Tools.PaintTools.AddRect:
@@ -163,18 +162,18 @@ namespace Time2Draw
         {
             redrawigFlag = false;
             rotatingFlag = false;
-            if(selectedFigure is Geometry.Line)
-               selectedFigure = new Geometry.Line();
+            if (selectedFigure is Geometry.Line)
+                selectedFigure = new Geometry.Line();
             else if (selectedFigure is Geometry.Ellipse)
-               selectedFigure = new Geometry.Ellipse();
+                selectedFigure = new Geometry.Ellipse();
             else if (selectedFigure is Geometry.Rectangle)
-               selectedFigure = new Geometry.Rectangle();
-    
+                selectedFigure = new Geometry.Rectangle();
+
             if (figure != null)
             {
                 figure = null;
-                
             }
+            p1 = null;
         }
 
         private void paintSurface_MouseMove(object sender, MouseEventArgs e)
@@ -187,17 +186,18 @@ namespace Time2Draw
                     case Tools.PaintTools.AddCircle:
                     case Tools.PaintTools.AddElips:
                     case Tools.PaintTools.AddPolygon:
-                        if (!redrawigFlag)
-                        {
-                            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
-                            GUI.Drawer.addFigure(selectedFigure, p1, p2, paintSurface);
-                            redrawigFlag = true;
-                        }
-                        else
-                        {
-                            p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
-                            GUI.Drawer.reDraw(selectedFigure, p1, p2, paintSurface);
-                        }
+                        if (p1 != null)
+                            if (!redrawigFlag)
+                            {
+                                p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                                GUI.Drawer.addFigure(selectedFigure, p1, p2, paintSurface);
+                                redrawigFlag = true;
+                            }
+                            else
+                            {
+                                p2 = new Point((int)e.GetPosition(paintSurface).X - 1, (int)e.GetPosition(paintSurface).Y - 1);
+                                GUI.Drawer.reDraw(selectedFigure, p1, p2, paintSurface);
+                            }
                         break;
                     case Tools.PaintTools.RotateFigure:
                         if (rotatingFlag)
@@ -237,9 +237,7 @@ namespace Time2Draw
         }
 
         void Rotating()
-        {
-            //GUI.Drawer.rotateFigure(x1, x2, angle, selectedType, paintSurface);
-
+        { 
             rotateTransform.Angle = p2.x - p1.x + startAngel;
             figure.RenderTransform = rotateTransform;
             paintSurface.Children[FigureIndex] = figure;
@@ -248,11 +246,8 @@ namespace Time2Draw
         }
         void Moving()
         {
-
-            //if (startPos.x + p2.x - p1.x > 0)
-                Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
-            //if (startPos.y + p2.y - p1.y > 0)
-                Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
+            Canvas.SetLeft(figure, startPos.x + p2.x - p1.x);
+            Canvas.SetTop(figure, startPos.y + p2.y - p1.y);
 
             paintSurface.Children[FigureIndex] = figure;
             GUI.Drawer.Figures[FigureIndex].setPoints(new List<Point> { new Point(startPos.x + p2.x - p1.x, startPos.y + p2.y - p1.y), new Point(startPos.x + p2.x - p1.x + (int)figure.Width, startPos.y + p2.y - p1.y + (int)figure.Height) });
@@ -338,7 +333,7 @@ namespace Time2Draw
             if (BrushWidth.Text != null)
             {
                 if (int.TryParse(value.ToString(), out result))
-                    if (GUIHandler.instance != null) 
+                    if (GUIHandler.instance != null)
                         GUIHandler.instance.ChangeBrushWidth(result);
             }
             else
@@ -386,31 +381,31 @@ namespace Time2Draw
                 case ".t2d":
                     break;
             }
-      }
+        }
 
         private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
-            var R = ColorPicker.SelectedColor.Value.R; 
-            var G = ColorPicker.SelectedColor.Value.G; 
+            var R = ColorPicker.SelectedColor.Value.R;
+            var G = ColorPicker.SelectedColor.Value.G;
             var B = ColorPicker.SelectedColor.Value.B;
             GUIHandler.instance.SelectedColor = System.Drawing.Color.FromArgb(R, G, B);
         }
 
         private void ColorPickerRect_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
-            var R = ColorPickerRect.SelectedColor.Value.R; 
-            var G = ColorPickerRect.SelectedColor.Value.G; 
+            var R = ColorPickerRect.SelectedColor.Value.R;
+            var G = ColorPickerRect.SelectedColor.Value.G;
             var B = ColorPickerRect.SelectedColor.Value.B;
             GUIHandler.instance.SelectedRectColor = System.Drawing.Color.FromArgb(R, G, B);
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-         SVGOpener open = new SVGOpener();
-         List<Figure> svgFigures = open.ReadSVG("C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
+            SVGOpener open = new SVGOpener();
+            List<Figure> svgFigures = open.ReadSVG("C:/Users/olgaa/OneDrive/Desktop/nstu/file.svg");
         }
 
-      private bool EditingToolIsActive()
+        private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||
