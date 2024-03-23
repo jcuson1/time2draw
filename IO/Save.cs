@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using IO.SVG_Saver;
 using Geometry;
-using System.Xml;
-
+using System.Xml.Serialization;
+using System.IO;
 
 namespace IO
 {
@@ -45,5 +45,17 @@ namespace IO
 
          parser.End();
       }
+        
+        public void SaveAsT2D(List<Figure> figure, string path)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Figure>));
+            string xml;
+            using (StringWriter stringWriter = new StringWriter())
+            {
+                xmlSerializer.Serialize(stringWriter, figure);
+                xml = stringWriter.ToString();
+            }
+            File.WriteAllText(path, xml, Encoding.Default);
+        }
    }
 }

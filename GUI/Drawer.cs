@@ -16,12 +16,8 @@ namespace GUI
     {
       public static List<Figure> Figures = new List<Figure>();
       public static int indFigures = -1;
-
-     
-
       public static void draw(Canvas canvas)
        {
-
             SolidColorBrush brStroke;
             SolidColorBrush brFill;
             for (int i = indFigures; i < Figures.Count; i++)           

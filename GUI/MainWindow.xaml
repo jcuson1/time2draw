@@ -67,6 +67,12 @@
             <TextBlock>.t2d</TextBlock>
         </ComboBox>
 
+        <Button x:Name="OpenButton" 
+                Content="Открыть"                
+                Grid.Column="1"
+                Margin="230,0,0,0"
+                Style="{StaticResource TopButton}" Click="OpenButton_Click"/>
+
         <Button x:Name="LineSegment" 
                 Grid.Row="2" 
                 ToolTip="Прямая" 

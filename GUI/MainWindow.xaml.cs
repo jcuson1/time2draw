@@ -363,15 +363,15 @@ namespace Time2Draw
         private void SafeButton_Click(object sender, RoutedEventArgs e)
         {
             string format = (SaveBox.SelectedItem as TextBlock).Text;
+            string path = "";
+            Save save;
             switch (format)
             {
                 case ".svg":
-                    Save save = new Save("svg");
-
+                    save = new Save("svg");
                     var savesvg = new Microsoft.Win32.SaveFileDialog();
                     savesvg.FileName = "MyFile";
                     savesvg.DefaultExt = ".svg";
-                    string path = "";
                     
                     if(savesvg.ShowDialog() == true)
                     {
@@ -400,9 +400,38 @@ namespace Time2Draw
                     }
                     break;
                 case ".t2d":
+                    save = new Save("t2d");
+                    var savet2d = new Microsoft.Win32.SaveFileDialog();
+                    savet2d.FileName = "MyFile";
+                    savet2d.DefaultExt = ".t2d";
+
+                    if (savet2d.ShowDialog() == true)
+                    {
+                        System.IO.Path.GetFullPath(savet2d.FileName);
+                    }
+                    path = System.IO.Path.GetFullPath(savet2d.FileName);
+                    save.SaveAsT2D(GUI.Drawer.Figures, path);
                     break;
             }
-      }
+         }
+        private void OpenButton_Click(object sender, RoutedEventArgs e)
+        {
+            Open open = new Open();
+            paintSurface.Children.Clear();
+            GUI.Drawer.indFigures = 0;
+            GUI.Drawer.Figures.Clear();
+
+            var opent2d = new Microsoft.Win32.OpenFileDialog();
+            opent2d.Filter = "Time2Draw File (.T2D)|*.T2D";
+            if (opent2d.ShowDialog() == true)
+            {
+                System.IO.Path.GetFullPath(opent2d.FileName);
+            }
+            List<Figure> newFigures = open.OpenFigures(opent2d.FileName);
+            GUI.Drawer.Figures = newFigures;
+            GUI.Drawer.draw(paintSurface);
+            GUI.Drawer.indFigures = newFigures.Count - 1;
+        }
 
         private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
@@ -420,12 +449,7 @@ namespace Time2Draw
             GUIHandler.instance.SelectedRectColor = System.Drawing.Color.FromArgb(R, G, B);
         }
 
-        private void LoadButton_Click(object sender, RoutedEventArgs e)
-        {
-        
-        }
-
-      private bool EditingToolIsActive()
+        private bool EditingToolIsActive()
         {
             return (GUIHandler.instance.SelectedTool == Tools.PaintTools.StretchFigure ||
                     GUIHandler.instance.SelectedTool == Tools.PaintTools.RotateFigure ||

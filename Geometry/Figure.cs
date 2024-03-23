@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Xml.Serialization;
 
 namespace Geometry
 {
-
-	abstract public class Figure : IFigure
+    [XmlInclude(typeof(Line)), XmlInclude(typeof(Ellipse)), XmlInclude(typeof(Rectangle))]
+    abstract public class Figure : IFigure
     {
         public List<Point> points;  // Точки
         public double angle;        // Угол поворота в градусах
